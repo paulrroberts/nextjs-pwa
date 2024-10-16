@@ -6,6 +6,7 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import HistoryIcon from '@mui/icons-material/History'
 import Link from 'next/link'
+import Head from 'next/head'
 
 const geistSans = localFont({
     src: './fonts/GeistVF.woff',
@@ -26,6 +27,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <Head>
+                <link rel="manifest" href="/manifest.json" />
+            </Head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <Card sx={{ height: '100vh' }}>
                     <CardHeader title="PWA POC" />
