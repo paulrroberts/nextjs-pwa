@@ -31,6 +31,7 @@ export default function PushNotificationManager() {
     }
 
     async function subscribeToPush() {
+        console.log('called subscribeToPush() function')
         const registration = await navigator.serviceWorker.ready
         const sub = await registration.pushManager.subscribe({
             userVisibleOnly: true,
@@ -44,12 +45,14 @@ export default function PushNotificationManager() {
     }
 
     async function unsubscribeFromPush() {
+        console.log('called unsubscribeFromPush() function')
         await subscription?.unsubscribe()
         setSubscription(null)
         await unsubscribeUser()
     }
 
     async function sendTestNotification() {
+        console.log('called sendTestNotification() function')
         if (subscription) {
             const subscriptionJson = subscription.toJSON()
             await sendNotification(message, subscriptionJson)

@@ -7,6 +7,7 @@ webpush.setVapidDetails('mailto:proberts@nuskin.com', process.env.NEXT_PUBLIC_VA
 let subscription = null
 
 export async function subscribeUser(sub) {
+    console.log('called subscribeUser() function')
     subscription = sub
     // In a production environment, you would want to store the subscription in a database
     // For example: await db.subscriptions.create({ data: sub })
@@ -14,6 +15,7 @@ export async function subscribeUser(sub) {
 }
 
 export async function unsubscribeUser() {
+    console.log('called unsubscribeUser() function')
     subscription = null
     // In a production environment, you would want to remove the subscription from the database
     // For example: await db.subscriptions.delete({ where: { ... } })
@@ -21,6 +23,7 @@ export async function unsubscribeUser() {
 }
 
 export async function sendNotification(message) {
+    console.log('called sendNotification() function')
     if (!subscription) {
         throw new Error('No subscription available')
     }
