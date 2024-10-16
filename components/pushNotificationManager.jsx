@@ -33,14 +33,17 @@ export default function PushNotificationManager() {
     async function subscribeToPush() {
         console.log('called subscribeToPush() function')
         const registration = await navigator.serviceWorker.ready
+        console.log('registration', registration)
         const sub = await registration.pushManager.subscribe({
             userVisibleOnly: true,
             applicationServerKey: urlBase64ToUint8Array(process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY)
         })
+        console.log('sub', sub)
         setSubscription(sub)
 
         // Convert the subscription to a plain object
         const subscriptionJson = sub.toJSON()
+        console.log('subscriptionJson', subscriptionJson)
         await subscribeUser(subscriptionJson)
     }
 
