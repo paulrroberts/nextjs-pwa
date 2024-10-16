@@ -1,3 +1,30 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+    "env": {
+        "es6": true,
+        "jest": true,
+        "node": true
+    },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:json/recommended", "plugin:prettier/recommended"],
+    "rules": {
+        "comma-dangle": ["error", "never"],
+        "indent": ["warn", 4, { "SwitchCase": 1 }],
+        "max-len": ["warn", 160],
+        // "no-console": "warn",
+        "no-invalid-this": "warn",
+        "no-unused-vars": "warn",
+        "no-var": "error",
+        "space-in-parens": ["warn", "never"],
+        "semi": "off",
+        "prettier/prettier": "error",
+        "json/*": "error",
+        "react/no-unescaped-entities": "off"
+    }
 }
