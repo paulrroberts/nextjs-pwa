@@ -1,11 +1,12 @@
 import localFont from 'next/font/local'
 import './globals.css'
-import { Card, CardContent, CardHeader, Paper, BottomNavigation, BottomNavigationAction } from '@mui/material'
-import HomeIcon from '@mui/icons-material/Home'
-import SettingsIcon from '@mui/icons-material/Settings'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import HistoryIcon from '@mui/icons-material/History'
-import Link from 'next/link'
+// import { Card, CardContent, CardHeader, Paper, BottomNavigation, BottomNavigationAction } from '@mui/material'
+// import HomeIcon from '@mui/icons-material/Home'
+// import SettingsIcon from '@mui/icons-material/Settings'
+// import FavoriteIcon from '@mui/icons-material/Favorite'
+// import HistoryIcon from '@mui/icons-material/History'
+// import Link from 'next/link'
+import LayoutComponent from '../components/layoutComponent'
 // import Head from 'next/head'
 
 const geistSans = localFont({
@@ -68,7 +69,8 @@ export default function RootLayout({ children }) {
                 {/* </Head> */}
             </head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <Card sx={{ height: '100vh' }}>
+                <LayoutComponent>{children}</LayoutComponent>
+                {/* <Card sx={{ height: '100vh' }}>
                     <CardHeader title="PWA POC" />
                     <CardContent>{children}</CardContent>
                 </Card>
@@ -79,7 +81,7 @@ export default function RootLayout({ children }) {
                         <BottomNavigationAction component={Link} href="/favorites" label="Favorites" icon={<FavoriteIcon />} />
                         <BottomNavigationAction component={Link} href="/history" label="History" icon={<HistoryIcon />} />
                     </BottomNavigation>
-                </Paper>
+                </Paper> */}
             </body>
         </html>
     )
