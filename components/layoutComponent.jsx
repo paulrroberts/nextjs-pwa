@@ -111,7 +111,7 @@ export default function LayoutComponent({ children }) {
                     {DrawerList}
                 </Drawer>
             )}
-            <Card sx={{ height: '100vh', flexGrow: 1 }}>
+            <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll' }}>
                 <CardHeader title="PWA POC" />
                 <CardContent>{children}</CardContent>
             </Card>

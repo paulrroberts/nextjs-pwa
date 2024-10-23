@@ -1,0 +1,85 @@
+@media (max-width: 480px) {
+    .hero-banner-left-inner {
+        background-color: #edece9;
+        padding: 30px;
+    }
+    .hero-banner-section .hero-banner-left {
+        height: auto;
+    }
+    .mob-heroleft {
+        color: #252525;
+        background: url(https://media.nuskin.com/transform/a91e62ba-b38e-4d0b-804e-23303bc8048c/MYND-Web-Banner?format=webp&io=transform:fill,width:600);
+        height: 309px !important;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
+    }
+}
+
+.hero-banner-left-inner .hero-btn {
+    background-color: #252525;
+    color: #fff;
+}
+
+body#en_US {
+    .hero-banner-left-inner h2,
+    .hero-banner-right-inner h2,
+    .category-head h3,
+    .separator-section .separator-container h3,
+    .popular-sidebar .populat-text h3,
+    .features-inner-text h3,
+    .tagline-textcontainer .paragraph-l,
+    .info-section .heading-1,
+    .info-section .heading-1 span,
+    .highlight-section .highlight-section-1 .highlight-section-content .heading-2,
+    .highlight-section-2 .highlight-section-two-content .heading-2 {
+        font-family: SangBleuKingdom !important;
+    }
+    .hero-banner-section .hero-btn,
+    .populat-text a span,
+    .most-popular-slider .card-text .content,
+    .most-popular-slider .pop-add-btn,
+    .features-inner-text a,
+    .highlight-section-content a span,
+    .highlight-section-two-content a span,
+    .news-slider-view-all .news-view-all-btn h6,
+    .newsslider .card-body .card-subtitle,
+    .news-date,
+    .hero-banner-left-inner h3,
+    .hero-banner-right-inner h3,
+    .hero-banner-right-inner button span,
+    .homepage-title-heading h1,
+    .category-section-slider-wrapper .viewmain .viewsec,
+    .category-section-card .card-subtitle,
+    .popular-section-inner .viewmain .viewsec,
+    .separator-section .separator-container h4,
+    .limit-title-height,
+    .tabssection .prodtabs .nav-link,
+    .brandsec .viewmain .viewsec,
+    .brandsection .head-3,
+    .features-inner-text h6,
+    .features-inner-text .paragraph-l,
+    .tagline-title,
+    .tagline-text2,
+    .awardsec .card-title.h5,
+    .awardsec .award-text,
+    .award-sub-text,
+    .highlight-section-content p,
+    .highlight-section-two-content p,
+    .disclaimer-wrap span {
+        font-family: Inter !important;
+    }
+}
+
+@media (min-width: 481px) {
+    .taglineImgBackground {
+        background-image: url(https://media.nuskin.com/transform/fc7697f4-8262-4bc7-bb7c-57bdeb76f427/-1-device-banner-background-image);
+    }
+}
+
+@media (max-width: 480px) {
+    .taglineImgBackground {
+        background-image: url(https://media.nuskin.com/transform/849d1f3a-021d-4c69-b131-2c8446b35ce9/productlines-header-web-ageloclumispaio);
+    }
+}

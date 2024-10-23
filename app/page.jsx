@@ -1,11 +1,13 @@
 import PushNotificationManager from '../components/pushNotificationManager'
 import InstallPrompt from '../components/installPrompt'
+import HomeContent from '../components/homeContent'
 
 export default function Page() {
     return (
         <div>
-            <PushNotificationManager />
-            <InstallPrompt />
+            <HomeContent />
+            {/* <PushNotificationManager />
+            <InstallPrompt /> */}
         </div>
     )
 }
