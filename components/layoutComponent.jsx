@@ -32,7 +32,7 @@ export default function LayoutComponent({ children }) {
     const [isStandalone, setIsStandalone] = useState(false)
 
     useEffect(() => {
-        setIsMobile(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
+        setIsMobile(/Mobile/.test(navigator.userAgent) && !window.MSStream)
 
         setIsStandalone(window.matchMedia('(display-mode: standalone)').matches)
     }, [])
