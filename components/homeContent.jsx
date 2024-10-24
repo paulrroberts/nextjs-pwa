@@ -4465,14 +4465,23 @@ export default function HomeContent() {
                     </div>
                 </div>
             </div>
-            {/* <script id="__LOADABLE_REQUIRED_CHUNKS__" type="application/json">[28727,62599,65425,17157]</script>
-            <script id="__LOADABLE_REQUIRED_CHUNKS___ext" type="application/json">{"namedChunks":["src-views-components-UnSupported-UnSupported","src-views-pages-StudioPage"]}</script> */}
-
-            {/* <Script async src="https://test.nuskin.com/storefront/client/main-bundle.a45760bcd1df2606e810.js"></Script>
-            <Script async src="https://test.nuskin.com/storefront/client/src-views-components-UnSupported-UnSupported.a45760bcd1df2606e810.js"></Script>
-            <Script async src="https://test.nuskin.com/storefront/client/62599.a45760bcd1df2606e810.js"></Script>
-            <Script async src="https://test.nuskin.com/storefront/client/65425.a45760bcd1df2606e810.js"></Script>
-            <Script async src="https://test.nuskin.com/storefront/client/src-views-pages-StudioPage.a45760bcd1df2606e810.js"></Script> */}
+            <script id="__LOADABLE_REQUIRED_CHUNKS__" type="application/json">
+                [28727,62599,65425,17157]
+            </script>
+            {/* <script id="__LOADABLE_REQUIRED_CHUNKS___ext" type="application/json">{"namedChunks":["src-views-components-UnSupported-UnSupported","src-views-pages-StudioPage"]}</script> */}
+            <script async data-chunk="main" src="https://test.nuskin.com/storefront/client/main-bundle.a45760bcd1df2606e810.js"></script>
+            <script
+                async
+                data-chunk="src-views-components-UnSupported-UnSupported"
+                src="https://test.nuskin.com/storefront/client/src-views-components-UnSupported-UnSupported.a45760bcd1df2606e810.js"
+            ></script>
+            <script async data-chunk="src-views-pages-StudioPage" src="https://test.nuskin.com/storefront/client/62599.a45760bcd1df2606e810.js"></script>
+            <script async data-chunk="src-views-pages-StudioPage" src="https://test.nuskin.com/storefront/client/65425.a45760bcd1df2606e810.js"></script>
+            <script
+                async
+                data-chunk="src-views-pages-StudioPage"
+                src="https://test.nuskin.com/storefront/client/src-views-pages-StudioPage.a45760bcd1df2606e810.js"
+            ></script>
         </section>
     )
 }
