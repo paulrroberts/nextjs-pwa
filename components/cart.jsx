@@ -45,7 +45,6 @@ export default function Cart() {
                                             type="text"
                                             id="itemSearchInput"
                                             className="search-textBox bg-transparent  form-control"
-                                            value=""
                                         />
                                     </div>
                                 </div>
@@ -169,7 +168,6 @@ export default function Cart() {
                                                                                 aria-label="quantity"
                                                                                 type="text"
                                                                                 className="p-0 text-center quantity-value form-control"
-                                                                                value="1"
                                                                             />
                                                                         </div>
                                                                         <div className="d-flex justify-content-center border-0 col">
@@ -227,9 +225,7 @@ export default function Cart() {
                                                     </div>
                                                 </div>
                                                 <p className="availability-text ml-2 text-success font-weight-bold" data-testid="qa-product-availability">
-                                                    <div>
-                                                        <p className="availability-text mt-2 text-success font-weight-bold p-0 mb-0"></p>
-                                                    </div>
+                                                    <span className="availability-text mt-2 text-success font-weight-bold p-0 mb-0"></span>
                                                 </p>
                                                 <div className="mt-2 align-items-end justify-content-center view-cart-total-section  ">
                                                     <div data-testid="qa-product-total" className=" pl-1 p-0 cart-total-price-wrapper col">
