@@ -20,10 +20,9 @@ import {
 import Link from 'next/link'
 import HomeIcon from '@mui/icons-material/Home'
 import SettingsIcon from '@mui/icons-material/Settings'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-// import HistoryIcon from '@mui/icons-material/History'
 import PersonIcon from '@mui/icons-material/Person'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import MenuIcon from '@mui/icons-material/Menu'
 
 const drawerWidth = 255
 
@@ -96,7 +95,7 @@ export default function LayoutComponent({ children }) {
                             <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
                             <BottomNavigationAction component={Link} href="/settings" label="Settings" icon={<SettingsIcon />} />
                             <BottomNavigationAction component={Link} href="/cart" label="Cart" icon={<ShoppingCartIcon />} />
-                            <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Account" icon={<PersonIcon />} />
+                            <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
                         </BottomNavigation>
                     </Paper>
                     <Drawer open={open} onClose={toggleDrawer(false)}>
