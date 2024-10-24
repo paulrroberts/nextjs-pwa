@@ -131,9 +131,7 @@ export default function HomeContent() {
                             </div>
                         </div>
                         <div class="homepage-title-heading col-lg-10 col-md-12">
-                            <h1 sx={{ color: 'rgb(95, 95, 95)' }}>
-                                Discover the best you, inside and out, with our integrated beauty and wellness products.
-                            </h1>
+                            <h1 sx={{ color: 'rgb(95, 95, 95)' }}>Discover the best you, inside and out, with our integrated beauty and wellness products.</h1>
                         </div>
                         <div class="float-right homepage-title-right-img d-hide d-lg-show p-0 col-md-auto">
                             <div class="image-wrapper col-12 p-0 m-0 " sx={{ width: '63.2px', height: '70px' }}>
