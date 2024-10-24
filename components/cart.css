@@ -27763,6 +27763,7 @@ body {
     top: 2px;
     transition: all 0.2s ease;
     transform: rotate(45deg);
+    left: 7px;
 }
 .shade-picker {
     border-radius: 50%;
