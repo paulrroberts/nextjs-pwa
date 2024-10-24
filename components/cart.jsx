@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './cart.css'
 
 export default function Cart() {
@@ -306,11 +307,7 @@ export default function Cart() {
                                     <div className="cart-view-button-wrapper">
                                         <div className="flex-row justify-content-end w-100 row no-gutters">
                                             <div className="col-lg-12">
-                                                <button
-                                                    data-testid="qa-cart-checkout"
-                                                    type="button"
-                                                    className="cart-view-checkout-button mr-2 w-100 btn btn-primary"
-                                                >
+                                                <Link type="button" className="cart-view-checkout-button mr-2 w-100 btn btn-primary" href="/checkout">
                                                     <div>
                                                         <span>
                                                             <svg
@@ -347,7 +344,7 @@ export default function Cart() {
                                                         </span>
                                                         <span>Checkout</span>
                                                     </div>
-                                                </button>
+                                                </Link>
                                                 <p className="text-danger view-cart-error-message"></p>
                                             </div>
                                             <div className="col-lg-12">
