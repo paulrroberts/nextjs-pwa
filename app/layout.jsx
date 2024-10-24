@@ -70,18 +70,6 @@ export default function RootLayout({ children }) {
             </head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <LayoutComponent>{children}</LayoutComponent>
-                {/* <Card sx={{ height: '100vh' }}>
-                    <CardHeader title="PWA POC" />
-                    <CardContent>{children}</CardContent>
-                </Card>
-                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-                    <BottomNavigation showLabels>
-                        <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
-                        <BottomNavigationAction component={Link} href="/settings" label="Settings" icon={<SettingsIcon />} />
-                        <BottomNavigationAction component={Link} href="/favorites" label="Favorites" icon={<FavoriteIcon />} />
-                        <BottomNavigationAction component={Link} href="/history" label="History" icon={<HistoryIcon />} />
-                    </BottomNavigation>
-                </Paper> */}
             </body>
         </html>
     )

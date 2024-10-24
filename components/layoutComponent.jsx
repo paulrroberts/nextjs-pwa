@@ -23,6 +23,7 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 // import HistoryIcon from '@mui/icons-material/History'
 import PersonIcon from '@mui/icons-material/Person'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 
 const drawerWidth = 255
 
@@ -44,7 +45,8 @@ export default function LayoutComponent({ children }) {
     const iconMap = {
         HomeIcon: <HomeIcon />,
         SettingsIcon: <SettingsIcon />,
-        PersonIcon: <PersonIcon />
+        PersonIcon: <PersonIcon />,
+        ShoppingCartIcon: <ShoppingCartIcon />
     }
 
     const drawerLinks = [
@@ -62,6 +64,11 @@ export default function LayoutComponent({ children }) {
             title: 'Profile',
             icon: 'PersonIcon',
             href: '/profile'
+        },
+        {
+            title: 'Cart',
+            icon: 'ShoppingCartIcon',
+            href: '/cart'
         }
     ]
 
@@ -88,7 +95,7 @@ export default function LayoutComponent({ children }) {
                         <BottomNavigation showLabels>
                             <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
                             <BottomNavigationAction component={Link} href="/settings" label="Settings" icon={<SettingsIcon />} />
-                            <BottomNavigationAction component={Link} href="/favorites" label="Favorites" icon={<FavoriteIcon />} />
+                            <BottomNavigationAction component={Link} href="/cart" label="Cart" icon={<ShoppingCartIcon />} />
                             <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Account" icon={<PersonIcon />} />
                         </BottomNavigation>
                     </Paper>
@@ -111,7 +118,7 @@ export default function LayoutComponent({ children }) {
                     {DrawerList}
                 </Drawer>
             )}
-            <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll' }}>
+            <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
                 <CardHeader title="PWA POC" />
                 <CardContent>{children}</CardContent>
             </Card>
