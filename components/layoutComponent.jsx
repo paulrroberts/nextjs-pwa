@@ -84,7 +84,7 @@ export default function LayoutComponent({ children }) {
         <Box sx={{ display: 'flex' }}>
             {isMobile ? (
                 <>
-                    <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px' }} elevation={3}>
+                    <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 10 }} elevation={3}>
                         <BottomNavigation showLabels>
                             <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
                             <BottomNavigationAction component={Link} href="/settings" label="Settings" icon={<SettingsIcon />} />
