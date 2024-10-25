@@ -25,6 +25,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
+import Image from 'next/image'
 
 const drawerWidth = 255
 
@@ -96,41 +97,41 @@ export default function LayoutComponent({ children }) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            {isMobile ? (
-                <>
-                    <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
-                        <BottomNavigation showLabels>
-                            <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
-                            <BottomNavigationAction component={Link} href="/vgclient" label="Volumes" icon={<BarChartIcon />} />
-                            <BottomNavigationAction component={Link} href="/cart" label="Cart" icon={<ShoppingCartIcon />} />
-                            <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
-                        </BottomNavigation>
-                    </Paper>
-                    <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
-                        {DrawerList}
-                    </SwipeableDrawer>
-                </>
-            ) : (
-                <Drawer
-                    sx={{
-                        width: drawerWidth,
-                        flexShrink: 0,
-                        '& .MuiDrawer-paper': {
-                            width: drawerWidth,
-                            boxSizing: 'border-box'
-                        }
-                    }}
-                    variant="permanent"
-                >
-                    {DrawerList}
-                </Drawer>
-            )}
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
                 {/* <CardHeader component={Image} src="/nu-skin-logo.svg" width={150} height={33} alt='Nu Skin Logo' /> */}
                 <CardMedia sx={{ padding: '20px' }}>
-                    <img class="nu-logo-image" alt="Nu Skin logo,HomePage" src="/nu-skin-logo.svg" data-testid="qa-nuskin-logo" />
+                    <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
                 </CardMedia>
                 <CardContent>{children}</CardContent>
+                {isMobile ? (
+                    <>
+                        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
+                            <BottomNavigation showLabels>
+                                <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
+                                <BottomNavigationAction component={Link} href="/vgclient" label="Volumes" icon={<BarChartIcon />} />
+                                <BottomNavigationAction component={Link} href="/cart" label="Cart" icon={<ShoppingCartIcon />} />
+                                <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
+                            </BottomNavigation>
+                        </Paper>
+                        <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
+                            {DrawerList}
+                        </SwipeableDrawer>
+                    </>
+                ) : (
+                    <Drawer
+                        sx={{
+                            width: drawerWidth,
+                            flexShrink: 0,
+                            '& .MuiDrawer-paper': {
+                                width: drawerWidth,
+                                boxSizing: 'border-box'
+                            }
+                        }}
+                        variant="permanent"
+                    >
+                        {DrawerList}
+                    </Drawer>
+                )}
             </Card>
         </Box>
     )
