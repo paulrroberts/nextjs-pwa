@@ -20,7 +20,7 @@ export default function InstallPrompt() {
     return (
         <div>
             <h3>Install App</h3>
-            <Button variant="outlined">Add to Home Screen</Button>
+            {/* <Button variant="outlined">Add to Home Screen</Button> */}
             {isIOS && (
                 <p>
                     To install this app on your iOS device, tap the share button

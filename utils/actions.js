@@ -2,13 +2,18 @@
 
 import webpush from 'web-push'
 
-webpush.setVapidDetails('mailto:proberts@nuskin.com', process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY, process.env.VAPID_PRIVATE_KEY)
+webpush.setVapidDetails(
+    'mailto:proberts@nuskin.com',
+    'BOarmq8OATtJgz1YBxP049V1IxdO2IUUJOs6WQPn-TkO6AMeYfRVLC7v9QIAp8R6NlSVEPHkiEa0-w4d5U-FgMc',
+    'HumfPZq5qFgAtgEsX_r8INRJmWcgonNrbcKmoY2r7zI'
+)
 
 let subscription = null
 
 export async function subscribeUser(sub) {
     console.log('called subscribeUser() function')
     subscription = sub
+    console.log('subscription from actions.js', subscription)
     // In a production environment, you would want to store the subscription in a database
     // For example: await db.subscriptions.create({ data: sub })
     return { success: true }
