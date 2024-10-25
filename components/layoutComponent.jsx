@@ -15,7 +15,9 @@ import {
     ListItemButton,
     ListItemIcon,
     ListItemText,
-    Paper
+    Paper,
+    CardMedia,
+    SwipeableDrawer
 } from '@mui/material'
 import Link from 'next/link'
 import HomeIcon from '@mui/icons-material/Home'
@@ -23,6 +25,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
+import Image from 'next/image'
 
 const drawerWidth = 255
 
@@ -98,9 +101,9 @@ export default function LayoutComponent({ children }) {
                             <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
                         </BottomNavigation>
                     </Paper>
-                    <Drawer open={open} onClose={toggleDrawer(false)}>
+                    <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
                         {DrawerList}
-                    </Drawer>
+                    </SwipeableDrawer>
                 </>
             ) : (
                 <Drawer
@@ -118,7 +121,10 @@ export default function LayoutComponent({ children }) {
                 </Drawer>
             )}
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
-                <CardHeader title="PWA POC" />
+                {/* <CardHeader component={Image} src="/nu-skin-logo.svg" width={150} height={33} alt='Nu Skin Logo' /> */}
+                <CardMedia sx={{ padding: '20px' }}>
+                    <img class="nu-logo-image" alt="Nu Skin logo,HomePage" src="/nu-skin-logo.svg" data-testid="qa-nuskin-logo" />
+                </CardMedia>
                 <CardContent>{children}</CardContent>
             </Card>
         </Box>
