@@ -22,7 +22,8 @@ const geistMono = localFont({
 
 export const metadata = {
     title: 'PWA POC',
-    description: 'NextJS PWA POC'
+    description: 'NextJS PWA POC',
+    manifest: '/manifest.json'
 }
 
 export default function RootLayout({ children }) {
