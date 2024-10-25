@@ -2,11 +2,7 @@
 
 import webpush from 'web-push'
 
-webpush.setVapidDetails(
-    'mailto:proberts@nuskin.com',
-    'BOarmq8OATtJgz1YBxP049V1IxdO2IUUJOs6WQPn-TkO6AMeYfRVLC7v9QIAp8R6NlSVEPHkiEa0-w4d5U-FgMc',
-    'HumfPZq5qFgAtgEsX_r8INRJmWcgonNrbcKmoY2r7zI'
-)
+webpush.setVapidDetails('mailto:proberts@nuskin.com', process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY, process.env.VAPID_PRIVATE_KEY)
 
 let subscription = null
 

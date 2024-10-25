@@ -55,7 +55,7 @@ export default function PushNotificationManager() {
         console.log('registration', registration)
         const sub = await registration.pushManager.subscribe({
             userVisibleOnly: true,
-            applicationServerKey: urlBase64ToUint8Array('BOarmq8OATtJgz1YBxP049V1IxdO2IUUJOs6WQPn-TkO6AMeYfRVLC7v9QIAp8R6NlSVEPHkiEa0-w4d5U-FgMc')
+            applicationServerKey: urlBase64ToUint8Array(process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY)
         })
         console.log('sub', sub)
         setSubscription(sub)
