@@ -303,7 +303,7 @@ export default function Cart() {
                                     <div className="cart-view-button-wrapper">
                                         <div className="flex-row justify-content-end w-100 row no-gutters">
                                             <div className="col-lg-12">
-                                                <Link type="button" className="cart-view-checkout-button mr-2 w-100 btn btn-primary" href="/checkout">
+                                                <Link type="button" className="cart-view-checkout-button mr-2 w-100 btn btn-primary" href="/cart/checkout">
                                                     <div>
                                                         <span>
                                                             <svg

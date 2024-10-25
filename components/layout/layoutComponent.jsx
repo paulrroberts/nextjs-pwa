@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import {
     Card,
-    CardHeader,
     CardContent,
     BottomNavigation,
     BottomNavigationAction,
@@ -25,7 +24,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
-import Image from 'next/image'
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 
 const drawerWidth = 255
 
@@ -48,7 +47,8 @@ export default function LayoutComponent({ children }) {
         HomeIcon: <HomeIcon />,
         BarChartIcon: <BarChartIcon />,
         PersonIcon: <PersonIcon />,
-        ShoppingCartIcon: <ShoppingCartIcon />
+        ShoppingCartIcon: <ShoppingCartIcon />,
+        NotificationsActiveIcon: <NotificationsActiveIcon />
     }
 
     const drawerLinks = [
@@ -71,6 +71,11 @@ export default function LayoutComponent({ children }) {
             title: 'Cart',
             icon: 'ShoppingCartIcon',
             href: '/cart'
+        },
+        {
+            title: 'Notifications',
+            icon: 'NotificationsActiveIcon',
+            href: '/install'
         }
     ]
 

@@ -6,7 +6,7 @@ import './globals.css'
 // import FavoriteIcon from '@mui/icons-material/Favorite'
 // import HistoryIcon from '@mui/icons-material/History'
 // import Link from 'next/link'
-import LayoutComponent from '../components/layoutComponent'
+import LayoutComponent from '../components/layout/layoutComponent'
 // import Head from 'next/head'
 
 const geistSans = localFont({

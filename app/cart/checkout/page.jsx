@@ -486,7 +486,7 @@ export default function Page() {
                                 </div>
                                 <div className="my-2 p-0 col-lg-12">
                                     <Link
-                                        href="/orderConfirmation"
+                                        href="/cart/orderConfirmation"
                                         className="w-100 submit-order-button-color submit-order-button btn btn-success"
                                         style={{ alignContent: 'center' }}
                                     >
