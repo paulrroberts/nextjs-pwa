@@ -7,6 +7,7 @@ import './globals.css'
 // import HistoryIcon from '@mui/icons-material/History'
 // import Link from 'next/link'
 import LayoutComponent from '../components/layout/layoutComponent'
+import AddToHomeScreen from '../components/addToHomeScreen/addToHomeScreen'
 // import Head from 'next/head'
 
 const geistSans = localFont({
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
                 {/* </Head> */}
             </head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+                <AddToHomeScreen />
                 <LayoutComponent>{children}</LayoutComponent>
             </body>
         </html>
