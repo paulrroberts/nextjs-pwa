@@ -8,7 +8,7 @@
     }
     .mob-heroleft {
         color: #252525;
-        /* background: url(https://media.nuskin.com/transform/a91e62ba-b38e-4d0b-804e-23303bc8048c/MYND-Web-Banner?format=webp&io=transform:fill,width:600); */
+        background: url(https://media.nuskin.com/transform/a91e62ba-b38e-4d0b-804e-23303bc8048c/MYND-Web-Banner?format=webp&io=transform:fill,width:600);
         height: 309px !important;
         position: relative;
         background-repeat: no-repeat;
@@ -74,13 +74,13 @@ body#en_US {
 
 @media (min-width: 481px) {
     .taglineImgBackground {
-        /* background-image: url(https://media.nuskin.com/transform/fc7697f4-8262-4bc7-bb7c-57bdeb76f427/-1-device-banner-background-image); */
+        background-image: url(https://media.nuskin.com/transform/fc7697f4-8262-4bc7-bb7c-57bdeb76f427/-1-device-banner-background-image);
     }
 }
 
 @media (max-width: 480px) {
     .taglineImgBackground {
-        /* background-image: url(https://media.nuskin.com/transform/849d1f3a-021d-4c69-b131-2c8446b35ce9/productlines-header-web-ageloclumispaio); */
+        background-image: url(https://media.nuskin.com/transform/849d1f3a-021d-4c69-b131-2c8446b35ce9/productlines-header-web-ageloclumispaio);
     }
 }
 
