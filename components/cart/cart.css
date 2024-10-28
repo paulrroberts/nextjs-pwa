@@ -92,7 +92,7 @@ body {
     padding: 15px;
 }
 
-.summary-details {
+.cart-summary-details {
     display: flex;
     justify-content: space-between;
 }

@@ -61,10 +61,10 @@ export default function Cart() {
                 <h2>Order Summary</h2>
                 <p>Order Total</p>
                 <p>One time subtotal</p>
-                <div className="summary-details">
+                <div className="cart-summary-details">
                     <p>Subtotal 2 items</p>
                     <p>Estimated Total</p>
-                    <h3>$109.00</h3>
+                    <p>$109.00</p>
                 </div>
                 <p>Total SV: 67.45</p>
                 <Link type="button" href="/cart/checkout" className="checkout-btn">
