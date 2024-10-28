@@ -92,6 +92,10 @@ body {
     padding: 15px;
 }
 
+.order-summary p {
+    margin: 0;
+}
+
 .cart-summary-details {
     display: flex;
     justify-content: space-between;

@@ -97,7 +97,7 @@ export default function LayoutComponent({ children }) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px', maxWidth: '100vw' }}>
+            <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
                 {/* <CardHeader component={Image} src="/nu-skin-logo.svg" width={150} height={33} alt='Nu Skin Logo' /> */}
                 <CardMedia sx={{ padding: '20px' }}>
                     <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
@@ -108,7 +108,7 @@ export default function LayoutComponent({ children }) {
                             <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
                                 {DrawerList}
                             </SwipeableDrawer>
-                            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100, maxWidth: '100vw' }} elevation={3}>
+                            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
                                 <BottomNavigation showLabels>
                                     <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
                                     <BottomNavigationAction component={Link} href="/vgclient" label="Volumes" icon={<BarChartIcon />} />

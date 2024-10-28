@@ -58,7 +58,7 @@ export default function Cart() {
             </div>
 
             <div className="order-summary">
-                <h2>Order Summary</h2>
+                <p>Order Summary</p>
                 <p>Order Total</p>
                 <p>One time subtotal</p>
                 <div className="cart-summary-details">
