@@ -23,8 +23,9 @@ export async function unsubscribeUser() {
     return { success: true }
 }
 
-export async function sendNotification(message) {
+export async function sendNotification(message, subscriptionJSON) {
     console.log('called sendNotification() function')
+    subscription = subscriptionJSON
     if (!subscription) {
         throw new Error('No subscription available')
     }

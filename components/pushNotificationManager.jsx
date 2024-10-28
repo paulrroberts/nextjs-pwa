@@ -75,10 +75,9 @@ export default function PushNotificationManager() {
 
     async function sendTestNotification() {
         console.log('called sendTestNotification() function')
-        console.log('subscription from sendTestNotification function', subscription)
+        console.log(subscription)
         if (subscription) {
             const subscriptionJson = subscription.toJSON()
-            console.log(subscriptionJson)
             await sendNotification(message, subscriptionJson)
             setMessage('')
         }
