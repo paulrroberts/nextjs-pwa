@@ -76,7 +76,7 @@ export default function LayoutComponent({ children }) {
         {
             title: 'Notifications',
             icon: 'NotificationsActiveIcon',
-            href: '/install'
+            href: '/subscribe'
         }
     ]
 

@@ -19,22 +19,24 @@ export default function InstallPrompt() {
 
     return (
         <div>
-            <h3>Install App</h3>
             {/* <Button variant="outlined">Add to Home Screen</Button> */}
             {isIOS && (
-                <p>
-                    To install this app on your iOS device, tap the share button
-                    <span role="img" aria-label="share icon">
-                        {' '}
-                        ⎋{' '}
-                    </span>
-                    and then "Add to Home Screen"
-                    <span role="img" aria-label="plus icon">
-                        {' '}
-                        ➕{' '}
-                    </span>
-                    .
-                </p>
+                <>
+                    <h3>Install App</h3>
+                    <p>
+                        To install this app on your iOS device, tap the share button
+                        <span role="img" aria-label="share icon">
+                            {' '}
+                            ⎋{' '}
+                        </span>
+                        and then "Add to Home Screen"
+                        <span role="img" aria-label="plus icon">
+                            {' '}
+                            ➕{' '}
+                        </span>
+                        .
+                    </p>
+                </>
             )}
         </div>
     )
