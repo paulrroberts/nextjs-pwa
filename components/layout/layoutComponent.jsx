@@ -26,19 +26,13 @@ import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 import Image from 'next/image'
+import useUserAgent from '../userAgent/userAgent'
 
 const drawerWidth = 255
 
 export default function LayoutComponent({ children }) {
     const [open, setOpen] = useState(false)
-    const [isMobile, setIsMobile] = useState(false)
-    const [isStandalone, setIsStandalone] = useState(false)
-
-    useEffect(() => {
-        setIsMobile(/Mobile/.test(navigator.userAgent) && !window.MSStream)
-
-        setIsStandalone(window.matchMedia('(display-mode: standalone)').matches)
-    }, [])
+    const { isMobile } = useUserAgent()
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen)
@@ -98,9 +92,10 @@ export default function LayoutComponent({ children }) {
     return (
         <Box sx={{ display: 'flex' }}>
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
-                {/* <CardHeader component={Image} src="/nu-skin-logo.svg" width={150} height={33} alt='Nu Skin Logo' /> */}
                 <CardMedia sx={{ padding: '20px' }}>
-                    <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
+                    <Link href="/">
+                        <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
+                    </Link>
                 </CardMedia>
                 <Box sx={{ display: 'flex' }}>
                     {isMobile ? (
