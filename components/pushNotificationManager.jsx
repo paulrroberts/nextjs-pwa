@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import { Button, TextField, Typography } from '@mui/material'
-// import { urlBase64ToUint8Array } from '../utils/util'
 import { subscribeUser, unsubscribeUser, sendNotification } from '../utils/actions'
 
 /**

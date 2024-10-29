@@ -1,14 +1,7 @@
 import localFont from 'next/font/local'
 import './globals.css'
-// import { Card, CardContent, CardHeader, Paper, BottomNavigation, BottomNavigationAction } from '@mui/material'
-// import HomeIcon from '@mui/icons-material/Home'
-// import SettingsIcon from '@mui/icons-material/Settings'
-// import FavoriteIcon from '@mui/icons-material/Favorite'
-// import HistoryIcon from '@mui/icons-material/History'
-// import Link from 'next/link'
 import LayoutComponent from '../components/layout/layoutComponent'
 import AddToHomeScreen from '../components/addToHomeScreen/addToHomeScreen'
-// import Head from 'next/head'
 
 const geistSans = localFont({
     src: './fonts/GeistVF.woff',
@@ -30,7 +23,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            {/* <Head> */}
             <head>
                 <meta name="application-name" content="PWA App" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -39,7 +31,6 @@ export default function RootLayout({ children }) {
                 <meta name="description" content="Best PWA App in the world" />
                 <meta name="format-detection" content="telephone=no" />
                 <meta name="mobile-web-app-capable" content="yes" />
-                {/* <meta name="msapplication-config" content="/icons/browserconfig.xml" /> */}
                 <meta name="msapplication-TileColor" content="#2B5797" />
                 <meta name="msapplication-tap-highlight" content="no" />
                 <meta name="theme-color" content="#000000" />
@@ -57,7 +48,6 @@ export default function RootLayout({ children }) {
                 <meta property="og:site_name" content="PWA App" />
                 <meta property="og:url" content="https://nextjs-pwa-git-main-paulrroberts-projects.vercel.app/" />
                 <meta property="og:image" content="https://nextjs-pwa-git-main-paulrroberts-projects.vercel.app/apple-touch-icon.png" />
-                {/* </Head> */}
             </head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <AddToHomeScreen />
