@@ -6,7 +6,11 @@ export default function HomeContent() {
         <div class="container">
             <section class="hero">
                 <Image src="/images/hero-image.webp" alt="Hero Banner" width={800} height={467} />
-                <button>Shop Now</button>
+                <div className="hero-caption">
+                    <p className="heading-1">MYND360™</p>
+                    <p className="heading-3">A holistic way to conquer a new day</p>
+                    <button>Shop Now</button>
+                </div>
             </section>
 
             <section>

@@ -25,6 +25,7 @@ body {
     align-items: center;
     text-align: center;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .hero img {
@@ -110,6 +111,24 @@ body {
     object-fit: contain;
 }
 
+.hero-caption {
+    background-color: #edece9;
+    padding: 30px;
+    width: 100%;
+}
+
+.hero-caption .heading-1 {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 400;
+}
+
+.hero-caption .heading-3 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .hero {
@@ -122,6 +141,24 @@ body {
     .promo-banner {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .hero-caption {
+        position: absolute;
+        background-color: transparent;
+        top: 35%;
+    }
+
+    .hero-caption .heading-1 {
+        font-size: 38px;
+        line-height: 46px;
+        font-weight: 400;
+    }
+
+    .hero-caption .heading-3 {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 400;
     }
 }
 
