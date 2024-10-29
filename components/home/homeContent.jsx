@@ -81,7 +81,7 @@ export default function HomeContent() {
                         <p>Body Care</p>
                     </div>
                     <div class="carousel-item">
-                        <Image src="/images/Makeup.jpg" alt="Makeup" width={230} height={260} />
+                        <Image src="/images/makeup.jpg" alt="Makeup" width={230} height={260} />
                         <p>Makeup</p>
                     </div>
                 </div>
