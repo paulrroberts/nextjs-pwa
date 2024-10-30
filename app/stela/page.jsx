@@ -27,7 +27,7 @@ export default function Page() {
 
     return (
         <div>
-            <div className="header">
+            {/* <div className="header">
                 <div className="logo">
                     <img src="path-to-stela-logo.png" alt="Stela Logo" />
                     <span>Stela</span>
@@ -45,7 +45,7 @@ export default function Page() {
                         <span className="badge">7</span>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="offer-card">
                 <h1 className="offer-title">Let's Create a Product Offer</h1>
                 <div className="offer-icon">

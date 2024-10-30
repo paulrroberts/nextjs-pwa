@@ -25,13 +25,17 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
+import StorefrontIcon from '@mui/icons-material/Storefront'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
+import { useRouter } from 'next/navigation'
 
 const drawerWidth = 255
 
 export default function LayoutComponent({ children }) {
+    const router = useRouter()
     const [open, setOpen] = useState(false)
+    const [activeTab, setActiveTab] = useState(0)
     const { isMobile } = useUserAgent()
 
     const toggleDrawer = (newOpen) => () => {
@@ -43,8 +47,24 @@ export default function LayoutComponent({ children }) {
         BarChartIcon: <BarChartIcon />,
         PersonIcon: <PersonIcon />,
         ShoppingCartIcon: <ShoppingCartIcon />,
-        NotificationsActiveIcon: <NotificationsActiveIcon />
+        NotificationsActiveIcon: <NotificationsActiveIcon />,
+        StorefrontIcon: <StorefrontIcon />
     }
+
+    const titleToTabMap = new Map([
+        ['Home', 0],
+        ['Shop', 1],
+        ['Cart', 2]
+    ])
+
+    const tabsMap = new Map([
+        [0, '/nuskin'],
+        ['Home', '/nuskin'],
+        [1, '/category'],
+        ['Shop', '/nuskin/category'],
+        [2, '/nuskin/cart'],
+        ['Cart', '/nuskin/cart']
+    ])
 
     const drawerLinks = [
         {
@@ -53,9 +73,9 @@ export default function LayoutComponent({ children }) {
             href: '/nuskin'
         },
         {
-            title: 'Volumes',
-            icon: 'BarChartIcon',
-            href: '/nuskin/vgclient'
+            title: 'Shop',
+            icon: 'StorefrontIcon',
+            href: '/nuskin/category'
         },
         {
             title: 'Profile',
@@ -79,12 +99,33 @@ export default function LayoutComponent({ children }) {
             <List>
                 {drawerLinks.map((link, index) => (
                     <ListItem key={index} disablePadding>
-                        <ListItemButton component={Link} href={link.href}>
+                        <ListItemButton
+                            onClick={() => {
+                                if (tabsMap.get(link.title)) {
+                                    router.push(tabsMap.get(link.title))
+                                    setActiveTab(titleToTabMap.get(link.title))
+                                } else {
+                                    router.push(link.href)
+                                    setActiveTab(null)
+                                }
+                            }}
+                        >
                             <ListItemIcon>{iconMap[link.icon]}</ListItemIcon>
                             <ListItemText primary={link.title} />
                         </ListItemButton>
                     </ListItem>
                 ))}
+            </List>
+            <hr />
+            <List>
+                <ListItem>
+                    <ListItemButton component={Link} href="/stela">
+                        <ListItemIcon>
+                            <BarChartIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Stela (Volumes)" />
+                    </ListItemButton>
+                </ListItem>
             </List>
         </Box>
     )
@@ -104,9 +145,18 @@ export default function LayoutComponent({ children }) {
                                 {DrawerList}
                             </SwipeableDrawer>
                             <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
-                                <BottomNavigation showLabels>
+                                <BottomNavigation
+                                    showLabels
+                                    value={activeTab}
+                                    onChange={(event, newValue) => {
+                                        if (newValue !== 3) {
+                                            router.push(tabsMap.get(newValue))
+                                            setActiveTab(newValue)
+                                        }
+                                    }}
+                                >
                                     <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeIcon />} />
-                                    <BottomNavigationAction component={Link} href="/stela" label="Volumes" icon={<BarChartIcon />} />
+                                    <BottomNavigationAction component={Link} href="/nuskin/category" label="Shop" icon={<StorefrontIcon />} />
                                     <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartIcon />} />
                                     <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
                                 </BottomNavigation>

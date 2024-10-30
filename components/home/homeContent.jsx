@@ -10,7 +10,7 @@ export default function HomeContent() {
                 <div className="hero-caption">
                     <p className="heading-1">MYND360™</p>
                     <p className="heading-3">A holistic way to conquer a new day</p>
-                    <Link type="button" href="/category">
+                    <Link type="button" href="/nuskin/category">
                         Shop Now
                     </Link>
                 </div>

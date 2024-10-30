@@ -129,7 +129,7 @@ export default function VGLayoutComponent({ children }) {
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
                 <CardMedia sx={{ padding: '20px' }}>
                     <Link href="/">
-                        <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
+                        <Image src="/stela-login-logo.png" width={150} height={33} alt="Nu Skin Logo" />
                     </Link>
                 </CardMedia>
                 <Box sx={{ display: 'flex' }}>
