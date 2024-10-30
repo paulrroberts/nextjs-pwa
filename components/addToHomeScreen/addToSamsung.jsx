@@ -5,12 +5,13 @@ import { FaTimes, FaBars } from 'react-icons/fa'
 import { ImArrowDown } from 'react-icons/im'
 import { FiShare } from 'react-icons/fi'
 import { TfiPlus } from 'react-icons/tfi'
+import { Button } from '@mui/material'
 
 export default function AddToSamsung(props) {
     const { closePrompt, doNotShowAgain } = props
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 h-[80%] z-50 pb-12 px-4 text-white">
+        <div className="fixed bottom-0 left-0 right-0 h-[80%] z-50 pb-12 px-4 text-white" style={{ zIndex: 110, backgroundColor: '#fff' }}>
             <div className="relative bg-primary p-4 h-full rounded-xl flex flex-col justify-around items-center text-center">
                 <button className="absolute top-0 right-0 p-3" onClick={closePrompt}>
                     <FaTimes className="text-2xl" />
@@ -23,7 +24,10 @@ export default function AddToSamsung(props) {
                 </div>
                 <div className="flex flex-col gap-2 items-center text-lg w-full px-4">
                     <p>Scroll down and then click:</p>
-                    <div className="bg-white text-zinc-800 flex flex-col gap-2 items-center p-4 rounded-lg">
+                    <div
+                        className="bg-white text-zinc-800 flex flex-col gap-2 items-center p-4 rounded-lg"
+                        style={{ backgroundColor: '#ededed', border: '1px solid lightgrey' }}
+                    >
                         <TfiPlus className="text-2xl" />
                         <p>Add page to</p>
                     </div>
@@ -34,9 +38,9 @@ export default function AddToSamsung(props) {
                         <p>Home screen</p>
                     </div>
                 </div>
-                <button className="border-2 p-1" onClick={doNotShowAgain}>
+                <Button variant="outlined" onClick={doNotShowAgain}>
                     Don&apos;t show again
-                </button>
+                </Button>
                 <ImArrowDown className="text-4xl absolute -bottom-[50px] right-[-3px] text-indigo-700 z-10 animate-bounce" />
             </div>
         </div>

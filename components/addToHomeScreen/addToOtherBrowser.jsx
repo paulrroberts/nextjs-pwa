@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { Button } from '@mui/material'
 
 import { FaTimes } from 'react-icons/fa'
 
@@ -8,7 +9,10 @@ export default function AddToOtherBrowser(props) {
     const searchUrl = `https://www.google.com/search?q=add+to+home+screen+for+common-mobile-browsers`
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 h-[60%] z-50 pb-12 px-4 text-white flex flex-col items-center justify-around">
+        <div
+            className="fixed bottom-0 left-0 right-0 h-[60%] z-50 pb-12 px-4 text-white flex flex-col items-center justify-around"
+            style={{ zIndex: 110, backgroundColor: '#fff' }}
+        >
             <div className="relative bg-primary p-4 h-full rounded-xl flex flex-col justify-around items-center text-center">
                 <button className="absolute top-0 right-0 p-3" onClick={closePrompt}>
                     <FaTimes className="text-2xl" />
@@ -20,9 +24,9 @@ export default function AddToOtherBrowser(props) {
                         Try This Search
                     </Link>
                 </div>
-                <button className="border-2 p-1" onClick={doNotShowAgain}>
+                <Button variant="outlined" onClick={doNotShowAgain}>
                     Don&apos;t show again
-                </button>
+                </Button>
             </div>
         </div>
     )
