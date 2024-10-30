@@ -35,7 +35,7 @@ body {
     object-fit: cover;
 }
 
-.hero button {
+.hero a[type='button'] {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -127,6 +127,7 @@ body {
     font-size: 20px;
     line-height: 26px;
     font-weight: 400;
+    margin-bottom: 10px;
 }
 
 /* Responsive adjustments */

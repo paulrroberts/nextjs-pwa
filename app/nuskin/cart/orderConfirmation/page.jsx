@@ -21,7 +21,7 @@ export default function Page() {
                     <div className="order-placed-email-container my-lg-4 my-3 p-0 col">
                         <p className="order-placed-text font-weight-bold mb-2">Your order has been placed. You will receive an email confirmation shortly.</p>
                     </div>
-                    <Link href="/cart" className="mb-4 continue-shopping btn btn-primary">
+                    <Link href="/nuskin/cart" className="mb-4 continue-shopping btn btn-primary">
                         Continue Shopping
                     </Link>
                 </div>

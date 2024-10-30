@@ -67,7 +67,7 @@ export default function Page() {
                     <p>$109.00</p>
                 </div>
                 <p>Total SV: 67.45</p>
-                <Link type="button" href="/cart/checkout" className="checkout-btn">
+                <Link type="button" href="/nuskin/cart/checkout" className="checkout-btn">
                     Checkout
                 </Link>
                 <div className="payment-options">

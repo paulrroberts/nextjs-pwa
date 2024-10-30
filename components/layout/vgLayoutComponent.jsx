@@ -25,12 +25,14 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
+import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
 
 const drawerWidth = 255
 
-export default function LayoutComponent({ children }) {
+export default function VGLayoutComponent({ children }) {
     const [open, setOpen] = useState(false)
     const { isMobile } = useUserAgent()
 
@@ -50,27 +52,27 @@ export default function LayoutComponent({ children }) {
         {
             title: 'Home',
             icon: 'HomeIcon',
-            href: '/nuskin'
+            href: '/'
         },
         {
             title: 'Volumes',
             icon: 'BarChartIcon',
-            href: '/nuskin/vgclient'
+            href: '/vgclient'
         },
         {
             title: 'Profile',
             icon: 'PersonIcon',
-            href: '/nuskin/profile'
+            href: '/profile'
         },
         {
             title: 'Cart',
             icon: 'ShoppingCartIcon',
-            href: '/nuskin/cart'
+            href: '/cart'
         },
         {
             title: 'Notifications',
             icon: 'NotificationsActiveIcon',
-            href: '/nuskin/subscribe'
+            href: '/subscribe'
         }
     ]
 
@@ -105,10 +107,11 @@ export default function LayoutComponent({ children }) {
                             </SwipeableDrawer>
                             <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
                                 <BottomNavigation showLabels>
-                                    <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeIcon />} />
-                                    <BottomNavigationAction component={Link} href="/vgclient" label="Volumes" icon={<BarChartIcon />} />
-                                    <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartIcon />} />
-                                    <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
+                                    <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
+                                    <BottomNavigationAction component={Link} href="/vgclient" label="Products" icon={<BarChartIcon />} />
+                                    <BottomNavigationAction component={Link} href="/cart" label="Build" icon={<ShoppingCartIcon />} />
+                                    <BottomNavigationAction component={Link} href="/cart" label="Other" icon={<SellOutlinedIcon />} />
+                                    <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="More" icon={<MoreHorizIcon />} />
                                 </BottomNavigation>
                             </Paper>
                         </>

@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
             </head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <AddToHomeScreen />
-                <LayoutComponent>{children}</LayoutComponent>
+                {children}
             </body>
         </html>
     )

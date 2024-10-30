@@ -94,7 +94,7 @@ export default function Page() {
                     <label>
                         <input type="checkbox" /> Gift Receipt
                     </label>
-                    <Link type="button" href="/cart/orderConfirmation" className="submit-order">
+                    <Link type="button" href="/nuskin/cart/orderConfirmation" className="submit-order">
                         Submit Order
                     </Link>
                 </div>
