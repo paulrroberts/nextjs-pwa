@@ -46,7 +46,7 @@ export default function Page() {
         if (username === 'usdist' && password === 'abc123') {
             setCookie(LOGGED_IN, true, { expires: date })
             setCookie(ACCOUNT_TYPE, 'dist', { expires: date })
-            router.push('/vgclient')
+            router.push('/stela')
         } else if (username === 'uscust' && password === 'abc123') {
             setCookie(LOGGED_IN, true, { expires: date })
             setCookie(ACCOUNT_TYPE, 'cust', { expires: date })
