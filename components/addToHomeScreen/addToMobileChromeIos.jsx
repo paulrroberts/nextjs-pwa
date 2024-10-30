@@ -4,7 +4,7 @@ import { AiOutlinePlusSquare } from 'react-icons/ai'
 import { FaTimes } from 'react-icons/fa'
 import { ImArrowUp } from 'react-icons/im'
 import { TbShare2 } from 'react-icons/tb'
-import {Button} from '@mui/material'
+import { Button } from '@mui/material'
 
 export default function AddToMobileChromeIos(props) {
     const { closePrompt, doNotShowAgain } = props
