@@ -106,7 +106,7 @@ export default function LayoutComponent({ children }) {
                             <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
                                 <BottomNavigation showLabels>
                                     <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeIcon />} />
-                                    <BottomNavigationAction component={Link} href="/vgclient" label="Volumes" icon={<BarChartIcon />} />
+                                    <BottomNavigationAction component={Link} href="/stela" label="Volumes" icon={<BarChartIcon />} />
                                     <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartIcon />} />
                                     <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
                                 </BottomNavigation>

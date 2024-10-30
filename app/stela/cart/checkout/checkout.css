@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.checkout-sections {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.checkout-section {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+}
+
+.section-header span {
+    color: green;
+    padding-right: 10px;
+}
+
+.section-header button {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.section-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.order-side-panel {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.promo-code-section {
+    margin-bottom: 20px;
+}
+
+.promo-code-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo-code-input input {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.apply-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.my-promos .promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.my-promos button {
+    padding: 5px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.see-more {
+    background: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.order-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.order-summary h3 {
+    font-size: 16px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-details p {
+    font-size: 14px;
+}
+
+.submit-order {
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .checkout-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .checkout-sections {
+        width: 60%;
+        margin-right: 20px;
+    }
+
+    .order-side-panel {
+        width: 35%;
+    }
+
+    .promo-code-input input {
+        width: 60%;
+    }
+
+    .apply-btn {
+        width: 30%;
+    }
+}

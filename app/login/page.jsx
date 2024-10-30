@@ -9,6 +9,9 @@ import { FormControl, InputAdornment, InputLabel, OutlinedInput, IconButton, Tex
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
 
+const LOGGED_IN = 'loggedIn'
+const ACCOUNT_TYPE = 'accountType'
+
 export default function Page() {
     const router = useRouter()
     const [username, setUsername] = useState('')
@@ -37,13 +40,16 @@ export default function Page() {
     const handleLogin = (e) => {
         e.preventDefault()
         const date = new Date()
+        date.setDate(date.getDate() + 1)
 
         // Check credentials and redirect accordingly
         if (username === 'usdist' && password === 'abc123') {
-            setCookie
+            setCookie(LOGGED_IN, true, { expires: date })
+            setCookie(ACCOUNT_TYPE, 'dist', { expires: date })
             router.push('/vgclient')
         } else if (username === 'uscust' && password === 'abc123') {
-            console.log('cust user')
+            setCookie(LOGGED_IN, true, { expires: date })
+            setCookie(ACCOUNT_TYPE, 'cust', { expires: date })
             router.push('/nuskin')
         } else {
             console.log('show error')
@@ -92,7 +98,9 @@ export default function Page() {
                 </button>
             </form>
             {showError === true && (
-                <div className="error-message">Unknown login, only 'usdist' and 'uscust' are valid usernames. Also check your password.</div>
+                <div className="error-message">
+                    Unknown login, only 'usdist' and 'uscust' are valid usernames. If you are using a correct username, please check your password.
+                </div>
             )}
         </div>
     )

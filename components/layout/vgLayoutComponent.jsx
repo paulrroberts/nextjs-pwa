@@ -22,57 +22,74 @@ import Link from 'next/link'
 import HomeIcon from '@mui/icons-material/Home'
 import PersonIcon from '@mui/icons-material/Person'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
-import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
+import { useRouter } from 'next/navigation'
+import './vgLayout.css'
 
 const drawerWidth = 255
 
 export default function VGLayoutComponent({ children }) {
+    const router = useRouter()
     const [open, setOpen] = useState(false)
+    const [activeTab, setActiveTab] = useState(0)
     const { isMobile } = useUserAgent()
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen)
     }
 
+    const titleToTabMap = new Map([
+        ['Home', 0],
+        ['Products', 1],
+        ['Build', 2],
+        ['Other', 3]
+    ])
+
+    const tabsMap = new Map([
+        [0, '/stela'],
+        ['Home', '/stela'],
+        [1, '/stela/products'],
+        ['Products', '/stela/products'],
+        [2, '/stela/build'],
+        ['Build', '/stela/build'],
+        [3, '/stela/other'],
+        ['Other', '/stela/other']
+    ])
+
     const iconMap = {
         HomeIcon: <HomeIcon />,
         BarChartIcon: <BarChartIcon />,
         PersonIcon: <PersonIcon />,
         ShoppingCartIcon: <ShoppingCartIcon />,
-        NotificationsActiveIcon: <NotificationsActiveIcon />
+        NotificationsActiveIcon: <NotificationsActiveIcon />,
+        SellOutlinedIcon: <SellOutlinedIcon />
     }
 
     const drawerLinks = [
         {
             title: 'Home',
             icon: 'HomeIcon',
-            href: '/'
+            href: '/stela'
         },
         {
-            title: 'Volumes',
+            title: 'Products',
             icon: 'BarChartIcon',
-            href: '/vgclient'
+            href: '/stela/products'
         },
         {
-            title: 'Profile',
-            icon: 'PersonIcon',
-            href: '/profile'
-        },
-        {
-            title: 'Cart',
+            title: 'Build',
             icon: 'ShoppingCartIcon',
-            href: '/cart'
+            href: '/stela/build'
         },
         {
-            title: 'Notifications',
-            icon: 'NotificationsActiveIcon',
-            href: '/subscribe'
+            title: 'Other',
+            icon: 'SellOutlinedIcon',
+            href: '/stela/other'
         }
     ]
 
@@ -81,12 +98,28 @@ export default function VGLayoutComponent({ children }) {
             <List>
                 {drawerLinks.map((link, index) => (
                     <ListItem key={index} disablePadding>
-                        <ListItemButton component={Link} href={link.href}>
+                        <ListItemButton
+                            onClick={() => {
+                                router.push(tabsMap.get(link.title))
+                                setActiveTab(titleToTabMap.get(link.title))
+                            }}
+                        >
                             <ListItemIcon>{iconMap[link.icon]}</ListItemIcon>
                             <ListItemText primary={link.title} />
                         </ListItemButton>
                     </ListItem>
                 ))}
+            </List>
+            <hr />
+            <List>
+                <ListItem>
+                    <ListItemButton component={Link} href="/">
+                        <ListItemIcon>
+                            <HomeIcon />
+                        </ListItemIcon>
+                        <ListItemText>Nu Skin Home</ListItemText>
+                    </ListItemButton>
+                </ListItem>
             </List>
         </Box>
     )
@@ -106,11 +139,20 @@ export default function VGLayoutComponent({ children }) {
                                 {DrawerList}
                             </SwipeableDrawer>
                             <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
-                                <BottomNavigation showLabels>
-                                    <BottomNavigationAction component={Link} href="/" label="Home" icon={<HomeIcon />} />
-                                    <BottomNavigationAction component={Link} href="/vgclient" label="Products" icon={<BarChartIcon />} />
-                                    <BottomNavigationAction component={Link} href="/cart" label="Build" icon={<ShoppingCartIcon />} />
-                                    <BottomNavigationAction component={Link} href="/cart" label="Other" icon={<SellOutlinedIcon />} />
+                                <BottomNavigation
+                                    showLabels
+                                    value={activeTab}
+                                    onChange={(event, newValue) => {
+                                        if (newValue !== 4) {
+                                            router.push(tabsMap.get(newValue))
+                                            setActiveTab(newValue)
+                                        }
+                                    }}
+                                >
+                                    <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+                                    <BottomNavigationAction label="Products" icon={<BarChartIcon />} />
+                                    <BottomNavigationAction label="Build" icon={<ShoppingCartIcon />} />
+                                    <BottomNavigationAction label="Other" icon={<SellOutlinedIcon />} />
                                     <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="More" icon={<MoreHorizIcon />} />
                                 </BottomNavigation>
                             </Paper>
