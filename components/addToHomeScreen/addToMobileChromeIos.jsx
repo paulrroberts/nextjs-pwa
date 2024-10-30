@@ -4,6 +4,7 @@ import { AiOutlinePlusSquare } from 'react-icons/ai'
 import { FaTimes } from 'react-icons/fa'
 import { ImArrowUp } from 'react-icons/im'
 import { TbShare2 } from 'react-icons/tb'
+import {Button} from '@mui/material'
 
 export default function AddToMobileChromeIos(props) {
     const { closePrompt, doNotShowAgain } = props
@@ -23,7 +24,10 @@ export default function AddToMobileChromeIos(props) {
                 </div>
                 <div className="flex flex-col gap-2 items-center text-lg w-full px-4">
                     <p>Scroll down and then click:</p>
-                    <div className="bg-zinc-800 flex items-center justify-between w-full px-8 py-2 rounded-lg">
+                    <div
+                        className="bg-zinc-800 flex items-center justify-between w-full px-8 py-2 rounded-lg"
+                        style={{ backgroundColor: '#ededed', border: '1px solid lightgrey' }}
+                    >
                         <p>Add to Home Screen</p>
                         <AiOutlinePlusSquare className="text-2xl" />
                     </div>
