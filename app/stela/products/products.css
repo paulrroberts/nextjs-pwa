@@ -1,0 +1,41 @@
+.product-category {
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-category img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.5);
+}
+
+.product-category-text {
+    position: absolute;
+    bottom: 14px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-category-subtext {
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.category-wrapper {
+    margin-bottom: 40px;
+}
+
+.continue-arrow {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    fill: #ffffff;
+}

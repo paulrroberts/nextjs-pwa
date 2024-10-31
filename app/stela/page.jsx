@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+import LooksIcon from '@mui/icons-material/Looks'
 import './stela.css'
 
 export default function Page() {
@@ -18,7 +20,7 @@ export default function Page() {
                 </p>
                 <button className="lets-go-button">Let's Go!</button>
             </div>
-            <img src="path-to-promo-image.jpg" alt="Happy Couple" className="promo-image" />
+            <Image src="/images/happy-couple.webp" alt="Happy Couple" className="promo-image" width={1024} height={413} style={{ marginBottom: '20px' }} />
             <div className="stats-container">
                 <div className="stats-section volumes">
                     <div className="section-header">
@@ -99,7 +101,7 @@ export default function Page() {
 
                         <div className="program-item">
                             <div className="program-icon">
-                                <img src="path-to-rainbow-icon.png" alt="Program Icon" />
+                                <LooksIcon sx={{ fill: '#fff' }} />
                             </div>
                             <div className="program-info">
                                 <div className="program-title">Consumer Retention Program (US)</div>
