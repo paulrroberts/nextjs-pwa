@@ -66,7 +66,11 @@ export default function LayoutComponent({ children }) {
 
     useEffect(() => {
         checkLogin()
-    }, [setIsLoggedIn, isLoggedIn])
+
+        if (accountType === 'dist') {
+            router.push('/stela')
+        }
+    }, [setIsLoggedIn, isLoggedIn, accountType, router])
 
     const logOut = () => {
         deleteCookie(LOGGED_IN)
