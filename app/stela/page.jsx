@@ -1,51 +1,10 @@
 'use client'
 
-import Image from 'next/image'
-import { setCookie, getCookie } from 'cookies-next'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import './stela.css'
 
-const LOGGED_IN = 'loggedIn'
-const ACCOUNT_TYPE = 'accountType'
-
 export default function Page() {
-    const router = useRouter()
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const [accountType, setAccountType] = useState('')
-
-    useEffect(() => {
-        const loggedIn = getCookie(LOGGED_IN)
-        const accntType = getCookie(ACCOUNT_TYPE)
-        setIsLoggedIn(loggedIn)
-        setAccountType(accntType)
-
-        if (!loggedIn || (loggedIn && accntType === 'cust')) {
-            router.push('/login')
-        }
-    })
-
     return (
         <div>
-            {/* <div className="header">
-                <div className="logo">
-                    <img src="path-to-stela-logo.png" alt="Stela Logo" />
-                    <span>Stela</span>
-                </div>
-                <div className="header-right">
-                    <div className="notification">
-                        <img src="path-to-profile-pic.png" alt="Profile" style={{ width: '30px', height: '30px', borderRadius: '50%' }} />
-                    </div>
-                    <div className="notification">
-                        <img src="path-to-message-icon.png" alt="Messages" style={{ width: '30px' }} />
-                        <span className="badge">6</span>
-                    </div>
-                    <div className="notification">
-                        <img src="path-to-cart-icon.png" alt="Cart" style={{ width: '30px' }} />
-                        <span className="badge">7</span>
-                    </div>
-                </div>
-            </div> */}
             <div className="offer-card">
                 <h1 className="offer-title">Let's Create a Product Offer</h1>
                 <div className="offer-icon">

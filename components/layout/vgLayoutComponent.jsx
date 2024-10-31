@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Card,
     CardContent,
@@ -16,9 +16,12 @@ import {
     ListItemText,
     Paper,
     CardMedia,
-    SwipeableDrawer
+    SwipeableDrawer,
+    Snackbar,
+    Alert
 } from '@mui/material'
 import Link from 'next/link'
+import { deleteCookie, getCookie } from 'cookies-next'
 import HomeIcon from '@mui/icons-material/Home'
 import PersonIcon from '@mui/icons-material/Person'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
@@ -26,21 +29,66 @@ import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
+import LogoutIcon from '@mui/icons-material/Logout'
+import LoginIcon from '@mui/icons-material/Login'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
 import { useRouter } from 'next/navigation'
 import './vgLayout.css'
+import Login from '../../components/login/login'
 
 const drawerWidth = 255
+const LOGGED_IN = 'loggedIn'
+const ACCOUNT_TYPE = 'accountType'
+const LOGOUT_MESSAGE = 'User successfully logged out'
+const LOGIN_MESSAGE = 'User successfully logged in'
 
 export default function VGLayoutComponent({ children }) {
     const router = useRouter()
     const [open, setOpen] = useState(false)
     const [activeTab, setActiveTab] = useState(0)
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [showLogin, setShowLogin] = useState(false)
+    const [showSnackbar, setShowSnackbar] = useState(false)
+    const [loginOutMessage, setLoginOutMessage] = useState(LOGIN_MESSAGE)
+    const [accountType, setAccountType] = useState('')
     const { isMobile } = useUserAgent()
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen)
+    }
+
+    const checkLogin = () => {
+        const loggedIn = getCookie(LOGGED_IN)
+        setIsLoggedIn(loggedIn)
+    }
+
+    useEffect(() => {
+        const loggedIn = getCookie(LOGGED_IN)
+        const accntType = getCookie(ACCOUNT_TYPE)
+        setIsLoggedIn(loggedIn)
+        setAccountType(accntType)
+
+        if (!loggedIn || (loggedIn && accntType === 'cust')) {
+            // router.push('/login')
+            setShowLogin(true)
+        }
+    }, [setIsLoggedIn, isLoggedIn, setAccountType, setShowLogin])
+
+    const logOut = () => {
+        deleteCookie(LOGGED_IN)
+        deleteCookie(ACCOUNT_TYPE)
+        // checkLogin()
+        // setLoginOutMessage(LOGOUT_MESSAGE)
+        // setShowSnackbar(true)
+        router.push('/nuskin')
+    }
+
+    const handleLogin = () => {
+        setShowLogin(false)
+        checkLogin()
+        setLoginOutMessage(LOGIN_MESSAGE)
+        setShowSnackbar(true)
     }
 
     const titleToTabMap = new Map([
@@ -113,13 +161,32 @@ export default function VGLayoutComponent({ children }) {
             <hr />
             <List>
                 <ListItem>
-                    <ListItemButton component={Link} href="/">
+                    <ListItemButton component={Link} href="/nuskin">
                         <ListItemIcon>
                             <HomeIcon />
                         </ListItemIcon>
                         <ListItemText>Nu Skin Home</ListItemText>
                     </ListItemButton>
                 </ListItem>
+                {isLoggedIn ? (
+                    <ListItem>
+                        <ListItemButton onClick={logOut}>
+                            <ListItemIcon>
+                                <LogoutIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Log Out" />
+                        </ListItemButton>
+                    </ListItem>
+                ) : (
+                    <ListItem>
+                        <ListItemButton onClick={() => setShowLogin(true)}>
+                            <ListItemIcon>
+                                <LoginIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Log In" />
+                        </ListItemButton>
+                    </ListItem>
+                )}
             </List>
         </Box>
     )
@@ -132,6 +199,7 @@ export default function VGLayoutComponent({ children }) {
                         <Image src="/stela-login-logo.png" width={150} height={33} alt="Nu Skin Logo" />
                     </Link>
                 </CardMedia>
+                {showLogin && <Login callback={handleLogin} />}
                 <Box sx={{ display: 'flex' }}>
                     {isMobile ? (
                         <>
@@ -175,6 +243,14 @@ export default function VGLayoutComponent({ children }) {
                     <CardContent sx={{ flexGrow: 1 }}>{children}</CardContent>
                 </Box>
             </Card>
+            <Snackbar
+                open={showSnackbar}
+                autoHideDuration={6000}
+                onClose={() => setShowSnackbar(false)}
+                anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            >
+                <Alert>{loginOutMessage}</Alert>
+            </Snackbar>
         </Box>
     )
 }

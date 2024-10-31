@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Card,
     CardContent,
@@ -16,9 +16,12 @@ import {
     ListItemText,
     Paper,
     CardMedia,
-    SwipeableDrawer
+    SwipeableDrawer,
+    Snackbar,
+    Alert
 } from '@mui/material'
 import Link from 'next/link'
+import { deleteCookie, getCookie } from 'cookies-next'
 import HomeIcon from '@mui/icons-material/Home'
 import PersonIcon from '@mui/icons-material/Person'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
@@ -26,20 +29,58 @@ import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 import StorefrontIcon from '@mui/icons-material/Storefront'
+import LogoutIcon from '@mui/icons-material/Logout'
+import LoginIcon from '@mui/icons-material/Login'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
 import { useRouter } from 'next/navigation'
+import Login from '../../components/login/login'
 
 const drawerWidth = 255
+const LOGGED_IN = 'loggedIn'
+const ACCOUNT_TYPE = 'accountType'
+const LOGOUT_MESSAGE = 'User successfully logged out'
+const LOGIN_MESSAGE = 'User successfully logged in'
 
 export default function LayoutComponent({ children }) {
     const router = useRouter()
     const [open, setOpen] = useState(false)
     const [activeTab, setActiveTab] = useState(0)
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [accountType, setAccountType] = useState('')
+    const [showLogin, setShowLogin] = useState(false)
+    const [showSnackbar, setShowSnackbar] = useState(false)
+    const [loginOutMessage, setLoginOutMessage] = useState(LOGIN_MESSAGE)
     const { isMobile } = useUserAgent()
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen)
+    }
+
+    const checkLogin = () => {
+        const loggedIn = getCookie(LOGGED_IN)
+        setIsLoggedIn(loggedIn)
+        const accntType = getCookie(ACCOUNT_TYPE)
+        setAccountType(accntType)
+    }
+
+    useEffect(() => {
+        checkLogin()
+    }, [setIsLoggedIn, isLoggedIn])
+
+    const logOut = () => {
+        deleteCookie(LOGGED_IN)
+        deleteCookie(ACCOUNT_TYPE)
+        checkLogin()
+        setLoginOutMessage(LOGOUT_MESSAGE)
+        setShowSnackbar(true)
+    }
+
+    const handleLogin = () => {
+        setShowLogin(false)
+        checkLogin()
+        setLoginOutMessage(LOGIN_MESSAGE)
+        setShowSnackbar(true)
     }
 
     const iconMap = {
@@ -118,14 +159,35 @@ export default function LayoutComponent({ children }) {
             </List>
             <hr />
             <List>
-                <ListItem>
-                    <ListItemButton component={Link} href="/stela">
-                        <ListItemIcon>
-                            <BarChartIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Stela (Volumes)" />
-                    </ListItemButton>
-                </ListItem>
+                {isLoggedIn && accountType === 'dist' && (
+                    <ListItem>
+                        <ListItemButton component={Link} href="/stela">
+                            <ListItemIcon>
+                                <BarChartIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Stela (Volumes)" />
+                        </ListItemButton>
+                    </ListItem>
+                )}
+                {isLoggedIn ? (
+                    <ListItem>
+                        <ListItemButton onClick={logOut}>
+                            <ListItemIcon>
+                                <LogoutIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Log Out" />
+                        </ListItemButton>
+                    </ListItem>
+                ) : (
+                    <ListItem>
+                        <ListItemButton onClick={() => setShowLogin(true)}>
+                            <ListItemIcon>
+                                <LoginIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Log In" />
+                        </ListItemButton>
+                    </ListItem>
+                )}
             </List>
         </Box>
     )
@@ -138,6 +200,7 @@ export default function LayoutComponent({ children }) {
                         <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
                     </Link>
                 </CardMedia>
+                {showLogin && <Login callback={handleLogin} />}
                 <Box sx={{ display: 'flex' }}>
                     {isMobile ? (
                         <>
@@ -180,6 +243,14 @@ export default function LayoutComponent({ children }) {
                     <CardContent sx={{ flexGrow: 1 }}>{children}</CardContent>
                 </Box>
             </Card>
+            <Snackbar
+                open={showSnackbar}
+                autoHideDuration={6000}
+                onClose={() => setShowSnackbar(false)}
+                anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            >
+                <Alert>{loginOutMessage}</Alert>
+            </Snackbar>
         </Box>
     )
 }
