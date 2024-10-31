@@ -160,14 +160,14 @@ export default function VGLayoutComponent({ children }) {
             </List>
             <hr />
             <List>
-                <ListItem>
+                {/* <ListItem>
                     <ListItemButton component={Link} href="/nuskin">
                         <ListItemIcon>
                             <HomeIcon />
                         </ListItemIcon>
                         <ListItemText>Nu Skin Home</ListItemText>
                     </ListItemButton>
-                </ListItem>
+                </ListItem> */}
                 {isLoggedIn ? (
                     <ListItem>
                         <ListItemButton onClick={logOut}>
