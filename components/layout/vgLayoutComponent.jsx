@@ -208,6 +208,7 @@ export default function VGLayoutComponent({ children }) {
                             </SwipeableDrawer>
                             <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
                                 <BottomNavigation
+                                    className="bottom-nav"
                                     showLabels
                                     value={activeTab}
                                     onChange={(event, newValue) => {
