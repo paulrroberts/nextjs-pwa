@@ -1,3 +1,6 @@
-.css-1scjuq2-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
+.css-1scjuq2-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected,
+.css-1scjuq2-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected svg,
+.css-1scjuq2-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected span {
     color: #ff6b6b;
+    fill: #ff6b6b;
 }
