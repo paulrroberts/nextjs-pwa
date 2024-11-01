@@ -3,6 +3,7 @@ import { FormControl, InputLabel, Input, InputAdornment, TextField } from '@mui/
 import SearchIcon from '@mui/icons-material/Search'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import './products.css'
+import Link from 'next/link'
 
 export default function Page() {
     return (
@@ -29,35 +30,45 @@ export default function Page() {
             </div>
 
             <div className="product-category">
-                <Image src="/images/beauty-devices.png" alt="Beauty Devices" width={424} height={140} />
+                <Link href="/stela/products/beauty-devices">
+                    <Image src="/images/beauty-devices.png" alt="Beauty Devices" width={424} height={140} />
+                </Link>
                 <div className="product-category-text">Beauty Devices</div>
                 <div className="product-category-subtext">Products</div>
                 <ArrowForwardIosIcon className="continue-arrow" />
             </div>
 
             <div className="product-category">
-                <Image src="/images/skinandbeauty.png" alt="Skin & Beauty" width={424} height={140} />
+                <Link href="/stela/products/skin-beauty">
+                    <Image src="/images/skinandbeauty.png" alt="Skin & Beauty" width={424} height={140} />
+                </Link>
                 <div className="product-category-text">Skin & Beauty</div>
                 <div className="product-category-subtext">Products</div>
                 <ArrowForwardIosIcon className="continue-arrow" />
             </div>
 
             <div className="product-category">
-                <Image src="/images/nutrition.png" alt="Nutrition" width={424} height={140} />
+                <Link href="/stela/products/nutrition">
+                    <Image src="/images/nutrition.png" alt="Nutrition" width={424} height={140} />
+                </Link>
                 <div className="product-category-text">Nutrition</div>
                 <div className="product-category-subtext">Products</div>
                 <ArrowForwardIosIcon className="continue-arrow" />
             </div>
 
             <div className="product-category">
-                <Image src="/images/product-lines.png" alt="Product Lines" width={424} height={140} />
+                <Link href="/stela/products/product-lines">
+                    <Image src="/images/product-lines.png" alt="Product Lines" width={424} height={140} />
+                </Link>
                 <div className="product-category-text">Product Lines</div>
                 <div className="product-category-subtext">Products</div>
                 <ArrowForwardIosIcon className="continue-arrow" />
             </div>
 
             <div className="product-category">
-                <Image src="/images/most-popular.png" alt="Product Lines" width={424} height={140} />
+                <Link href="/stela/products/most-popular">
+                    <Image src="/images/most-popular.png" alt="Product Lines" width={424} height={140} />
+                </Link>
                 <div className="product-category-text">Most Popular</div>
                 <div className="product-category-subtext">Products</div>
                 <ArrowForwardIosIcon className="continue-arrow" />
