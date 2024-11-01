@@ -22,9 +22,9 @@ import {
 } from '@mui/material'
 import Link from 'next/link'
 import { deleteCookie, getCookie } from 'cookies-next'
-import HomeIcon from '@mui/icons-material/Home'
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import PersonIcon from '@mui/icons-material/Person'
-import BarChartIcon from '@mui/icons-material/BarChart'
+import SanitizerOutlinedIcon from '@mui/icons-material/SanitizerOutlined'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
@@ -110,8 +110,8 @@ export default function VGLayoutComponent({ children }) {
     ])
 
     const iconMap = {
-        HomeIcon: <HomeIcon />,
-        BarChartIcon: <BarChartIcon />,
+        HomeIcon: <HomeOutlinedIcon />,
+        BarChartIcon: <SanitizerOutlinedIcon />,
         PersonIcon: <PersonIcon />,
         CachedIcon: <CachedIcon />,
         NotificationsActiveIcon: <NotificationsActiveIcon />,
@@ -160,14 +160,6 @@ export default function VGLayoutComponent({ children }) {
             </List>
             <hr />
             <List>
-                {/* <ListItem>
-                    <ListItemButton component={Link} href="/nuskin">
-                        <ListItemIcon>
-                            <HomeIcon />
-                        </ListItemIcon>
-                        <ListItemText>Nu Skin Home</ListItemText>
-                    </ListItemButton>
-                </ListItem> */}
                 {isLoggedIn ? (
                     <ListItem>
                         <ListItemButton onClick={logOut}>
@@ -218,8 +210,8 @@ export default function VGLayoutComponent({ children }) {
                                         }
                                     }}
                                 >
-                                    <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-                                    <BottomNavigationAction label="Products" icon={<BarChartIcon />} />
+                                    <BottomNavigationAction label="Home" icon={<HomeOutlinedIcon />} />
+                                    <BottomNavigationAction label="Products" icon={<SanitizerOutlinedIcon />} />
                                     <BottomNavigationAction label="Build" icon={<CachedIcon />} />
                                     <BottomNavigationAction label="Other" icon={<SellOutlinedIcon />} />
                                     <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="More" icon={<MoreVertIcon />} />
