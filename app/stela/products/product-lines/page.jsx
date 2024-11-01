@@ -34,7 +34,7 @@ export default function Page() {
                 </div>
 
                 <div class="product-card">
-                    <Image src="/products/ageLoc.png" class="product-image" alt="LumiSpa Rose Bundle" width={400} height={400} />
+                    <Image src="/products/ageloc.png" class="product-image" alt="LumiSpa Rose Bundle" width={400} height={400} />
                     <div class="product-title">ageLOC</div>
                 </div>
 
