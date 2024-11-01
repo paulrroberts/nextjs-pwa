@@ -24,13 +24,13 @@ import Link from 'next/link'
 import { deleteCookie, getCookie } from 'cookies-next'
 import HomeIcon from '@mui/icons-material/Home'
 import PersonIcon from '@mui/icons-material/Person'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
+import MoreVertIcon from '@mui/icons-material/MoreVert'
 import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
 import LogoutIcon from '@mui/icons-material/Logout'
 import LoginIcon from '@mui/icons-material/Login'
+import CachedIcon from '@mui/icons-material/Cached'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
 import { useRouter } from 'next/navigation'
@@ -113,7 +113,7 @@ export default function VGLayoutComponent({ children }) {
         HomeIcon: <HomeIcon />,
         BarChartIcon: <BarChartIcon />,
         PersonIcon: <PersonIcon />,
-        ShoppingCartIcon: <ShoppingCartIcon />,
+        CachedIcon: <CachedIcon />,
         NotificationsActiveIcon: <NotificationsActiveIcon />,
         SellOutlinedIcon: <SellOutlinedIcon />
     }
@@ -131,7 +131,7 @@ export default function VGLayoutComponent({ children }) {
         },
         {
             title: 'Build',
-            icon: 'ShoppingCartIcon',
+            icon: 'CachedIcon',
             href: '/stela/build'
         },
         {
@@ -220,9 +220,9 @@ export default function VGLayoutComponent({ children }) {
                                 >
                                     <BottomNavigationAction label="Home" icon={<HomeIcon />} />
                                     <BottomNavigationAction label="Products" icon={<BarChartIcon />} />
-                                    <BottomNavigationAction label="Build" icon={<ShoppingCartIcon />} />
+                                    <BottomNavigationAction label="Build" icon={<CachedIcon />} />
                                     <BottomNavigationAction label="Other" icon={<SellOutlinedIcon />} />
-                                    <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="More" icon={<MoreHorizIcon />} />
+                                    <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="More" icon={<MoreVertIcon />} />
                                 </BottomNavigation>
                             </Paper>
                         </>
