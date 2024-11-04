@@ -74,7 +74,7 @@ export default function Page() {
                         variant="outlined"
                         required
                         sx={{ width: '100%' }}
-                        slotProps={{ input: { autoCapitalize: 'none' } }}
+                        slotProps={{ htmlInput: { autoCapitalize: 'none' } }}
                     />
                 </div>
                 <div className="form-group">
@@ -84,6 +84,7 @@ export default function Page() {
                             id="outlined-adornment-password"
                             type={showPassword ? 'text' : 'password'}
                             onChange={handlePasswordChange}
+                            slotProps={{ htmlInput: { autoCapitalize: 'none' } }}
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton
@@ -98,7 +99,6 @@ export default function Page() {
                                 </InputAdornment>
                             }
                             label="Password"
-                            slotProps={{ input: { autoCapitalize: 'none' } }}
                         />
                     </FormControl>
                 </div>
