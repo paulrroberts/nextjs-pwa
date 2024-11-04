@@ -67,7 +67,15 @@ export default function Page() {
 
             <form onSubmit={handleLogin}>
                 <div className="form-group">
-                    <TextField id="username" onChange={handleUserNameChange} label="Username" variant="outlined" required sx={{ width: '100%' }} />
+                    <TextField
+                        id="username"
+                        onChange={handleUserNameChange}
+                        label="Username"
+                        variant="outlined"
+                        required
+                        sx={{ width: '100%' }}
+                        autoCapitalize="false"
+                    />
                 </div>
                 <div className="form-group">
                     <FormControl sx={{ width: '100%' }} variant="outlined">
@@ -90,6 +98,7 @@ export default function Page() {
                                 </InputAdornment>
                             }
                             label="Password"
+                            autoCapitalize="false"
                         />
                     </FormControl>
                 </div>
