@@ -21,17 +21,14 @@ body {
 }
 
 .MuiCardContent-root {
-  padding: 20px 0;
+  padding: 20px 0 !important;
+  max-width: calc(100% - 255px);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-.MuiCardContent-root {
-  max-width: calc(100% - 255px);
 }
 
 @media (max-width: 768px) {
