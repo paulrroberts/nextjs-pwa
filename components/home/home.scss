@@ -12,10 +12,14 @@ body {
 
 /* Container for sections */
 .container {
-    /* width: 90%; */
     max-width: 1200px;
     margin: 0 auto 40px;
-    /* padding: 20px; */
+    
+    &.home {
+        section {
+            padding: 0 10px;
+        }
+    }
 }
 
 /* Hero Section */
@@ -64,7 +68,6 @@ body {
     flex: 0 0 200px;
     background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 8px;
     text-align: center;
 }
 

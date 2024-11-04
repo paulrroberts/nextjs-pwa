@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import LooksIcon from '@mui/icons-material/Looks'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
-import './vg.css'
+import './vg.scss'
 
 export default function VGHome() {
     return (

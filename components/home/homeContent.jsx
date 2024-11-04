@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import './home.css'
+import './home.scss'
 import Link from 'next/link'
 
 export default function HomeContent() {
     return (
-        <div className="container">
+        <div className="container home">
             <section className="hero">
                 <Image src="/images/hero-image.webp" alt="Hero Banner" width={800} height={467} />
                 <div className="hero-caption">
