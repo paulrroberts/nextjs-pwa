@@ -208,7 +208,12 @@ export default function LayoutComponent({ children }) {
                                     showLabels
                                     value={activeTab}
                                     onChange={(event, newValue) => {
-                                        if (newValue !== 3) {
+                                        let max = 3
+                                        if (accountType === dist) {
+                                            max = 4
+                                        }
+
+                                        if (newValue !== max) {
                                             router.push(tabsMap.get(newValue))
                                             setActiveTab(newValue)
                                         }
