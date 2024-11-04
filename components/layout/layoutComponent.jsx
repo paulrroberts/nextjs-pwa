@@ -209,7 +209,7 @@ export default function LayoutComponent({ children }) {
                                     value={activeTab}
                                     onChange={(event, newValue) => {
                                         let max = 3
-                                        if (accountType === dist) {
+                                        if (accountType === 'dist') {
                                             max = 4
                                         }
 
