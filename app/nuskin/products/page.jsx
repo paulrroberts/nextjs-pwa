@@ -30,7 +30,7 @@ export default function Page() {
             </div>
 
             <div className="product-category">
-                <Link href="/stela/products/beauty-devices">
+                <Link href="/nuskin/products/beauty-devices">
                     <Image src="/images/beauty-devices.png" alt="Beauty Devices" width={424} height={140} />
                 </Link>
                 <div className="product-category-text">Beauty Devices</div>
@@ -39,7 +39,7 @@ export default function Page() {
             </div>
 
             <div className="product-category">
-                <Link href="/stela/products/skin-beauty">
+                <Link href="/nuskin/products/skin-beauty">
                     <Image src="/images/skinandbeauty.png" alt="Skin & Beauty" width={424} height={140} />
                 </Link>
                 <div className="product-category-text">Skin & Beauty</div>
@@ -48,7 +48,7 @@ export default function Page() {
             </div>
 
             <div className="product-category">
-                <Link href="/stela/products/nutrition">
+                <Link href="/nuskin/products/nutrition">
                     <Image src="/images/nutrition.png" alt="Nutrition" width={424} height={140} />
                 </Link>
                 <div className="product-category-text">Nutrition</div>
@@ -57,7 +57,7 @@ export default function Page() {
             </div>
 
             <div className="product-category">
-                <Link href="/stela/products/product-lines">
+                <Link href="/nuskin/products/product-lines">
                     <Image src="/images/product-lines.png" alt="Product Lines" width={424} height={140} />
                 </Link>
                 <div className="product-category-text">Product Lines</div>
@@ -66,7 +66,7 @@ export default function Page() {
             </div>
 
             <div className="product-category">
-                <Link href="/stela/products/most-popular">
+                <Link href="/nuskin/products/most-popular">
                     <Image src="/images/most-popular.png" alt="Product Lines" width={424} height={140} />
                 </Link>
                 <div className="product-category-text">Most Popular</div>

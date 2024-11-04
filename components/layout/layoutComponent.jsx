@@ -22,19 +22,19 @@ import {
 } from '@mui/material'
 import Link from 'next/link'
 import { deleteCookie, getCookie } from 'cookies-next'
-import HomeIcon from '@mui/icons-material/Home'
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import PersonIcon from '@mui/icons-material/Person'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
 import StorefrontIcon from '@mui/icons-material/Storefront'
 import LogoutIcon from '@mui/icons-material/Logout'
 import LoginIcon from '@mui/icons-material/Login'
+import CachedIcon from '@mui/icons-material/Cached'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
 import { useRouter } from 'next/navigation'
-import Login from '../../components/login/login'
 
 const drawerWidth = 255
 const LOGGED_IN = 'loggedIn'
@@ -66,10 +66,6 @@ export default function LayoutComponent({ children }) {
 
     useEffect(() => {
         checkLogin()
-
-        if (accountType === 'dist') {
-            router.push('/stela')
-        }
     }, [setIsLoggedIn, isLoggedIn, accountType, router])
 
     const logOut = () => {
@@ -78,20 +74,14 @@ export default function LayoutComponent({ children }) {
         checkLogin()
         setLoginOutMessage(LOGOUT_MESSAGE)
         setShowSnackbar(true)
-    }
-
-    const handleLogin = () => {
-        setShowLogin(false)
-        checkLogin()
-        setLoginOutMessage(LOGIN_MESSAGE)
-        setShowSnackbar(true)
+        router.push('/')
     }
 
     const iconMap = {
-        HomeIcon: <HomeIcon />,
+        HomeOutlinedIcon: <HomeOutlinedIcon />,
         BarChartIcon: <BarChartIcon />,
         PersonIcon: <PersonIcon />,
-        ShoppingCartIcon: <ShoppingCartIcon />,
+        ShoppingCartOutlinedIcon: <ShoppingCartOutlinedIcon />,
         NotificationsActiveIcon: <NotificationsActiveIcon />,
         StorefrontIcon: <StorefrontIcon />
     }
@@ -164,14 +154,16 @@ export default function LayoutComponent({ children }) {
             <hr />
             <List>
                 {isLoggedIn && accountType === 'dist' && (
-                    <ListItem>
-                        <ListItemButton component={Link} href="/stela">
-                            <ListItemIcon>
-                                <BarChartIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Stela (Volumes)" />
-                        </ListItemButton>
-                    </ListItem>
+                    <>
+                        <ListItem>
+                            <ListItemButton component={Link} href="/nuskin/build">
+                                <ListItemIcon>
+                                    <CachedIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Build" />
+                            </ListItemButton>
+                        </ListItem>
+                    </>
                 )}
                 {isLoggedIn ? (
                     <ListItem>
@@ -184,7 +176,7 @@ export default function LayoutComponent({ children }) {
                     </ListItem>
                 ) : (
                     <ListItem>
-                        <ListItemButton onClick={() => setShowLogin(true)}>
+                        <ListItemButton component={Link} href="/login">
                             <ListItemIcon>
                                 <LoginIcon />
                             </ListItemIcon>
@@ -204,7 +196,7 @@ export default function LayoutComponent({ children }) {
                         <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
                     </Link>
                 </CardMedia>
-                {showLogin && <Login callback={handleLogin} />}
+                {/* {showLogin && <Login callback={handleLogin} />} */}
                 <Box sx={{ display: 'flex' }}>
                     {isMobile ? (
                         <>
@@ -222,9 +214,12 @@ export default function LayoutComponent({ children }) {
                                         }
                                     }}
                                 >
-                                    <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeIcon />} />
-                                    <BottomNavigationAction component={Link} href="/nuskin/category" label="Shop" icon={<StorefrontIcon />} />
-                                    <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartIcon />} />
+                                    <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeOutlinedIcon />} />
+                                    <BottomNavigationAction component={Link} href="/nuskin/products" label="Shop" icon={<StorefrontIcon />} />
+                                    {accountType === 'dist' && (
+                                        <BottomNavigationAction component={Link} href="/nuskin/build" label="Build" icon={<CachedIcon />} />
+                                    )}
+                                    <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartOutlinedIcon />} />
                                     <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
                                 </BottomNavigation>
                             </Paper>

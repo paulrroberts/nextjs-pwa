@@ -101,8 +101,8 @@ export default function VGLayoutComponent({ children }) {
     const tabsMap = new Map([
         [0, '/stela'],
         ['Home', '/stela'],
-        [1, '/stela/products'],
-        ['Products', '/stela/products'],
+        [1, '/nuskin/products'],
+        ['Products', '/nuskin/products'],
         [2, '/stela/build'],
         ['Build', '/stela/build'],
         [3, '/stela/other'],
