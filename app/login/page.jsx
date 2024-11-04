@@ -74,7 +74,7 @@ export default function Page() {
                         variant="outlined"
                         required
                         sx={{ width: '100%' }}
-                        autoCapitalize={false}
+                        slotProps={{ input: { autoCapitalize: 'none' } }}
                     />
                 </div>
                 <div className="form-group">
@@ -98,7 +98,7 @@ export default function Page() {
                                 </InputAdornment>
                             }
                             label="Password"
-                            autoCapitalize={false}
+                            slotProps={{ input: { autoCapitalize: 'none' } }}
                         />
                     </FormControl>
                 </div>
