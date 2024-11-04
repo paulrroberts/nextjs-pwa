@@ -23,11 +23,11 @@ import {
 import Link from 'next/link'
 import { deleteCookie, getCookie } from 'cookies-next'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
-import PersonIcon from '@mui/icons-material/Person'
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import MenuIcon from '@mui/icons-material/Menu'
 import BarChartIcon from '@mui/icons-material/BarChart'
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive'
+import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined'
 import StorefrontIcon from '@mui/icons-material/Storefront'
 import LogoutIcon from '@mui/icons-material/Logout'
 import LoginIcon from '@mui/icons-material/Login'
@@ -80,9 +80,9 @@ export default function LayoutComponent({ children }) {
     const iconMap = {
         HomeOutlinedIcon: <HomeOutlinedIcon />,
         BarChartIcon: <BarChartIcon />,
-        PersonIcon: <PersonIcon />,
+        PersonOutlineOutlinedIcon: <PersonOutlineOutlinedIcon />,
         ShoppingCartOutlinedIcon: <ShoppingCartOutlinedIcon />,
-        NotificationsActiveIcon: <NotificationsActiveIcon />,
+        NotificationsActiveOutlinedIcon: <NotificationsActiveOutlinedIcon />,
         StorefrontIcon: <StorefrontIcon />
     }
 
@@ -104,7 +104,7 @@ export default function LayoutComponent({ children }) {
     const drawerLinks = [
         {
             title: 'Home',
-            icon: 'HomeIcon',
+            icon: 'HomeOutlinedIcon',
             href: '/nuskin'
         },
         {
@@ -114,17 +114,17 @@ export default function LayoutComponent({ children }) {
         },
         {
             title: 'Profile',
-            icon: 'PersonIcon',
+            icon: 'PersonOutlineOutlinedIcon',
             href: '/nuskin/profile'
         },
         {
             title: 'Cart',
-            icon: 'ShoppingCartIcon',
+            icon: 'ShoppingCartOutlinedIcon',
             href: '/nuskin/cart'
         },
         {
             title: 'Notifications',
-            icon: 'NotificationsActiveIcon',
+            icon: 'NotificationsActiveOutlinedIcon',
             href: '/nuskin/subscribe'
         }
     ]
