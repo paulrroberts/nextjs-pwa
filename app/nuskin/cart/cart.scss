@@ -37,6 +37,11 @@ body {
   flex-direction: column;
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
+  align-content: flex-end;
+
+  // @media (min-width: 767px) {
+  //   flex-direction: column;
+  // }
 }
 
 .cart-item img {
@@ -47,6 +52,7 @@ body {
 
 .product-details {
   flex-grow: 1;
+  display: flex;
 }
 
 .product-details h3 {
@@ -56,6 +62,10 @@ body {
 
 .product-details p {
   font-size: 14px;
+}
+
+.price-details {
+  text-align: right;
 }
 
 .quantity {

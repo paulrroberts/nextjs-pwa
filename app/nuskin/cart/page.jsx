@@ -12,20 +12,24 @@ export default function Page() {
 
                 <div className="cart-items">
                     <div className="cart-item">
-                        <Image src="/products/bodybar.png" alt="Body Bar" className="product-image" width={100} height={100} />
                         <div className="product-details">
-                            <h3>Body Bar (5 pack)</h3>
-                            <p>SKU: 0110354</p>
-                            <label>
-                                <input type="checkbox" /> Subscribe
-                            </label>
-                            <div className="quantity">
-                                <button>-</button>
-                                <span>1</span>
-                                <button>+</button>
+                            <div>
+                                <Image src="/products/bodybar.png" alt="Body Bar" className="product-image" width={100} height={100} />
                             </div>
-                            <p>Price: $60.00</p>
-                            <button className="save-for-later">Save For Later</button>
+                            <div>
+                                <h3>Body Bar (5 pack)</h3>
+                                <p>SKU: 0110354</p>
+                                <label>
+                                    <input type="checkbox" /> Subscribe
+                                </label>
+                                <div className="quantity">
+                                    <button>-</button>
+                                    <span>1</span>
+                                    <button>+</button>
+                                </div>
+                                <p>Price: $60.00</p>
+                                <button className="save-for-later">Save For Later</button>
+                            </div>
                         </div>
                         <div className="price-details">
                             <p>$60.00</p>
@@ -34,20 +38,24 @@ export default function Page() {
                     </div>
 
                     <div className="cart-item">
-                        <Image src="/products/shampoo.png" alt="ReNu Smoothing Shampoo" className="product-image" width={100} height={100} />
                         <div className="product-details">
-                            <h3>ReNu Smoothing Shampoo</h3>
-                            <p>SKU: 01002368</p>
-                            <label>
-                                <input type="checkbox" /> Subscribe
-                            </label>
-                            <div className="quantity">
-                                <button>-</button>
-                                <span>1</span>
-                                <button>+</button>
+                            <div>
+                                <Image src="/products/shampoo.png" alt="ReNu Smoothing Shampoo" className="product-image" width={100} height={100} />
                             </div>
-                            <p>Price: $49.00</p>
-                            <button className="save-for-later">Save For Later</button>
+                            <div>
+                                <h3>ReNu Smoothing Shampoo</h3>
+                                <p>SKU: 01002368</p>
+                                <label>
+                                    <input type="checkbox" /> Subscribe
+                                </label>
+                                <div className="quantity">
+                                    <button>-</button>
+                                    <span>1</span>
+                                    <button>+</button>
+                                </div>
+                                <p>Price: $49.00</p>
+                                <button className="save-for-later">Save For Later</button>
+                            </div>
                         </div>
                         <div className="price-details">
                             <p>$49.00</p>
