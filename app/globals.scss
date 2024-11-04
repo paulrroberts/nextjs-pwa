@@ -23,6 +23,7 @@ body {
 .MuiCardContent-root {
   padding: 20px 0 !important;
   max-width: calc(100% - 255px);
+  background-color: #ededed;
 }
 
 @layer utilities {
