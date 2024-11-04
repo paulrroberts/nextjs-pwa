@@ -1,0 +1,148 @@
+.product-card-wrapper {
+  margin: 10px 10px 40px;
+}
+
+.product-category {
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-category img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.5);
+}
+
+.product-category-text {
+  position: absolute;
+  bottom: 14px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-category-subtext {
+  position: absolute;
+  bottom: 2px;
+  left: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.category-wrapper {
+  margin: 10px 10px 40px;
+}
+
+.category-wrapper {
+  .search-bar {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    > div {
+        margin-bottom: 0;
+    }
+  }
+}
+
+.continue-arrow {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  fill: #ffffff !important;
+}
+
+.MuiCardContent-root {
+  background-color: #ededed;
+}
+
+.search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cancel-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  text-decoration: none;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 0;
+  padding: 15px;
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-category {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-sv {
+  color: #666;
+  font-size: 14px;
+}
+
+.bundle-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}

@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import './category.css'
+import '../products.scss'
 
 export default function Page() {
     return (
-        <div style={{ marginBottom: '40px' }}>
+        <div className="product-card-wrapper">
             <div className="search-container">
                 <span className="search-icon">🔍</span>
                 <input type="text" className="search-input" placeholder="Search for products" />

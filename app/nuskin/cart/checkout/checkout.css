@@ -6,13 +6,11 @@ body {
 .checkout-container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
 }
 
 .checkout-sections {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
 }
@@ -46,7 +44,6 @@ body {
 .order-side-panel {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
     padding: 15px;
 }
 

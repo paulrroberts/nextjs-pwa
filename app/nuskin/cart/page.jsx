@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import './cart.css'
+import './cart.scss'
 import Image from 'next/image'
 
 export default function Page() {

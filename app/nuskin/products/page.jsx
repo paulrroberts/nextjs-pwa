@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FormControl, InputLabel, Input, InputAdornment, TextField } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import './products.css'
+import './products.scss'
 import Link from 'next/link'
 
 export default function Page() {

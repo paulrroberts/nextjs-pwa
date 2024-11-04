@@ -1,5 +1,5 @@
 import localFont from 'next/font/local'
-import './globals.css'
+import './globals.scss'
 import LayoutComponent from '../components/layout/layoutComponent'
 import AddToHomeScreen from '../components/addToHomeScreen/addToHomeScreen'
 

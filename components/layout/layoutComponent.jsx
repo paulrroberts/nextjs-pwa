@@ -96,7 +96,7 @@ export default function LayoutComponent({ children }) {
         [0, '/nuskin'],
         ['Home', '/nuskin'],
         [1, '/category'],
-        ['Shop', '/nuskin/category'],
+        ['Shop', '/nuskin/products'],
         [2, '/nuskin/cart'],
         ['Cart', '/nuskin/cart']
     ])
