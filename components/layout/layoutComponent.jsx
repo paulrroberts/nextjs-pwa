@@ -25,7 +25,7 @@ import { deleteCookie, getCookie } from 'cookies-next'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import MenuIcon from '@mui/icons-material/Menu'
+import MoreVertIcon from '@mui/icons-material/MoreVert'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined'
 import StorefrontIcon from '@mui/icons-material/Storefront'
@@ -225,7 +225,13 @@ export default function LayoutComponent({ children }) {
                                         <BottomNavigationAction component={Link} href="/nuskin/build" label="Build" icon={<CachedIcon />} />
                                     )}
                                     <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartOutlinedIcon />} />
-                                    <BottomNavigationAction component={Button} onClick={toggleDrawer(true)} label="Menu" icon={<MenuIcon />} />
+                                    <BottomNavigationAction
+                                        component={Button}
+                                        onClick={toggleDrawer(true)}
+                                        label="More"
+                                        icon={<MoreVertIcon />}
+                                        sx={{ textTransform: 'none' }}
+                                    />
                                 </BottomNavigation>
                             </Paper>
                         </>
