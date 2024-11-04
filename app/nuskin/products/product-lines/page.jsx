@@ -13,7 +13,7 @@ export default function Page() {
             </div>
 
             <div className="results-header">
-                <h2>35 results for "Product Lines"</h2>
+                <p>35 results for "Product Lines"</p>
             </div>
 
             <div className="product-grid">
