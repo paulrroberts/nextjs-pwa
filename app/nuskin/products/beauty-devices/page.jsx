@@ -13,14 +13,12 @@ export default function Page() {
             </div>
 
             <div className="results-header">
-                <h2>35 results for "Beauty Devices"</h2>
-                <button className="filter-btn">FILTER ⚙️</button>
+                <h2>12 results for "Beauty Devices"</h2>
             </div>
 
             <div className="product-grid">
                 <div className="product-card">
                     <Image src="/products/nuskin-renuspa-io.png" className="product-image" alt="RenuSpa" width={400} height={400} />
-                    <div className="product-category">AGELOC WELLSPA IO</div>
                     <div className="product-title">Nu Skin® RenuSpa iO™</div>
                     <div className="product-price">$ 299.00</div>
                     <div className="product-sv">SV: 250</div>
@@ -28,7 +26,6 @@ export default function Page() {
 
                 <div className="product-card">
                     <Image src="/products/ageloc-rose-gold-lumispa-io.png" className="product-image" alt="LumiSpa Rose" width={400} height={400} />
-                    <div className="product-category">AGELOC LUMISPA</div>
                     <div className="product-title">ageLOC Rose Gold LumiSpa® iO</div>
                     <div className="product-price">$ 199.00</div>
                     <div className="product-sv">SV: 167</div>
@@ -52,6 +49,66 @@ export default function Page() {
                     />
                     <div className="product-title">ageLOC Rose Gold LumiSpa® iO + Cleanser</div>
                     <div className="product-price">$ 209.00</div>
+                </div>
+                <div className="product-card">
+                    <Image src="/products/ageloc-lumispa-silicone-head.png" className="product-image" alt="RenuSpa" width={400} height={400} />
+                    <div className="product-title">ageLOC LumiSpa® Silicone Head</div>
+                    <div className="product-price">$ 51.00</div>
+                </div>
+
+                <div className="product-card">
+                    <Image
+                        src="/products/ageloc-lumispa-io-rose-gold-treatment-head.png"
+                        className="product-image"
+                        alt="LumiSpa Rose"
+                        width={400}
+                        height={400}
+                    />
+                    <div className="product-title">ageLOC® LumiSpa® iO Rose Gold Treatment Head</div>
+                    <div className="product-price">$ 49.00</div>
+                </div>
+
+                <div className="product-card">
+                    <Image src="/products/ageloc-lumispa-io.png" className="product-image" alt="LumiSpa Blue" width={400} height={400} />
+                    <div className="product-title">ageLOC® LumiSpa® iO</div>
+                    <div className="product-price">$ 245.00</div>
+                </div>
+
+                <div className="product-card">
+                    <Image src="/products/ageloc-lumispa-io-head.png" className="product-image" alt="LumiSpa Rose Bundle" width={400} height={400} />
+                    <div className="product-title">ageLOC LumiSpa iO Head</div>
+                    <div className="product-price">$ 49.00</div>
+                </div>
+                <div className="product-card">
+                    <span className="bundle-tag">Bundle</span>
+                    <Image src="/products/lumispa-facial-spa-beauty-bundle.webp" className="product-image" alt="RenuSpa" width={400} height={400} />
+                    <div className="product-title">LumiSpa® Facial Spa Beauty Bundle</div>
+                    <div className="product-price">$ 842.00</div>
+                </div>
+
+                <div className="product-card">
+                    <span className="bundle-tag">Bundle</span>
+                    <Image
+                        src="/products/lumispa-facial-spa-beauty-bundle-pink-head.webp"
+                        className="product-image"
+                        alt="LumiSpa Rose"
+                        width={400}
+                        height={400}
+                    />
+                    <div className="product-title">ageLOC Rose Gold LumiSpa® iO</div>
+                    <div className="product-price">$ 842.00</div>
+                </div>
+
+                <div className="product-card">
+                    <Image src="/products/nuskin-facial-spa.png" className="product-image" alt="LumiSpa Blue" width={400} height={400} />
+                    <div className="product-title">Nu Skin® Facial Spa</div>
+                    <div className="product-price">$ 425.00</div>
+                </div>
+
+                <div className="product-card">
+                    <Image src="/products/ageloc-lumispa-idealeyes.png" className="product-image" alt="LumiSpa Rose Bundle" width={400} height={400} />
+                    <div className="product-title">ageLOC® Lumispa® IdealEyes®</div>
+                    <div className="product-price">$ 49.00</div>
                 </div>
             </div>
         </div>
