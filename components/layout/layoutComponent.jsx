@@ -191,7 +191,7 @@ export default function LayoutComponent({ children }) {
     return (
         <Box sx={{ display: 'flex' }}>
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
-                <CardMedia sx={{ padding: '20px' }}>
+                <CardMedia sx={{ padding: '20px' }} className="main-logo">
                     <Link href="/">
                         <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
                     </Link>
