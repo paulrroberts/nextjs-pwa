@@ -1,8 +1,53 @@
+'use client'
+
 import Link from 'next/link'
 import './cart.scss'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import { Button } from '@mui/material'
+import { SiKuula } from 'react-icons/si'
+import AddIcon from '@mui/icons-material/Add'
+import RemoveIcon from '@mui/icons-material/Remove'
+
+const cartProducts = [
+    {
+        title: 'Body Bar (5 pack)',
+        sku: '0110354',
+        quantity: 1,
+        price: 60.0,
+        sv: 35.15,
+        image: '/products/bodybar.png'
+    },
+    {
+        title: 'ReNu Smoothing Shampoo',
+        sku: '01002368',
+        quantity: 1,
+        price: 49.0,
+        sv: 32.3,
+        image: '/products/shampoo.png'
+    }
+]
 
 export default function Page() {
+    const [totalCartPrice, setTotalCartPrice] = useState(0)
+    const [totalSv, setTotalSV] = useState(0)
+    const [cartItems, setCartItems] = useState(cartProducts)
+
+    useEffect(() => {
+        const total = cartItems.reduce((acc, product) => acc + product.price * product.quantity, 0).toFixed(2) // Round to two decimal places
+        setTotalCartPrice(parseFloat(total)) // Convert back to a number
+        const totalSV = cartItems.reduce((acc, product) => acc + product.sv * product.quantity, 0).toFixed(2) // Round to two decimal places
+        setTotalSV(totalSV)
+    }, [cartItems])
+
+    const handleQtyAdded = (sku) => {
+        setCartItems((prevItems) => prevItems.map((item) => (item.sku === sku ? { ...item, quantity: item.quantity + 1 } : item)))
+    }
+
+    const handleQtySubtracted = (sku) => {
+        setCartItems((prevItems) => prevItems.map((item) => (item.sku === sku ? { ...item, quantity: item.quantity - 1 } : item)))
+    }
+
     return (
         <div className="cart-container">
             <div className="cart">
@@ -11,70 +56,55 @@ export default function Page() {
                 </div>
 
                 <div className="cart-items">
-                    <div className="cart-item">
-                        <div className="product-details">
-                            <div>
-                                <Image src="/products/bodybar.png" alt="Body Bar" className="product-image" width={100} height={100} />
-                            </div>
-                            <div>
-                                <h3>Body Bar (5 pack)</h3>
-                                <p>SKU: 0110354</p>
-                                <label>
-                                    <input type="checkbox" /> Subscribe
-                                </label>
-                                <div className="quantity">
-                                    <button>-</button>
-                                    <span>1</span>
-                                    <button>+</button>
+                    {cartItems.map((product) => (
+                        <div className="cart-item" key={product.sku}>
+                            <div className="product-details">
+                                <div>
+                                    <Image src={product.image} alt="Body Bar" className="product-image" width={100} height={100} />
                                 </div>
-                                <p>Price: $60.00</p>
-                                <button className="save-for-later">Save For Later</button>
-                            </div>
-                        </div>
-                        <div className="price-details">
-                            <p>$60.00</p>
-                            <p>SV: 35.15</p>
-                        </div>
-                    </div>
-
-                    <div className="cart-item">
-                        <div className="product-details">
-                            <div>
-                                <Image src="/products/shampoo.png" alt="ReNu Smoothing Shampoo" className="product-image" width={100} height={100} />
-                            </div>
-                            <div>
-                                <h3>ReNu Smoothing Shampoo</h3>
-                                <p>SKU: 01002368</p>
-                                <label>
-                                    <input type="checkbox" /> Subscribe
-                                </label>
-                                <div className="quantity">
-                                    <button>-</button>
-                                    <span>1</span>
-                                    <button>+</button>
+                                <div>
+                                    <h3>{product.title}</h3>
+                                    <p>SKU: {product.sku}</p>
+                                    <label>
+                                        <input type="checkbox" /> Subscribe
+                                    </label>
+                                    <div className="quantity">
+                                        <Button onClick={() => handleQtySubtracted(product.sku)}>
+                                            <RemoveIcon />
+                                        </Button>
+                                        <span>{product.quantity}</span>
+                                        <Button onClick={() => handleQtyAdded(product.sku)}>
+                                            <AddIcon />
+                                        </Button>
+                                    </div>
+                                    <p>Price: ${product.price}</p>
+                                    <button className="save-for-later">Save For Later</button>
                                 </div>
-                                <p>Price: $49.00</p>
-                                <button className="save-for-later">Save For Later</button>
+                            </div>
+                            <div className="price-details">
+                                <p>${(product.price * product.quantity).toFixed(2)}</p>
+                                <p>SV: {(product.sv * product.quantity).toFixed(2)}</p>
                             </div>
                         </div>
-                        <div className="price-details">
-                            <p>$49.00</p>
-                            <p>SV: 32.30</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
             <div className="order-summary">
                 <p>Order Summary</p>
                 <p>Order Total</p>
-                <p>One time subtotal</p>
+                {/* <p>One time subtotal</p> */}
+                {/* <p>Subtotal 2 items</p> */}
                 <div className="cart-summary-details">
-                    <p>Subtotal 2 items</p>
-                    <p>Estimated Total</p>
-                    <p>$109.00</p>
+                    <div>
+                        <div className="font-semibold">Estimated Total</div>
+                        <div className="font-semibold">${totalCartPrice.toFixed(2)}</div>
+                    </div>
+                    <div>
+                        <div className="font-semibold">Total SV:</div>
+                        <div className="font-semibold">{totalSv}</div>
+                    </div>
                 </div>
-                <p>Total SV: 67.45</p>
                 <Link type="button" href="/nuskin/cart/checkout" className="checkout-btn">
                     Checkout
                 </Link>

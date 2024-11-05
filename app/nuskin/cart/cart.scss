@@ -79,6 +79,7 @@ body {
   border: 1px solid #ddd;
   background-color: #fff;
   cursor: pointer;
+  color: #222;
 }
 
 .quantity span {
@@ -105,7 +106,7 @@ body {
   margin: 0;
 }
 
-.cart-summary-details {
+.cart-summary-details div {
   display: flex;
   justify-content: space-between;
 }
