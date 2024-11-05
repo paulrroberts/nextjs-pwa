@@ -42,6 +42,100 @@ const ACCOUNT_TYPE = 'accountType'
 const LOGOUT_MESSAGE = 'User successfully logged out'
 const LOGIN_MESSAGE = 'User successfully logged in'
 
+const titleToTabMap = new Map([
+    ['Home', 0],
+    ['Shop', 1],
+    ['Cart', 2]
+])
+
+const distTitleToTabMap = new Map([
+    ['Home', 0],
+    ['Shop', 1],
+    ['Build', 2],
+    ['Cart', 3]
+])
+
+const tabsMap = new Map([
+    [0, '/nuskin'],
+    ['Home', '/nuskin'],
+    [1, '/category'],
+    ['Shop', '/nuskin/products'],
+    [2, '/nuskin/cart'],
+    ['Cart', '/nuskin/cart']
+])
+
+const distTabsMap = new Map([
+    [0, '/nuskin'],
+    ['Home', '/nuskin'],
+    [1, '/nuskin/products'],
+    ['Shop', '/nuskin/products'],
+    [2, '/nuskin/build'],
+    ['Build', '/nuskin/build'],
+    [3, '/nuskin/cart'],
+    ['Cart', '/nuskin/cart']
+])
+
+const drawerLinks = [
+    {
+        title: 'Home',
+        icon: 'HomeOutlinedIcon',
+        href: '/nuskin'
+    },
+    {
+        title: 'Shop',
+        icon: 'StorefrontIcon',
+        href: '/nuskin/products'
+    },
+    {
+        title: 'Profile',
+        icon: 'PersonOutlineOutlinedIcon',
+        href: '/nuskin/profile'
+    },
+    {
+        title: 'Cart',
+        icon: 'ShoppingCartOutlinedIcon',
+        href: '/nuskin/cart'
+    },
+    {
+        title: 'Notifications',
+        icon: 'NotificationsActiveOutlinedIcon',
+        href: '/nuskin/subscribe'
+    }
+]
+
+const distDrawerLinks = [
+    {
+        title: 'Home',
+        icon: 'HomeOutlinedIcon',
+        href: '/nuskin'
+    },
+    {
+        title: 'Shop',
+        icon: 'StorefrontIcon',
+        href: '/nuskin/products'
+    },
+    {
+        title: 'Build',
+        icon: 'CachedIcon',
+        href: '/nuskin/build'
+    },
+    {
+        title: 'Profile',
+        icon: 'PersonOutlineOutlinedIcon',
+        href: '/nuskin/profile'
+    },
+    {
+        title: 'Cart',
+        icon: 'ShoppingCartOutlinedIcon',
+        href: '/nuskin/cart'
+    },
+    {
+        title: 'Notifications',
+        icon: 'NotificationsActiveOutlinedIcon',
+        href: '/nuskin/subscribe'
+    }
+]
+
 export default function LayoutComponent({ children }) {
     const router = useRouter()
     const [open, setOpen] = useState(false)
@@ -51,6 +145,9 @@ export default function LayoutComponent({ children }) {
     const [showLogin, setShowLogin] = useState(false)
     const [showSnackbar, setShowSnackbar] = useState(false)
     const [loginOutMessage, setLoginOutMessage] = useState(LOGIN_MESSAGE)
+    const [tabs, setTabs] = useState(tabsMap)
+    const [titleTabs, setTitleTabs] = useState(titleToTabMap)
+    const [drawerLnks, setDrawerLnks] = useState(drawerLinks)
     const { isMobile } = useUserAgent()
 
     const toggleDrawer = (newOpen) => () => {
@@ -66,7 +163,12 @@ export default function LayoutComponent({ children }) {
 
     useEffect(() => {
         checkLogin()
-    }, [setIsLoggedIn, isLoggedIn, accountType, router])
+        if (accountType === 'dist') {
+            setTabs(distTabsMap)
+            setTitleTabs(distTitleToTabMap)
+            setDrawerLnks(distDrawerLinks)
+        }
+    }, [setIsLoggedIn, isLoggedIn, accountType, router, accountType, setTabs, tabs, distTabsMap])
 
     const logOut = () => {
         deleteCookie(LOGGED_IN)
@@ -80,76 +182,23 @@ export default function LayoutComponent({ children }) {
     const iconMap = {
         HomeOutlinedIcon: <HomeOutlinedIcon />,
         BarChartIcon: <BarChartIcon />,
+        CachedIcon: <CachedIcon />,
         PersonOutlineOutlinedIcon: <PersonOutlineOutlinedIcon />,
         ShoppingCartOutlinedIcon: <ShoppingCartOutlinedIcon />,
         NotificationsActiveOutlinedIcon: <NotificationsActiveOutlinedIcon />,
         StorefrontIcon: <StorefrontIcon />
     }
 
-    const titleToTabMap = new Map([
-        ['Home', 0],
-        ['Shop', 1],
-        ['Cart', 2]
-    ])
-
-    const tabsMap = new Map([
-        [0, '/nuskin'],
-        ['Home', '/nuskin'],
-        [1, '/category'],
-        ['Shop', '/nuskin/products'],
-        [2, '/nuskin/cart'],
-        ['Cart', '/nuskin/cart']
-    ])
-
-    const distTabsMap = new Map([
-        [0, '/nuskin'],
-        ['Home', '/nuskin'],
-        [1, '/nuskin/products'],
-        ['Shop', '/nuskin/products'],
-        [2, '/nuskin/build'],
-        ['Build', '/nuskin/build'],
-        [3, '/nuskin/cart'],
-        ['Cart', '/nuskin/cart']
-    ])
-
-    const drawerLinks = [
-        {
-            title: 'Home',
-            icon: 'HomeOutlinedIcon',
-            href: '/nuskin'
-        },
-        {
-            title: 'Shop',
-            icon: 'StorefrontIcon',
-            href: '/nuskin/category'
-        },
-        {
-            title: 'Profile',
-            icon: 'PersonOutlineOutlinedIcon',
-            href: '/nuskin/profile'
-        },
-        {
-            title: 'Cart',
-            icon: 'ShoppingCartOutlinedIcon',
-            href: '/nuskin/cart'
-        },
-        {
-            title: 'Notifications',
-            icon: 'NotificationsActiveOutlinedIcon',
-            href: '/nuskin/subscribe'
-        }
-    ]
-
     const DrawerList = (
         <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
             <List>
-                {drawerLinks.map((link, index) => (
+                {drawerLnks.map((link, index) => (
                     <ListItem key={index} disablePadding>
                         <ListItemButton
                             onClick={() => {
-                                if (tabsMap.get(link.title)) {
-                                    router.push(tabsMap.get(link.title))
-                                    setActiveTab(titleToTabMap.get(link.title))
+                                if (tabs.get(link.title)) {
+                                    router.push(tabs.get(link.title))
+                                    setActiveTab(titleTabs.get(link.title))
                                 } else {
                                     router.push(link.href)
                                     setActiveTab(null)
@@ -164,18 +213,6 @@ export default function LayoutComponent({ children }) {
             </List>
             <hr />
             <List>
-                {isLoggedIn && accountType === 'dist' && (
-                    <>
-                        <ListItem>
-                            <ListItemButton component={Link} href="/nuskin/build">
-                                <ListItemIcon>
-                                    <CachedIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Build" />
-                            </ListItemButton>
-                        </ListItem>
-                    </>
-                )}
                 {isLoggedIn ? (
                     <ListItem>
                         <ListItemButton onClick={logOut}>
@@ -207,7 +244,6 @@ export default function LayoutComponent({ children }) {
                         <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
                     </Link>
                 </CardMedia>
-                {/* {showLogin && <Login callback={handleLogin} />} */}
                 <Box sx={{ display: 'flex' }}>
                     {isMobile ? (
                         <>
@@ -220,13 +256,10 @@ export default function LayoutComponent({ children }) {
                                     value={activeTab}
                                     onChange={(event, newValue) => {
                                         let max = 3
-                                        let tabs = tabsMap
                                         if (accountType === 'dist') {
                                             max = 4
-                                            tabs = distTabsMap
                                         }
 
-                                        console.log('tabs:', tabs)
                                         if (newValue !== max) {
                                             router.push(tabs.get(newValue))
                                             setActiveTab(newValue)
