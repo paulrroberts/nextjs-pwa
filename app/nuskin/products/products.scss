@@ -42,7 +42,7 @@
     background-color: #ffffff;
     margin-bottom: 20px;
     > div {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -145,4 +145,16 @@
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .category-wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

@@ -13,7 +13,7 @@ export default function Page() {
             </div>
 
             <div className="results-header">
-                <p>35 results for "Most Popular"</p>
+                <p>4 results for "Most Popular"</p>
             </div>
 
             <div className="product-grid">
