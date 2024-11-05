@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { Button, TextField, Typography, Switch } from '@mui/material'
 import { subscribeUser, unsubscribeUser, sendNotification } from '../utils/actions'
+import './pushNotificationManager.css'
 
 /**
  *
@@ -105,7 +106,7 @@ export default function PushNotificationManager() {
         if (isTurningOn) {
             Notification.requestPermission().then((permission) => {
                 if (permission === 'granted') {
-                    alert('Permission Granted')
+                    // alert('Permission Granted')
                     registerAndSendToAWS(type)
                 } else {
                     alert('User does not allow permission')
@@ -128,7 +129,7 @@ export default function PushNotificationManager() {
                     })
                 })
                 .then(function (subscription) {
-                    alert('Device subscripted:  ' + JSON.stringify(subscription))
+                    // alert('Device subscripted:  ' + JSON.stringify(subscription));
                     const payload = { subscription, type }
                     // // Send the subscription object to your server
                     fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
@@ -161,7 +162,7 @@ export default function PushNotificationManager() {
                     })
                 })
                 .then(function (subscription) {
-                    alert('Device subscripted:  ' + JSON.stringify(subscription))
+                    // alert('Device subscripted:  ' + JSON.stringify(subscription))
                     const payload = { subscription, type }
                     // // Send the subscription object to your server
                     fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
@@ -185,7 +186,7 @@ export default function PushNotificationManager() {
     }
 
     return (
-        <div>
+        <div className="push-notification-wrapper">
             <h3>Push Notifications</h3>
             <div>
                 <Switch id="promoSub" checked={isPromoChecked} onChange={handleToggle} color="primary" inputProps={{ 'aria-label': 'controlled' }} />
