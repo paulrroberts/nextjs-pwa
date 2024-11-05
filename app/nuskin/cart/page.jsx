@@ -93,8 +93,6 @@ export default function Page() {
             <div className="order-summary">
                 <p>Order Summary</p>
                 <p>Order Total</p>
-                {/* <p>One time subtotal</p> */}
-                {/* <p>Subtotal 2 items</p> */}
                 <div className="cart-summary-details">
                     <div>
                         <div className="font-semibold">Estimated Total</div>
