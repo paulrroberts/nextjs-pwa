@@ -6,6 +6,7 @@ const withPWA = require('next-pwa')({
     sw: '/sw.js',
     register: true,
     skipWaiting: true,
+    disable: true, // disable sw.js auto-generation
     exclude: [
         // add buildExcludes here
         ({ asset, compilation }) => {

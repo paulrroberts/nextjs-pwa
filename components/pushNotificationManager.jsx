@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Button, TextField, Typography } from '@mui/material'
+import { Button, TextField, Typography, Switch } from '@mui/material'
 import { subscribeUser, unsubscribeUser, sendNotification } from '../utils/actions'
 
 /**
@@ -24,6 +24,8 @@ export function urlBase64ToUint8Array(base64String) {
 }
 
 export default function PushNotificationManager() {
+    const [isPromoChecked, setIsPromoChecked] = useState(false);
+    const [isEventChecked, setIsEventChecked] = useState(false);
     const [isSupported, setIsSupported] = useState(false)
     const [subscription, setSubscription] = useState(null)
     const [message, setMessage] = useState('')
@@ -82,6 +84,94 @@ export default function PushNotificationManager() {
         }
     }
 
+    // Handle switch toggle
+    function handleToggle(event) {
+        const element = event.target
+        const type = element.id.slice(0, -3)
+        const isTurningOn = element.checked
+
+        // Update the state
+        switch (type) {
+            case 'promo':
+                setIsPromoChecked(isTurningOn)
+                break;
+            case 'event':
+                setIsEventChecked(isTurningOn)
+                break;
+            default:
+                console.log('No type is given')
+        }
+        console.log("Switch clicked, new state:", isTurningOn)
+        if (isTurningOn) {
+            Notification.requestPermission().then(permission => {
+                if (permission === 'granted') {
+                    alert('Permission Granted')
+                    registerAndSendToAWS(type)
+                } else {
+                    alert('User does not allow permission')
+                }
+            });
+        } else {
+            unregister(type)
+        }
+    }
+
+    function registerAndSendToAWS(type) {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                registration.update();
+                return registration.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: urlBase64ToUint8Array('BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w')
+                });
+            }).then(function(subscription) {
+                alert('Device subscripted:  ' + JSON.stringify(subscription));
+                const payload = {subscription, type};
+                // // Send the subscription object to your server
+                fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
+                    method: 'POST',
+                    body: JSON.stringify(payload),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+            }).catch(function(error) {
+                console.error('Error subscribing to push notifications:', error);
+            });
+        } else {
+            alert('No Service worker availalbe in navigator');
+        }
+    }
+
+    // We need to make sure the subscription is still around (maybe a file or some kind of storage)
+    // For this demo, I just need to turn it off by registering it again
+    function unregister(type) {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                registration.update();
+                return registration.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: urlBase64ToUint8Array('BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w')
+                });
+            }).then(function(subscription) {
+                alert('Device subscripted:  ' + JSON.stringify(subscription));
+                const payload = {subscription, type};
+                // // Send the subscription object to your server
+                fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
+                    method: 'DELETE',
+                    body: JSON.stringify(payload),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+            }).catch(function(error) {
+                console.error('Error subscribing to push notifications:', error);
+            });
+        } else {
+            alert('No Service worker availalbe in navigator');
+        }
+    }
+
     if (!isSupported) {
         return <p>Push notifications are not supported in this browser.</p>
     }
@@ -89,7 +179,28 @@ export default function PushNotificationManager() {
     return (
         <div>
             <h3>Push Notifications</h3>
-            <Typography variant="body1">To receive push notifications, you need to subscribe to them.</Typography>
+            <div>
+                <Switch 
+                    id='promoSub'
+                    checked={isPromoChecked}
+                    onChange={handleToggle}
+                    color="primary"
+                    inputProps={{ 'aria-label': 'controlled' }}
+                />
+                <label htmlFor='promoSub'>Subscribe to Promotion message</label>
+            </div>
+            <div>
+                <Switch 
+                    id='eventSub'
+                    checked={isEventChecked}
+                    onChange={handleToggle}
+                    color="primary"
+                    inputProps={{ 'aria-label': 'controlled' }}
+                />
+                <label htmlFor='eventSub'>Subscribe to Event message</label>
+            </div>
+
+            {/* <Typography variant="body1">To receive push notifications, you need to subscribe to them.</Typography>
             {subscription ? (
                 <>
                     <p>You are subscribed to push notifications.</p>
@@ -112,7 +223,7 @@ export default function PushNotificationManager() {
                     <p>You are not subscribed to push notifications.</p>
                     <Button onClick={subscribeToPush}>Subscribe</Button>
                 </>
-            )}
+            )} */}
         </div>
     )
 }
