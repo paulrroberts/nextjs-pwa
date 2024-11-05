@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import LooksIcon from '@mui/icons-material/Looks'
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
+import SendIcon from '@mui/icons-material/Send'
 import './vg.scss'
 
 export default function VGHome() {
@@ -9,7 +9,7 @@ export default function VGHome() {
             <div className="offer-card">
                 <h1 className="offer-title">Let's Create a Product Offer</h1>
                 <div className="offer-icon">
-                    <PersonOutlineOutlinedIcon sx={{ width: 150, height: 150 }} />
+                    <SendIcon sx={{ width: 125, height: 125 }} />
                 </div>
                 <p className="offer-description">
                     A Product Offer lets you send product recommendations to your friends on social media or other messaging platforms.
