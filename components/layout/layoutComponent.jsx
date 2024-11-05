@@ -101,6 +101,17 @@ export default function LayoutComponent({ children }) {
         ['Cart', '/nuskin/cart']
     ])
 
+    const distTabsMap = new Map([
+        [0, '/nuskin'],
+        ['Home', '/nuskin'],
+        [1, '/nuskin/products'],
+        ['Shop', '/nuskin/products'],
+        [2, '/nuskin/build'],
+        ['Build', '/nuskin/build'],
+        [3, '/nuskin/cart'],
+        ['Cart', '/nuskin/cart']
+    ])
+
     const drawerLinks = [
         {
             title: 'Home',
@@ -209,12 +220,15 @@ export default function LayoutComponent({ children }) {
                                     value={activeTab}
                                     onChange={(event, newValue) => {
                                         let max = 3
+                                        let tabs = tabsMap
                                         if (accountType === 'dist') {
                                             max = 4
+                                            tabs = distTabsMap
                                         }
 
+                                        console.log('tabs:', tabs)
                                         if (newValue !== max) {
-                                            router.push(tabsMap.get(newValue))
+                                            router.push(tabs.get(newValue))
                                             setActiveTab(newValue)
                                         }
                                     }}
