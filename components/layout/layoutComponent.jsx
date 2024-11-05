@@ -161,6 +161,7 @@ export default function LayoutComponent({ children }) {
         setAccountType(accntType)
     }
 
+    // comment for commit trigger
     useEffect(() => {
         checkLogin()
         if (accountType === 'dist') {
