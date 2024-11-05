@@ -5,7 +5,6 @@ import './cart.scss'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Button } from '@mui/material'
-import { SiKuula } from 'react-icons/si'
 import AddIcon from '@mui/icons-material/Add'
 import RemoveIcon from '@mui/icons-material/Remove'
 
@@ -37,7 +36,7 @@ export default function Page() {
         const total = cartItems.reduce((acc, product) => acc + product.price * product.quantity, 0).toFixed(2) // Round to two decimal places
         setTotalCartPrice(parseFloat(total)) // Convert back to a number
         const totalSV = cartItems.reduce((acc, product) => acc + product.sv * product.quantity, 0).toFixed(2) // Round to two decimal places
-        setTotalSV(totalSV)
+        setTotalSV(parseFloat(totalSV))
     }, [cartItems])
 
     const handleQtyAdded = (sku) => {
