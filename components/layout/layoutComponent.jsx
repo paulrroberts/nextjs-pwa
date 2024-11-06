@@ -164,12 +164,12 @@ export default function LayoutComponent({ children }) {
     // comment for commit trigger
     useEffect(() => {
         checkLogin()
-        if (accountType === 'dist') {
+        if (isLoggedIn && accountType === 'dist') {
             setTabs(distTabsMap)
             setTitleTabs(distTitleToTabMap)
             setDrawerLnks(distDrawerLinks)
         }
-    }, [setIsLoggedIn, isLoggedIn, accountType, router, accountType, setTabs, tabs, distTabsMap])
+    }, [setIsLoggedIn, isLoggedIn, accountType, router, setTabs, tabs])
 
     const logOut = () => {
         deleteCookie(LOGGED_IN)
@@ -257,7 +257,7 @@ export default function LayoutComponent({ children }) {
                                     value={activeTab}
                                     onChange={(event, newValue) => {
                                         let max = 3
-                                        if (accountType === 'dist') {
+                                        if (isLoggedIn && accountType === 'dist') {
                                             max = 4
                                         }
 
