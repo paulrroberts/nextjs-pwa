@@ -13,7 +13,7 @@ export default function AddToOtherBrowser(props) {
             className="fixed bottom-0 left-0 right-0 h-[60%] z-50 pb-12 px-4 flex flex-col items-center justify-around"
             style={{ zIndex: 110, backgroundColor: '#fff', color: '#000' }}
         >
-            <div className="relative bg-primary p-4 h-full rounded-xl flex flex-col justify-around items-center text-center">
+            <div className="relative p-4 h-full rounded-xl flex flex-col justify-around items-center text-center">
                 <button className="absolute top-0 right-0 p-3" onClick={closePrompt}>
                     <FaTimes className="text-2xl" />
                 </button>
