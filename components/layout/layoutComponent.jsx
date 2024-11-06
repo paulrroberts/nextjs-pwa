@@ -32,6 +32,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront'
 import LogoutIcon from '@mui/icons-material/Logout'
 import LoginIcon from '@mui/icons-material/Login'
 import CachedIcon from '@mui/icons-material/Cached'
+import MenuIcon from '@mui/icons-material/Menu'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
 import { useRouter } from 'next/navigation'
@@ -148,7 +149,7 @@ export default function LayoutComponent({ children }) {
     const [tabs, setTabs] = useState(tabsMap)
     const [titleTabs, setTitleTabs] = useState(titleToTabMap)
     const [drawerLnks, setDrawerLnks] = useState(drawerLinks)
-    const { isMobile } = useUserAgent()
+    const { isMobile, isStandalone } = useUserAgent()
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen)
@@ -240,10 +241,23 @@ export default function LayoutComponent({ children }) {
     return (
         <Box sx={{ display: 'flex' }}>
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
-                <CardMedia sx={{ padding: '20px' }} className="main-logo">
-                    <Link href="/">
-                        <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
-                    </Link>
+                <CardMedia className="main-logo">
+                    <div className="menu-logo">
+                        <MenuIcon onClick={toggleDrawer(true)} sx={{ marginRight: '10px' }} />
+                        <Link href="/">
+                            <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
+                        </Link>
+                    </div>
+                    {!isStandalone && (
+                        <div className="mini-nav">
+                            <Link href="/nuskin/profile">
+                                <PersonOutlineOutlinedIcon />
+                            </Link>
+                            <Link href="/nuskin/cart">
+                                <ShoppingCartOutlinedIcon />
+                            </Link>
+                        </div>
+                    )}
                 </CardMedia>
                 <Box sx={{ display: 'flex' }}>
                     {isMobile ? (
@@ -251,37 +265,33 @@ export default function LayoutComponent({ children }) {
                             <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
                                 {DrawerList}
                             </SwipeableDrawer>
-                            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
-                                <BottomNavigation
-                                    showLabels
-                                    value={activeTab}
-                                    onChange={(event, newValue) => {
-                                        let max = 3
-                                        if (isLoggedIn && accountType === 'dist') {
-                                            max = 4
-                                        }
+                            {isStandalone && (
+                                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
+                                    <BottomNavigation
+                                        showLabels
+                                        value={activeTab}
+                                        onChange={(event, newValue) => {
+                                            let max = 3
+                                            if (isLoggedIn && accountType === 'dist') {
+                                                max = 4
+                                            }
 
-                                        if (newValue !== max) {
-                                            router.push(tabs.get(newValue))
-                                            setActiveTab(newValue)
-                                        }
-                                    }}
-                                >
-                                    <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeOutlinedIcon />} />
-                                    <BottomNavigationAction component={Link} href="/nuskin/products" label="Shop" icon={<StorefrontIcon />} />
-                                    {accountType === 'dist' && (
-                                        <BottomNavigationAction component={Link} href="/nuskin/build" label="Build" icon={<CachedIcon />} />
-                                    )}
-                                    <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartOutlinedIcon />} />
-                                    <BottomNavigationAction
-                                        component={Button}
-                                        onClick={toggleDrawer(true)}
-                                        label="More"
-                                        icon={<MoreVertIcon />}
-                                        sx={{ textTransform: 'none' }}
-                                    />
-                                </BottomNavigation>
-                            </Paper>
+                                            if (newValue !== max) {
+                                                router.push(tabs.get(newValue))
+                                                setActiveTab(newValue)
+                                            }
+                                        }}
+                                    >
+                                        <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeOutlinedIcon />} />
+                                        <BottomNavigationAction component={Link} href="/nuskin/products" label="Shop" icon={<StorefrontIcon />} />
+                                        {accountType === 'dist' && (
+                                            <BottomNavigationAction component={Link} href="/nuskin/build" label="Build" icon={<CachedIcon />} />
+                                        )}
+                                        <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartOutlinedIcon />} />
+                                        <BottomNavigationAction component={Link} href="/nuskin/profile" label="Profile" icon={<PersonOutlineOutlinedIcon />} />
+                                    </BottomNavigation>
+                                </Paper>
+                            )}
                         </>
                     ) : (
                         <Drawer

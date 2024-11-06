@@ -26,6 +26,24 @@ body {
   background-color: #ededed;
 }
 
+.main-logo {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menu-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mini-nav {
+    svg {
+      margin: 0 5px;
+    }
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
