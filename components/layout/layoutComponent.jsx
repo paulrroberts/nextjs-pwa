@@ -25,7 +25,6 @@ import { deleteCookie, getCookie } from 'cookies-next'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import MoreVertIcon from '@mui/icons-material/MoreVert'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined'
 import StorefrontIcon from '@mui/icons-material/Storefront'
@@ -33,9 +32,11 @@ import LogoutIcon from '@mui/icons-material/Logout'
 import LoginIcon from '@mui/icons-material/Login'
 import CachedIcon from '@mui/icons-material/Cached'
 import MenuIcon from '@mui/icons-material/Menu'
+import GetAppIcon from '@mui/icons-material/GetApp'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
 import { useRouter } from 'next/navigation'
+import AddToHomeScreen from '../addToHomeScreen/addToHomeScreen'
 
 const drawerWidth = 255
 const LOGGED_IN = 'loggedIn'
@@ -143,12 +144,13 @@ export default function LayoutComponent({ children }) {
     const [activeTab, setActiveTab] = useState(0)
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [accountType, setAccountType] = useState('')
-    const [showLogin, setShowLogin] = useState(false)
+    const [showInstall, setShowInstall] = useState(false)
     const [showSnackbar, setShowSnackbar] = useState(false)
     const [loginOutMessage, setLoginOutMessage] = useState(LOGIN_MESSAGE)
     const [tabs, setTabs] = useState(tabsMap)
     const [titleTabs, setTitleTabs] = useState(titleToTabMap)
     const [drawerLnks, setDrawerLnks] = useState(drawerLinks)
+    const [showInstallPopup, setShowInstallPopup] = useState(false)
     const { isMobile, isStandalone } = useUserAgent()
 
     const toggleDrawer = (newOpen) => () => {
@@ -165,12 +167,14 @@ export default function LayoutComponent({ children }) {
     // comment for commit trigger
     useEffect(() => {
         checkLogin()
+        const showAddToHomePrompt = getCookie('addToHomeScreenPrompt') ? true : false
+        setShowInstall(showAddToHomePrompt)
         if (isLoggedIn && accountType === 'dist') {
             setTabs(distTabsMap)
             setTitleTabs(distTitleToTabMap)
             setDrawerLnks(distDrawerLinks)
         }
-    }, [setIsLoggedIn, isLoggedIn, accountType, router, setTabs, tabs])
+    }, [setIsLoggedIn, isLoggedIn, accountType, router, setTabs, tabs, setShowInstall, showInstall])
 
     const logOut = () => {
         deleteCookie(LOGGED_IN)
@@ -189,6 +193,11 @@ export default function LayoutComponent({ children }) {
         ShoppingCartOutlinedIcon: <ShoppingCartOutlinedIcon />,
         NotificationsActiveOutlinedIcon: <NotificationsActiveOutlinedIcon />,
         StorefrontIcon: <StorefrontIcon />
+    }
+
+    const handleInstallClick = () => {
+        deleteCookie('addToHomeScreenPrompt')
+        setShowInstallPopup(true)
     }
 
     const DrawerList = (
@@ -240,6 +249,7 @@ export default function LayoutComponent({ children }) {
 
     return (
         <Box sx={{ display: 'flex' }}>
+            <AddToHomeScreen checkcookie={showInstallPopup} callback={() => setShowInstall} />
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
                 <CardMedia className="main-logo">
                     <div className="menu-logo">
@@ -256,6 +266,12 @@ export default function LayoutComponent({ children }) {
                             <Link href="/nuskin/cart">
                                 <ShoppingCartOutlinedIcon />
                             </Link>
+                            {showInstall && (
+                                <div style={{ display: 'flex', flexDirection: 'column' }} onClick={handleInstallClick}>
+                                    <GetAppIcon />
+                                    <span style={{ fontSize: '12px' }}>Install</span>
+                                </div>
+                            )}
                         </div>
                     )}
                 </CardMedia>

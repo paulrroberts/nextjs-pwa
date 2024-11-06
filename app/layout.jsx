@@ -1,7 +1,5 @@
 import localFont from 'next/font/local'
 import './globals.scss'
-import LayoutComponent from '../components/layout/layoutComponent'
-import AddToHomeScreen from '../components/addToHomeScreen/addToHomeScreen'
 
 const geistSans = localFont({
     src: './fonts/GeistVF.woff',
@@ -49,10 +47,7 @@ export default function RootLayout({ children }) {
                 <meta property="og:url" content="https://nextjs-pwa-git-main-paulrroberts-projects.vercel.app/" />
                 <meta property="og:image" content="https://nextjs-pwa-git-main-paulrroberts-projects.vercel.app/apple-touch-icon.png" />
             </head>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <AddToHomeScreen />
-                {children}
-            </body>
+            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
         </html>
     )
 }

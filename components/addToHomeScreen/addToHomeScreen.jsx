@@ -18,12 +18,13 @@ import useUserAgent from '../userAgent/userAgent'
 // type AddToHomeScreenPromptType = 'safari' | 'chrome' | 'firefox' | 'other' | 'firefoxIos' | 'chromeIos' | 'samsung' | '';
 const COOKIE_NAME = 'addToHomeScreenPrompt'
 
-export default function AddToHomeScreen() {
+export default function AddToHomeScreen({ checkcookie, callback }) {
     const [displayPrompt, setDisplayPrompt] = useState('')
     const { userAgent, isMobile, isStandalone, isIOS } = useUserAgent()
 
     const closePrompt = () => {
         setDisplayPrompt('')
+        callback(false)
     }
 
     const doNotShowAgain = () => {
@@ -32,6 +33,7 @@ export default function AddToHomeScreen() {
         date.setFullYear(date.getFullYear() + 1)
         setCookie(COOKIE_NAME, 'dontShow', { expires: date }) // Set cookie for a year
         setDisplayPrompt('')
+        callback(true)
     }
 
     useEffect(() => {
@@ -57,7 +59,7 @@ export default function AddToHomeScreen() {
                 }
             }
         }
-    }, [userAgent, isMobile, isStandalone, isIOS])
+    }, [userAgent, isMobile, isStandalone, isIOS, checkcookie])
 
     const Prompt = () => (
         <>
