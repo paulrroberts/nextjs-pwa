@@ -271,15 +271,8 @@ export default function LayoutComponent({ children }) {
                                         showLabels
                                         value={activeTab}
                                         onChange={(event, newValue) => {
-                                            let max = 3
-                                            if (isLoggedIn && accountType === 'dist') {
-                                                max = 4
-                                            }
-
-                                            if (newValue !== max) {
-                                                router.push(tabs.get(newValue))
-                                                setActiveTab(newValue)
-                                            }
+                                            router.push(tabs.get(newValue))
+                                            setActiveTab(newValue)
                                         }}
                                     >
                                         <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeOutlinedIcon />} />
