@@ -37,7 +37,7 @@ export default function AddToMobileFirefox(props) {
                 <Button variant="outlined" onClick={doNotShowAgain}>
                     Don&apos;t show again
                 </Button>
-                <ImArrowDownRight className="text-4xl absolute -bottom-[50px] right-1 text-indigo-700 z-10 animate-bounce" />
+                <ImArrowDownRight className="text-4xl absolute -bottom-[50px] right-1 text-neutral-700 z-10 animate-bounce" />
             </div>
         </div>
     )

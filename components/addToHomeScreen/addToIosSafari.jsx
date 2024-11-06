@@ -34,7 +34,7 @@ export default function AddToIosSafari(props) {
                 <Button variant="outlined" onClick={doNotShowAgain}>
                     Don&apos;t show again
                 </Button>
-                <ImArrowDown className="text-4xl absolute -bottom-[50px] text-indigo-700 -z-10 animate-bounce" />
+                <ImArrowDown className="text-4xl absolute -bottom-[50px] text-neutral-700 -z-10 animate-bounce" />
             </div>
         </div>
     )

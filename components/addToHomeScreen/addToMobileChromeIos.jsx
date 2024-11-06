@@ -12,7 +12,7 @@ export default function AddToMobileChromeIos(props) {
     return (
         <div className="fixed top-0 left-0 right-0 h-[70%] z-50 pt-12 px-4" style={{ zIndex: 110, backgroundColor: '#fff', color: '#000' }}>
             <div className="relative p-4 h-full rounded-xl flex flex-col justify-around items-center text-center">
-                <ImArrowUp className="text-4xl absolute -top-[40px] right-0 text-indigo-700 z-10 animate-bounce" />
+                <ImArrowUp className="text-4xl absolute -top-[40px] right-0 text-neutral-700 z-10 animate-bounce" />
                 <button className="absolute top-0 right-0 p-3" onClick={closePrompt}>
                     <FaTimes className="text-2xl" />
                 </button>

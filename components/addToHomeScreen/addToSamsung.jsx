@@ -41,7 +41,7 @@ export default function AddToSamsung(props) {
                 <Button variant="outlined" onClick={doNotShowAgain}>
                     Don&apos;t show again
                 </Button>
-                <ImArrowDown className="text-4xl absolute -bottom-[50px] right-[-3px] text-indigo-700 z-10 animate-bounce" />
+                <ImArrowDown className="text-4xl absolute -bottom-[50px] right-[-3px] text-neutral-700 z-10 animate-bounce" />
             </div>
         </div>
     )
