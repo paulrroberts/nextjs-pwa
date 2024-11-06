@@ -24,7 +24,7 @@ export default function AddToHomeScreen({ checkcookie, callback }) {
 
     const closePrompt = () => {
         setDisplayPrompt('')
-        callback(false)
+        callback(true)
     }
 
     const doNotShowAgain = () => {
