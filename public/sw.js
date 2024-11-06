@@ -1,4 +1,4 @@
-console.log('loading sw.js with notificationonclick2')
+console.log('loading sw.js with notificationonclick 3')
 
 
 self.addEventListener("install", (event) => {
@@ -15,12 +15,14 @@ self.addEventListener('push', function(event) {
   const data = event.data.json()
   console.log('Brand new Push2 received....')
   console.log('data.body:', data.body)
+  console.log('data.url:', data.url)
 
   const options = {
       body: data.body,
       icon: '/apple-touch-icon.png',
       data: {
-        url: '/nuskin/home'
+        // url: '/nuskin/products/beauty-devices'
+        url: data.url
       }
   }
   event.waitUntil(
@@ -30,10 +32,10 @@ self.addEventListener('push', function(event) {
 
 self.addEventListener("notificationclick", (event) => {
   console.log("On notification click: ", event.notification.tag)
-  console.log("url: ", event.notification.data.url)
+  console.log("url: ", event.notification.data?.url)
   event.notification.close()
 
-  const targetUrl = event.notification.data.url
+  const targetUrl = event.notification.data?.url || '/'
 
   // This looks to see if the current is already open and
   // focuses if it is

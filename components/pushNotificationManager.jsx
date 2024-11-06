@@ -3,7 +3,13 @@
 import React, { useState, useEffect } from 'react'
 import { Button, TextField, Typography, Switch } from '@mui/material'
 import { subscribeUser, unsubscribeUser, sendNotification } from '../utils/actions'
+import { setCookie, getCookie, deleteCookie } from 'cookies-next'
 import './pushNotificationManager.css'
+
+const PROMO_SUB = 'promoSub'
+const EVENT_SUB = 'eventSub'
+
+const NEXT_PUBLIC_VAPID_PUBLIC_KEY = 'BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w'
 
 /**
  *
@@ -32,6 +38,11 @@ export default function PushNotificationManager() {
     const [message, setMessage] = useState('')
 
     useEffect(() => {
+        const promoSub = getCookie(PROMO_SUB) === 'true'
+        setIsPromoChecked(promoSub)
+        const eventSub = getCookie(EVENT_SUB) === 'true'
+        setIsEventChecked(eventSub)
+
         const myFunc = async () => {
             if ('serviceWorker' in navigator && 'PushManager' in window) {
                 setIsSupported(true)
@@ -40,7 +51,7 @@ export default function PushNotificationManager() {
         }
 
         myFunc()
-    }, [])
+    }, [setIsPromoChecked, setIsEventChecked])
 
     async function registerServiceWorker() {
         const registration = await navigator.serviceWorker.register('/sw.js', {
@@ -68,12 +79,12 @@ export default function PushNotificationManager() {
         await subscribeUser(subscriptionJson)
     }
 
-    async function unsubscribeFromPush() {
-        console.log('called unsubscribeFromPush() function')
-        await subscription?.unsubscribe()
-        setSubscription(null)
-        await unsubscribeUser()
-    }
+    // async function unsubscribeFromPush() {
+    //     console.log('called unsubscribeFromPush() function')
+    //     await subscription?.unsubscribe()
+    //     setSubscription(null)
+    //     await unsubscribeUser()
+    // }
 
     async function sendTestNotification() {
         console.log('called sendTestNotification() function')
@@ -91,23 +102,38 @@ export default function PushNotificationManager() {
         const type = element.id.slice(0, -3)
         const isTurningOn = element.checked
 
+        const date = new Date()
+        date.setDate(date.getDate() + 400)
+
         // Update the state
         switch (type) {
             case 'promo':
                 setIsPromoChecked(isTurningOn)
+                if (isTurningOn) {
+                    setCookie(PROMO_SUB, true, { expires: date })
+                } else {
+                    deleteCookie(PROMO_SUB)
+                }
                 break
             case 'event':
                 setIsEventChecked(isTurningOn)
+                if (isTurningOn) {
+                    setCookie(EVENT_SUB, true, { expires: date })
+                } else {
+                    deleteCookie(EVENT_SUB)
+                }
                 break
             default:
                 console.log('No type is given')
         }
         console.log('Switch clicked, new state:', isTurningOn)
+
         if (isTurningOn) {
             Notification.requestPermission().then((permission) => {
                 if (permission === 'granted') {
                     // alert('Permission Granted')
                     registerAndSendToAWS(type)
+                    // subscribeToPush(type)g
                 } else {
                     alert('User does not allow permission')
                 }
@@ -117,69 +143,129 @@ export default function PushNotificationManager() {
         }
     }
 
-    function registerAndSendToAWS(type) {
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                .register('/sw.js')
-                .then(function (registration) {
-                    registration.update()
-                    return registration.pushManager.subscribe({
-                        userVisibleOnly: true,
-                        applicationServerKey: urlBase64ToUint8Array('BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w')
-                    })
-                })
-                .then(function (subscription) {
-                    // alert('Device subscripted:  ' + JSON.stringify(subscription));
-                    const payload = { subscription, type }
-                    // // Send the subscription object to your server
-                    fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
-                        method: 'POST',
-                        body: JSON.stringify(payload),
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
-                })
-                .catch(function (error) {
-                    console.error('Error subscribing to push notifications:', error)
-                })
+    async function registerAndSendToAWS(type) {
+        console.log('registering with AWS!!!!')
+        console.log('subscrption:', subscription)
+        let sub
+        if (subscription === null) {
+            console.log('No subscription yet!!!')
+            // Not initialized yet
+            const registration = await navigator.serviceWorker.ready
+            sub = await registration.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: urlBase64ToUint8Array(NEXT_PUBLIC_VAPID_PUBLIC_KEY)
+            })
+            // Note that after setSubscription, you need to wait for the next cycle to get the updated value
+            setSubscription(sub)
+            console.log('after setting subscription is', subscription)
         } else {
-            alert('No Service worker availalbe in navigator')
+            sub = subscription
         }
+
+        const payload = { subscription: sub, type }
+
+        // // Send the subscription object to your server
+        await fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
     }
+
+    async function unregister(type) {
+        console.log('unregistering with AWS')
+        let sub
+        if (subscription === null) {
+            console.log('No subscription yet!!!')
+            // Not initialized yet
+            const registration = await navigator.serviceWorker.ready
+            sub = await registration.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: urlBase64ToUint8Array(NEXT_PUBLIC_VAPID_PUBLIC_KEY)
+            })
+            setSubscription(sub)
+        } else {
+            sub = subscription
+        }
+
+        console.log('sub:', sub)
+        const payload = { subscription: sub, type }
+        // // Send the subscription object to your server
+        await fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
+            method: 'DELETE',
+            body: JSON.stringify(payload),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
+        await subscription?.unsubscribe()
+        setSubscription(null)
+    }
+
+    // function registerAndSendToAWS(type) {
+    //     if ('serviceWorker' in navigator) {
+    //         navigator.serviceWorker
+    //             .register('/sw.js')
+    //             .then(function (registration) {
+    //                 return registration.pushManager.subscribe({
+    //                     userVisibleOnly: true,
+    //                     applicationServerKey: urlBase64ToUint8Array('BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w')
+    //                 })
+    //             })
+    //             .then(function (subscription) {
+    //                 // alert('Device subscripted:  ' + JSON.stringify(subscription))g
+    //                 const payload = { subscription, type }
+    //                 // // Send the subscription object to your server
+    //                 fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
+    //                     method: 'POST',
+    //                     body: JSON.stringify(payload),
+    //                     headers: {
+    //                         'Content-Type': 'application/json'
+    //                     }
+    //                 })
+    //             })
+    //             .catch(function (error) {
+    //                 console.error('Error subscribing to push notifications:', error)
+    //             })
+    //     } else {
+    //         alert('No Service worker availalbe in navigator')
+    //     }
+    // }
 
     // We need to make sure the subscription is still around (maybe a file or some kind of storage)
     // For this demo, I just need to turn it off by registering it again
-    function unregister(type) {
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                .register('/sw.js')
-                .then(function (registration) {
-                    registration.update()
-                    return registration.pushManager.subscribe({
-                        userVisibleOnly: true,
-                        applicationServerKey: urlBase64ToUint8Array('BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w')
-                    })
-                })
-                .then(function (subscription) {
-                    // alert('Device subscripted:  ' + JSON.stringify(subscription))
-                    const payload = { subscription, type }
-                    // // Send the subscription object to your server
-                    fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
-                        method: 'DELETE',
-                        body: JSON.stringify(payload),
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
-                })
-                .catch(function (error) {
-                    console.error('Error subscribing to push notifications:', error)
-                })
-        } else {
-            alert('No Service worker availalbe in navigator')
-        }
-    }
+    // function unregister(type) {
+    //     if ('serviceWorker' in navigator) {
+    //         navigator.serviceWorker
+    //             .register('/sw.js')
+    //             .then(function (registration) {
+    //                 return registration.pushManager.subscribe({
+    //                     userVisibleOnly: true,
+    //                     applicationServerKey: urlBase64ToUint8Array('BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w')
+    //                 })
+    //             })
+    //             .then(function (subscription) {
+    //                 // alert('Device subscripted:  ' + JSON.stringify(subscription))
+    //                 const payload = { subscription, type }
+    //                 // // Send the subscription object to your server
+    //                 fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
+    //                     method: 'DELETE',
+    //                     body: JSON.stringify(payload),
+    //                     headers: {
+    //                         'Content-Type': 'application/json'
+    //                     }
+    //                 })
+    //             })
+    //             .catch(function (error) {
+    //                 console.error('Error subscribing to push notifications:', error)
+    //             })
+    //     } else {
+    //         alert('No Service worker availalbe in navigator')
+    //     }
+    // }
 
     if (!isSupported) {
         return <p>Push notifications are not supported in this browser.</p>
