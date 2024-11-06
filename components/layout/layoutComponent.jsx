@@ -249,7 +249,7 @@ export default function LayoutComponent({ children }) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <AddToHomeScreen checkcookie={showInstallPopup} callback={() => setShowInstall} />
+            <AddToHomeScreen checkcookie={showInstallPopup} callback={setShowInstall} />
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
                 <CardMedia className="main-logo">
                     <div className="menu-logo">
