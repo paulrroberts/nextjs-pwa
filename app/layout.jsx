@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
                 <link rel="shortcut icon" href="/favicon.ico" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <meta name="apple-mobile-web-app-title" content="Nu Skin" />
-                <link rel="manifest" href="/site.webmanifest" />
+                <link rel="manifest" href="/manifest.json" />
 
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="PWA App" />
