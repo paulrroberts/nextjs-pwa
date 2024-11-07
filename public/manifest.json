@@ -2,7 +2,7 @@
     "name": "Nu Skin",
     "description": "This is a PWA POC to determine if it is a viable option for our circumstances.",
     "id": "nuskin_pwa_poc",
-    "orientation": "portrait",
+    "orientation": "any",
     "short_name": "Nu Skin",
     "start_url": "/",
     "icons": [
