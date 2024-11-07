@@ -24,11 +24,6 @@
     "display": "standalone",
     "dir": "ltr",
     "lang": "en",
-    "display_override": [
-        "browser",
-        "standalone",
-        "window-controls-overlay"
-    ],
     "categories": [
         "business",
         "health",
