@@ -268,7 +268,7 @@ export default function LayoutComponent({ children }) {
                             <Link href="/nuskin/cart">
                                 <ShoppingCartOutlinedIcon />
                             </Link>
-                            {showInstall && (
+                            {!isStandalone && showInstall && (
                                 <div style={{ display: 'flex', flexDirection: 'column' }} onClick={handleInstallClick}>
                                     <GetAppIcon />
                                     <span style={{ fontSize: '12px' }}>Install</span>
