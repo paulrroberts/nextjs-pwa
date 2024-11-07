@@ -258,7 +258,7 @@ export default function LayoutComponent({ children }) {
                             <Image src="/nu-skin-logo.svg" width={150} height={33} alt="Nu Skin Logo" />
                         </Link>
                     </div>
-                    {!isStandalone && (
+                    {(!isStandalone || (isStandalone && !isMobile)) && (
                         <div className="mini-nav">
                             {isLoggedIn && (
                                 <Link href="/nuskin/profile">
