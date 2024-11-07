@@ -278,7 +278,34 @@ export default function LayoutComponent({ children }) {
                     )}
                 </CardMedia>
                 <Box sx={{ display: 'flex' }}>
-                    {isMobile ? (
+                    <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
+                        {DrawerList}
+                    </SwipeableDrawer>
+                    {isStandalone && (
+                        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
+                            <BottomNavigation
+                                showLabels
+                                value={activeTab}
+                                onChange={(event, newValue) => {
+                                    router.push(tabs.get(newValue))
+                                    setActiveTab(newValue)
+                                }}
+                            >
+                                <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeOutlinedIcon />} />
+                                <BottomNavigationAction component={Link} href="/nuskin/products" label="Shop" icon={<StorefrontIcon />} />
+                                {accountType === 'dist' && <BottomNavigationAction component={Link} href="/nuskin/build" label="Build" icon={<CachedIcon />} />}
+                                <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartOutlinedIcon />} />
+                                <BottomNavigationAction
+                                    component={Button}
+                                    onClick={toggleDrawer(true)}
+                                    label="More"
+                                    icon={<MenuIcon />}
+                                    sx={{ textTransform: 'none' }}
+                                />
+                            </BottomNavigation>
+                        </Paper>
+                    )}
+                    {/* {isMobile ? (
                         <>
                             <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
                                 {DrawerList}
@@ -324,7 +351,7 @@ export default function LayoutComponent({ children }) {
                         >
                             {DrawerList}
                         </Drawer>
-                    )}
+                    )} */}
                     <CardContent sx={{ flexGrow: 1 }}>{children}</CardContent>
                 </Box>
             </Card>

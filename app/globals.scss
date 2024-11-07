@@ -22,7 +22,7 @@ body {
 
 .MuiCardContent-root {
   padding: 20px 0 !important;
-  max-width: calc(100% - 255px);
+  // max-width: calc(100% - 255px);
   background-color: #ededed;
 }
 
@@ -57,8 +57,8 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  .main-logo {
-    margin-left: 256px;
-  }
-}
+// @media (min-width: 768px) {
+//   .main-logo {
+//     margin-left: 256px;
+//   }
+// }

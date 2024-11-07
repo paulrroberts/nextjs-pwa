@@ -33,7 +33,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -51,7 +51,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 24 24"
                                         className="account-menu-icon "
                                         aria-label="My Profile"
@@ -69,7 +69,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -86,7 +86,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 640 512"
                                         className="account-menu-icon "
                                         aria-label="Account Profile"
@@ -103,7 +103,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -117,7 +117,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 640 512"
                                         className="account-menu-icon "
                                         aria-label="Security"
@@ -134,7 +134,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -148,7 +148,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-icon "
                                         aria-label="My Site Admin"
@@ -165,7 +165,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -182,7 +182,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 576 512"
                                         className="account-menu-icon "
                                         aria-label="Address Book"
@@ -199,7 +199,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -213,7 +213,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 576 512"
                                         className="account-menu-icon "
                                         aria-label="Payment Methods"
@@ -230,7 +230,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -244,7 +244,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-icon "
                                         aria-label="Store Credits"
@@ -261,7 +261,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -275,7 +275,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 24 24"
                                         className="account-menu-icon "
                                         aria-label="Associates"
@@ -293,7 +293,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -307,7 +307,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 640 512"
                                         className="account-menu-icon "
                                         aria-label="Order History"
@@ -324,7 +324,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -338,7 +338,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-icon "
                                         aria-label="Lists"
@@ -355,7 +355,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -369,7 +369,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 640 512"
                                         className="account-menu-icon "
                                         aria-label="Direct Deposit"
@@ -386,7 +386,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -400,7 +400,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-icon favorites-icon"
                                         aria-label="Favorites"
@@ -417,7 +417,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -431,7 +431,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 24 24"
                                         className="account-menu-icon "
                                         aria-label="Subscriptions"
@@ -449,7 +449,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -463,7 +463,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 448 512"
                                         className="account-menu-icon "
                                         aria-label="Privacy"
@@ -480,7 +480,7 @@ export default function Profile() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="account-menu-link-arrow"
                                         height="1em"
@@ -541,7 +541,7 @@ export default function Profile() {
                                                             <svg
                                                                 stroke="currentColor"
                                                                 fill="currentColor"
-                                                                stroke-width="0"
+                                                                strokeWidth="0"
                                                                 viewBox="0 0 512 512"
                                                                 className="checkVal"
                                                                 height="1em"
@@ -572,7 +572,7 @@ export default function Profile() {
                                                     <svg
                                                         stroke="currentColor"
                                                         fill="currentColor"
-                                                        stroke-width="0"
+                                                        strokeWidth="0"
                                                         viewBox="0 0 512 512"
                                                         className="checkNotVal circleclose"
                                                         height="1em"
@@ -586,7 +586,7 @@ export default function Profile() {
                                                             Email is not verified.
                                                         </div>
                                                         <div className="ancher-default-accounts email-notverified">
-                                                            <div tabindex="0">Click here</div>
+                                                            <div tabIndex="0">Click here</div>
                                                         </div>
                                                         <div className="emailNotVerifiedLinkFinishText ">&nbsp;to send email verification link</div>
                                                     </div>
