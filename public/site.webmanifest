@@ -1,12 +1,16 @@
 {
   "name": "Nu Skin",
+  "description": "This is a PWA POC to determine if it is a viable option for our circumstances.",
+  "id": "nuskin_pwa_poc",
+  "orientation": "portrait",
   "short_name": "Nu Skin",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     },
     {
       "src": "/web-app-manifest-512x512.png",

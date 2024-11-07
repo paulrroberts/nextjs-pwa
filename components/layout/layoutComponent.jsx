@@ -260,9 +260,11 @@ export default function LayoutComponent({ children }) {
                     </div>
                     {!isStandalone && (
                         <div className="mini-nav">
-                            <Link href="/nuskin/profile">
-                                <PersonOutlineOutlinedIcon />
-                            </Link>
+                            {isLoggedIn && (
+                                <Link href="/nuskin/profile">
+                                    <PersonOutlineOutlinedIcon />
+                                </Link>
+                            )}
                             <Link href="/nuskin/cart">
                                 <ShoppingCartOutlinedIcon />
                             </Link>
@@ -281,7 +283,7 @@ export default function LayoutComponent({ children }) {
                             <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
                                 {DrawerList}
                             </SwipeableDrawer>
-                            {isStandalone && (
+                            {!isStandalone && (
                                 <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
                                     <BottomNavigation
                                         showLabels
@@ -297,7 +299,13 @@ export default function LayoutComponent({ children }) {
                                             <BottomNavigationAction component={Link} href="/nuskin/build" label="Build" icon={<CachedIcon />} />
                                         )}
                                         <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartOutlinedIcon />} />
-                                        <BottomNavigationAction component={Link} href="/nuskin/profile" label="Profile" icon={<PersonOutlineOutlinedIcon />} />
+                                        <BottomNavigationAction
+                                            component={Button}
+                                            onClick={toggleDrawer(true)}
+                                            label="More"
+                                            icon={<MenuIcon />}
+                                            sx={{ textTransform: 'none' }}
+                                        />
                                     </BottomNavigation>
                                 </Paper>
                             )}
