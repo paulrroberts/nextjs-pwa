@@ -117,7 +117,7 @@ export default function PushNotificationManager() {
         const date = new Date()
         date.setDate(date.getDate() + 400)
 
-        setIsSubChecked({...isSubChecked, [subscriptionType]:isTurningOn})
+        setIsSubChecked({ ...isSubChecked, [subscriptionType]: isTurningOn })
         if (isTurningOn) {
             setCookie(subscriptionType, true, { expires: date })
         } else {
@@ -209,11 +209,23 @@ export default function PushNotificationManager() {
         <div className="push-notification-wrapper">
             <h3>Push Notifications</h3>
             <div>
-                <Switch id="accountSub" checked={isThisChecked('accountSub')} onChange={handleToggle} color="primary" inputProps={{ 'aria-label': 'controlled' }} />
+                <Switch
+                    id="accountSub"
+                    checked={isThisChecked('accountSub')}
+                    onChange={handleToggle}
+                    color="primary"
+                    inputProps={{ 'aria-label': 'controlled' }}
+                />
                 <label htmlFor="accountoSub">Subscribe to Account Notifications</label>
             </div>
             <div>
-                <Switch id="productSub" checked={isThisChecked('productSub')} onChange={handleToggle} color="primary" inputProps={{ 'aria-label': 'controlled' }} />
+                <Switch
+                    id="productSub"
+                    checked={isThisChecked('productSub')}
+                    onChange={handleToggle}
+                    color="primary"
+                    inputProps={{ 'aria-label': 'controlled' }}
+                />
                 <label htmlFor="productSub">Subscribe to Product Notifications</label>
             </div>
             <div>
