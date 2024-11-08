@@ -6,7 +6,8 @@ import { subscribeUser, unsubscribeUser, sendNotification } from '../utils/actio
 import { setCookie, getCookie, deleteCookie } from 'cookies-next'
 import './pushNotificationManager.css'
 
-const PROMO_SUB = 'promoSub'
+const ACCOUNT_SUB = 'accountSub'
+const PRODUCT_SUB = 'productSub'
 const EVENT_SUB = 'eventSub'
 
 const NEXT_PUBLIC_VAPID_PUBLIC_KEY = 'BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w'
@@ -30,18 +31,24 @@ export function urlBase64ToUint8Array(base64String) {
     return outputArray
 }
 
+// This subscription is the 'id' of the particular subscriptions displayed to the user
+// It is also the key name of the cookie
+const SUBSCRIPTIONS = ['accountSub', 'productSub', 'eventSub']
+
 export default function PushNotificationManager() {
-    const [isPromoChecked, setIsPromoChecked] = useState(false)
-    const [isEventChecked, setIsEventChecked] = useState(false)
+    const [isSubChecked, setIsSubChecked] = useState({})
+
     const [isSupported, setIsSupported] = useState(false)
     const [subscription, setSubscription] = useState(null)
     const [message, setMessage] = useState('')
 
     useEffect(() => {
-        const promoSub = getCookie(PROMO_SUB) === 'true'
-        setIsPromoChecked(promoSub)
-        const eventSub = getCookie(EVENT_SUB) === 'true'
-        setIsEventChecked(eventSub)
+        const newSubChecked = {}
+        for (const subscription of SUBSCRIPTIONS) {
+            newSubChecked[subscription] = getCookie(subscription) === 'true'
+        }
+        console.log('newSubChecked = ', newSubChecked)
+        setIsSubChecked(newSubChecked)
 
         const myFunc = async () => {
             if ('serviceWorker' in navigator && 'PushManager' in window) {
@@ -51,7 +58,7 @@ export default function PushNotificationManager() {
         }
 
         myFunc()
-    }, [setIsPromoChecked, setIsEventChecked])
+    }, [setIsSubChecked])
 
     async function registerServiceWorker() {
         const registration = await navigator.serviceWorker.register('/sw.js', {
@@ -96,35 +103,25 @@ export default function PushNotificationManager() {
         }
     }
 
+    function isThisChecked(sub) {
+        return isSubChecked[sub]
+    }
+
     // Handle switch toggle
     function handleToggle(event) {
         const element = event.target
+        const subscriptionType = element.id
         const type = element.id.slice(0, -3)
         const isTurningOn = element.checked
 
         const date = new Date()
         date.setDate(date.getDate() + 400)
 
-        // Update the state
-        switch (type) {
-            case 'promo':
-                setIsPromoChecked(isTurningOn)
-                if (isTurningOn) {
-                    setCookie(PROMO_SUB, true, { expires: date })
-                } else {
-                    deleteCookie(PROMO_SUB)
-                }
-                break
-            case 'event':
-                setIsEventChecked(isTurningOn)
-                if (isTurningOn) {
-                    setCookie(EVENT_SUB, true, { expires: date })
-                } else {
-                    deleteCookie(EVENT_SUB)
-                }
-                break
-            default:
-                console.log('No type is given')
+        setIsSubChecked({...isSubChecked, [subscriptionType]:isTurningOn})
+        if (isTurningOn) {
+            setCookie(subscriptionType, true, { expires: date })
+        } else {
+            deleteCookie(subscriptionType)
         }
         console.log('Switch clicked, new state:', isTurningOn)
 
@@ -133,7 +130,6 @@ export default function PushNotificationManager() {
                 if (permission === 'granted') {
                     // alert('Permission Granted')
                     registerAndSendToAWS(type)
-                    // subscribeToPush(type)g
                 } else {
                     alert('User does not allow permission')
                 }
@@ -205,68 +201,6 @@ export default function PushNotificationManager() {
         setSubscription(null)
     }
 
-    // function registerAndSendToAWS(type) {
-    //     if ('serviceWorker' in navigator) {
-    //         navigator.serviceWorker
-    //             .register('/sw.js')
-    //             .then(function (registration) {
-    //                 return registration.pushManager.subscribe({
-    //                     userVisibleOnly: true,
-    //                     applicationServerKey: urlBase64ToUint8Array('BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w')
-    //                 })
-    //             })
-    //             .then(function (subscription) {
-    //                 // alert('Device subscripted:  ' + JSON.stringify(subscription))g
-    //                 const payload = { subscription, type }
-    //                 // // Send the subscription object to your server
-    //                 fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
-    //                     method: 'POST',
-    //                     body: JSON.stringify(payload),
-    //                     headers: {
-    //                         'Content-Type': 'application/json'
-    //                     }
-    //                 })
-    //             })
-    //             .catch(function (error) {
-    //                 console.error('Error subscribing to push notifications:', error)
-    //             })
-    //     } else {
-    //         alert('No Service worker availalbe in navigator')
-    //     }
-    // }
-
-    // We need to make sure the subscription is still around (maybe a file or some kind of storage)
-    // For this demo, I just need to turn it off by registering it again
-    // function unregister(type) {
-    //     if ('serviceWorker' in navigator) {
-    //         navigator.serviceWorker
-    //             .register('/sw.js')
-    //             .then(function (registration) {
-    //                 return registration.pushManager.subscribe({
-    //                     userVisibleOnly: true,
-    //                     applicationServerKey: urlBase64ToUint8Array('BNPnMguxotxK9szzmYdWGfRlwyA_l48_o0iHLBhGzPp6NMQP4xlK6k1FA-CRCUMFObInxSYdhlgFwTwjI8cpE2w')
-    //                 })
-    //             })
-    //             .then(function (subscription) {
-    //                 // alert('Device subscripted:  ' + JSON.stringify(subscription))
-    //                 const payload = { subscription, type }
-    //                 // // Send the subscription object to your server
-    //                 fetch('https://devapi.cloud.nuskin.com/webPushDemo/v1/subscriptions', {
-    //                     method: 'DELETE',
-    //                     body: JSON.stringify(payload),
-    //                     headers: {
-    //                         'Content-Type': 'application/json'
-    //                     }
-    //                 })
-    //             })
-    //             .catch(function (error) {
-    //                 console.error('Error subscribing to push notifications:', error)
-    //             })
-    //     } else {
-    //         alert('No Service worker availalbe in navigator')
-    //     }
-    // }
-
     if (!isSupported) {
         return <p>Push notifications are not supported in this browser.</p>
     }
@@ -275,38 +209,17 @@ export default function PushNotificationManager() {
         <div className="push-notification-wrapper">
             <h3>Push Notifications</h3>
             <div>
-                <Switch id="promoSub" checked={isPromoChecked} onChange={handleToggle} color="primary" inputProps={{ 'aria-label': 'controlled' }} />
-                <label htmlFor="promoSub">Subscribe to Promotion message</label>
+                <Switch id="accountSub" checked={isThisChecked('accountSub')} onChange={handleToggle} color="primary" inputProps={{ 'aria-label': 'controlled' }} />
+                <label htmlFor="accountoSub">Subscribe to Account Notifications</label>
             </div>
             <div>
-                <Switch id="eventSub" checked={isEventChecked} onChange={handleToggle} color="primary" inputProps={{ 'aria-label': 'controlled' }} />
-                <label htmlFor="eventSub">Subscribe to Event message</label>
+                <Switch id="productSub" checked={isThisChecked('productSub')} onChange={handleToggle} color="primary" inputProps={{ 'aria-label': 'controlled' }} />
+                <label htmlFor="productSub">Subscribe to Product Notifications</label>
             </div>
-
-            {/* <Typography variant="body1">To receive push notifications, you need to subscribe to them.</Typography>
-            {subscription ? (
-                <>
-                    <p>You are subscribed to push notifications.</p>
-                    <div className="mb-5 mt-5">
-                        <Button variant="text" onClick={unsubscribeFromPush}>
-                            Unsubscribe
-                        </Button>
-                    </div>
-                    <div className="mb-5">
-                        <TextField variant="outlined" label="Enter notification message" value={message} onChange={(e) => setMessage(e.target.value)} />
-                    </div>
-                    <div className="mb-5">
-                        <Button variant="contained" onClick={sendTestNotification}>
-                            Send Test
-                        </Button>
-                    </div>
-                </>
-            ) : (
-                <>
-                    <p>You are not subscribed to push notifications.</p>
-                    <Button onClick={subscribeToPush}>Subscribe</Button>
-                </>
-            )} */}
+            <div>
+                <Switch id="eventSub" checked={isThisChecked('eventSub')} onChange={handleToggle} color="primary" inputProps={{ 'aria-label': 'controlled' }} />
+                <label htmlFor="eventSub">Subscribe to Sales Event Notifications</label>
+            </div>
         </div>
     )
 }
