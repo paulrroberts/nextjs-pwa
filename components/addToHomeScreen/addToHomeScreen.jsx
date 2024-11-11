@@ -24,7 +24,7 @@ export default function AddToHomeScreen({ checkcookie, callback }) {
 
     const closePrompt = () => {
         setDisplayPrompt('')
-        callback(true)
+        callback(false)
     }
 
     const doNotShowAgain = () => {
@@ -33,7 +33,7 @@ export default function AddToHomeScreen({ checkcookie, callback }) {
         date.setFullYear(date.getFullYear() + 1)
         setCookie(COOKIE_NAME, 'dontShow', { expires: date }) // Set cookie for a year
         setDisplayPrompt('')
-        callback(true)
+        callback(false)
     }
 
     useEffect(() => {

@@ -249,7 +249,7 @@ export default function LayoutComponent({ children }) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <AddToHomeScreen checkcookie={showInstallPopup} callback={setShowInstall} />
+            <AddToHomeScreen checkcookie={showInstallPopup} callback={setShowInstallPopup} />
             <Card sx={{ height: '100vh', flexGrow: 1, overflow: 'scroll', paddingBottom: '40px' }}>
                 <CardMedia className="main-logo">
                     <div className="menu-logo">
@@ -268,7 +268,7 @@ export default function LayoutComponent({ children }) {
                             <Link href="/nuskin/cart">
                                 <ShoppingCartOutlinedIcon />
                             </Link>
-                            {!isStandalone && showInstall && (
+                            {!isStandalone && (
                                 <div style={{ display: 'flex', flexDirection: 'column' }} onClick={handleInstallClick}>
                                     <GetAppIcon />
                                     <span style={{ fontSize: '12px' }}>Install</span>
@@ -305,53 +305,6 @@ export default function LayoutComponent({ children }) {
                             </BottomNavigation>
                         </Paper>
                     )}
-                    {/* {isMobile ? (
-                        <>
-                            <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)}>
-                                {DrawerList}
-                            </SwipeableDrawer>
-                            {isStandalone && (
-                                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, paddingBottom: '20px', zIndex: 100 }} elevation={3}>
-                                    <BottomNavigation
-                                        showLabels
-                                        value={activeTab}
-                                        onChange={(event, newValue) => {
-                                            router.push(tabs.get(newValue))
-                                            setActiveTab(newValue)
-                                        }}
-                                    >
-                                        <BottomNavigationAction component={Link} href="/nuskin" label="Home" icon={<HomeOutlinedIcon />} />
-                                        <BottomNavigationAction component={Link} href="/nuskin/products" label="Shop" icon={<StorefrontIcon />} />
-                                        {accountType === 'dist' && (
-                                            <BottomNavigationAction component={Link} href="/nuskin/build" label="Build" icon={<CachedIcon />} />
-                                        )}
-                                        <BottomNavigationAction component={Link} href="/nuskin/cart" label="Cart" icon={<ShoppingCartOutlinedIcon />} />
-                                        <BottomNavigationAction
-                                            component={Button}
-                                            onClick={toggleDrawer(true)}
-                                            label="More"
-                                            icon={<MenuIcon />}
-                                            sx={{ textTransform: 'none' }}
-                                        />
-                                    </BottomNavigation>
-                                </Paper>
-                            )}
-                        </>
-                    ) : (
-                        <Drawer
-                            sx={{
-                                width: drawerWidth,
-                                flexShrink: 0,
-                                '& .MuiDrawer-paper': {
-                                    width: drawerWidth,
-                                    boxSizing: 'border-box'
-                                }
-                            }}
-                            variant="permanent"
-                        >
-                            {DrawerList}
-                        </Drawer>
-                    )} */}
                     <CardContent sx={{ flexGrow: 1 }}>{children}</CardContent>
                 </Box>
             </Card>
