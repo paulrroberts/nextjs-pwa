@@ -53,7 +53,7 @@ export default function PushNotificationManager() {
 
         const myFunc = async () => {
             if ('serviceWorker' in navigator && 'PushManager' in window) {
-                setIsSupported(false)
+                setIsSupported(true)
                 await registerServiceWorker()
             }
         }
