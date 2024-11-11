@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Button, TextField, Typography, Switch } from '@mui/material'
 import { subscribeUser, unsubscribeUser, sendNotification } from '../utils/actions'
 import { setCookie, getCookie, deleteCookie } from 'cookies-next'
+import GetAppIcon from '@mui/icons-material/GetApp'
 import './pushNotificationManager.css'
 
 const ACCOUNT_SUB = 'accountSub'
@@ -52,7 +53,7 @@ export default function PushNotificationManager() {
 
         const myFunc = async () => {
             if ('serviceWorker' in navigator && 'PushManager' in window) {
-                setIsSupported(true)
+                setIsSupported(false)
                 await registerServiceWorker()
             }
         }
@@ -202,7 +203,14 @@ export default function PushNotificationManager() {
     }
 
     if (!isSupported) {
-        return <p>Push notifications are not supported in this browser.</p>
+        return (
+            <div className="push-notification-wrapper">
+                <p>
+                    To enable push notifications please install this application by clicking the <GetAppIcon /> at the top right and follow the instructions
+                    provided.
+                </p>
+            </div>
+        )
     }
 
     return (
