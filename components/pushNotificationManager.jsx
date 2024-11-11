@@ -206,7 +206,7 @@ export default function PushNotificationManager() {
         return (
             <div className="push-notification-wrapper">
                 <p>
-                    To enable push notifications please install this application by clicking the <GetAppIcon /> at the top right and follow the instructions
+                    To enable push notifications please install this application by tapping the <GetAppIcon /> at the top right and follow the instructions
                     provided.
                 </p>
             </div>
