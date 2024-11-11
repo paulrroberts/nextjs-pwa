@@ -37,9 +37,10 @@ export default function AddToHomeScreen({ checkcookie, callback }) {
     }
 
     useEffect(() => {
-        const addToHomeScreenPromptCookie = getCookie(COOKIE_NAME)
+        // const addToHomeScreenPromptCookie = getCookie(COOKIE_NAME)
 
-        if (addToHomeScreenPromptCookie !== 'dontShow') {
+        // if (addToHomeScreenPromptCookie !== 'dontShow') {
+        if (checkcookie) {
             // Only show prompt if user is on mobile and app is not installed
             if (isMobile && !isStandalone) {
                 if (userAgent === 'Safari') {
