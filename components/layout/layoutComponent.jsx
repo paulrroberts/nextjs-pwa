@@ -8,7 +8,6 @@ import {
     BottomNavigationAction,
     Box,
     Button,
-    Drawer,
     List,
     ListItem,
     ListItemButton,
@@ -38,7 +37,6 @@ import useUserAgent from '../userAgent/userAgent'
 import { useRouter } from 'next/navigation'
 import AddToHomeScreen from '../addToHomeScreen/addToHomeScreen'
 
-const drawerWidth = 255
 const LOGGED_IN = 'loggedIn'
 const ACCOUNT_TYPE = 'accountType'
 const LOGOUT_MESSAGE = 'User successfully logged out'
