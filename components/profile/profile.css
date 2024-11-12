@@ -31055,386 +31055,523 @@ button.header-oktasignout-text:focus {
     }
 }
 
-.placholder-custom .product-isloading .image,.placholder-custom .product-isloading h2,.placholder-custom .product-isloading p {
+.placholder-custom .product-isloading .image,
+.placholder-custom .product-isloading h2,
+.placholder-custom .product-isloading p {
     background: #e3e3e3;
     border: none;
-    background-size: 200% 100%
+    background-size: 200% 100%;
 }
 
 .placholder-custom .product-isloading .product-card {
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .placholder-custom .product-isloading .image {
     height: 210px;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .placholder-custom .product-isloading h2 {
     height: 20px;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .placholder-custom .product-isloading p {
     height: 20px;
     width: 50%;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .placholder-custom .product-isloading .right-below-row {
     background: #f5f5f5;
-    padding: 8% 0
+    padding: 8% 0;
 }
 
 .placholder-custom .product-isloading .right-top-row {
-    height: 65px
+    height: 65px;
 }
 
 .placholder-custom .product-isloading .right-top-row p {
     background-color: #e3e3e3;
     height: 20px;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .placholder-custom .product-isloading .w-inherit {
-    width: inherit!important
+    width: inherit !important;
 }
 
 .placholder-custom .sidebar-isLoading .listBlock {
     border-bottom: 1px solid #e3e3e3;
-    padding: 1.5rem 0
+    padding: 1.5rem 0;
 }
 
 .placholder-custom .sidebar-isLoading .listBlock:first-child {
-    padding-top: 0!important
+    padding-top: 0 !important;
 }
 
 .placholder-custom .sidebar-isLoading .listBlock:last-child {
-    border: none
+    border: none;
 }
 
 .placholder-custom .sidebar-isLoading .listBlock ul {
     list-style-type: none;
-    padding-left: 30px
+    padding-left: 30px;
 }
 
-.placholder-custom .sidebar-isLoading .listBlock li,.placholder-custom .sidebar-isLoading .listBlock p {
+.placholder-custom .sidebar-isLoading .listBlock li,
+.placholder-custom .sidebar-isLoading .listBlock p {
     height: 18px;
     width: 100%;
     background: #e3e3e3;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .placholder-custom .sidebar-isLoading .listBlock li:before {
     height: 18px;
-    content: "";
+    content: '';
     position: absolute;
     border-color: #e3e3e3;
     background: #e3e3e3;
     left: 15px;
     width: 18px;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .placholder-custom .sidebar-isLoading .w-40 {
-    width: 40%!important
+    width: 40% !important;
 }
 
 .placholder-custom .sort-label {
-    margin-top: 20px
+    margin-top: 20px;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .placholder-custom .plp-placeholder-row {
-        padding-left:1rem!important;
-        padding-right: 1rem!important
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
     }
 
-    .placholder-custom .search-result,.placholder-custom .sort-column {
-        padding-left: 0!important;
-        padding-right: 0!important
+    .placholder-custom .search-result,
+    .placholder-custom .sort-column {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
 .mpp-placeholder {
     margin-top: 10px;
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .recommended-products .mpp-placeholder {
-    flex-wrap: nowrap
+    flex-wrap: nowrap;
 }
 
 .mpp-placeholder .product-card {
     height: 423px;
-    width: 250px
+    width: 250px;
 }
 
 .mpp-placeholder .image {
     height: 283px;
     width: 100%;
     border-radius: 5px;
-    background-color: #e3e3e3
+    background-color: #e3e3e3;
 }
 
-.mpp-placeholder .content h2,.mpp-placeholder .content p {
+.mpp-placeholder .content h2,
+.mpp-placeholder .content p {
     height: 20px;
     border-radius: 5px;
-    background-color: #e3e3e3
+    background-color: #e3e3e3;
 }
 
 .mpp-placeholder .content p {
-    width: 50%
+    width: 50%;
 }
 
 .accounts-container .sidebar-isLoading .listBlock li:before {
-    display: none
+    display: none;
 }
 
 :root {
-    --primary-color: #252525
+    --primary-color: #252525;
 }
 
 .subscription-next-order-wrapper .scan-card-btn {
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 .subscription-next-order-wrapper .scan-card-info-icon {
     align-self: center;
     cursor: pointer;
     background: none;
-    border: 2px solid transparent
+    border: 2px solid transparent;
 }
 
 .subscription-next-order-wrapper .scan-card-info-icon:focus {
-    border: 2px solid #252525
+    border: 2px solid #252525;
 }
 
 .subscription-next-order-wrapper .nav-item {
-    flex: unset!important;
-    height: auto!important;
+    flex: unset !important;
+    height: auto !important;
     padding: 0;
     align-items: center;
-    min-width: 130px!important;
-    max-width: 175px!important;
-    display: contents
+    min-width: 130px !important;
+    max-width: 175px !important;
+    display: contents;
 }
 
 .subscription-next-order-wrapper .nav-item .tab-header-section {
-    display: flex
+    display: flex;
 }
 
 .subscription-next-order-wrapper .nav-item .tab-header-section .warning-icon {
     width: 24px;
     height: 24px;
-    padding-left: 8px
+    padding-left: 8px;
 }
 
 .subscription-next-order-wrapper .nav-item .tab-header-section .warning-icon svg {
     width: 24px;
     height: 24px;
-    color: #c81d1d
+    color: #c81d1d;
 }
 
 .subscription-next-order-wrapper .nav-item .tab-header-section .date {
-    border-bottom: 1px solid #252525
+    border-bottom: 1px solid #252525;
 }
 
 .subscription-next-order-wrapper .nav-item .tab-header-section .date:focus {
-    border: 1px solid #252525
+    border: 1px solid #252525;
 }
 
 .subscription-next-order-wrapper .nav-item .tab-header-section .divider {
-    padding: 0 24px
+    padding: 0 24px;
 }
 
 .subscription-next-order-wrapper .nav-item:last-child .divider {
-    display: none
+    display: none;
 }
 
 .subscription-next-order-wrapper .nav-item:hover {
-    border: none!important;
-    color: inherit!important
+    border: none !important;
+    color: inherit !important;
 }
 
 .subscription-next-order-wrapper .nav-item.active {
-    border: none!important
+    border: none !important;
 }
 
 .subscription-next-order-wrapper .nav-tabs {
     flex-wrap: nowrap;
-    border: none!important;
+    border: none !important;
     overflow-x: auto;
     scrollbar-width: thin;
     white-space: nowrap;
-    padding-bottom: 8px
+    padding-bottom: 8px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section {
     display: grid;
     margin-top: 26px;
     grid-template-columns: 65% auto;
-    grid-template-rows: 44px auto
+    grid-template-rows: 44px auto;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .disable {
-    opacity: .5;
-    pointer-events: none
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subs-input-parent {
     grid-column: 1/2;
-    grid-row: 1/2
+    grid-row: 1/2;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subs-input-parent .search-textBox {
-    border-radius: 4px!important;
-    border-color: #b2b2b2
+    border-radius: 4px !important;
+    border-color: #b2b2b2;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section {
-    grid-column: 1/2
+    grid-column: 1/2;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card {
-    padding: 15px
+    padding: 15px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section {
-    flex: 1 1
+    flex: 1 1;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .subs-product-sku-right-section .cart-prdct-qntity-count {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-section
+    .subs-product-sku-right-section
+    .cart-prdct-qntity-count {
     width: 116px;
-    border-color: #b2b2b2!important;
+    border-color: #b2b2b2 !important;
     border-radius: 4px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .subs-product-sku-right-section .cart-prdct-qntity-count .quantity-value {
-    border: none!important
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-section
+    .subs-product-sku-right-section
+    .cart-prdct-qntity-count
+    .quantity-value {
+    border: none !important;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .subs-product-sku-right-section .manage-skip-button {
-    border-color: #b2b2b2!important;
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-section
+    .subs-product-sku-right-section
+    .manage-skip-button {
+    border-color: #b2b2b2 !important;
     border-radius: 4px;
     flex-grow: 1;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .subs-product-sku-right-section .manage-skip-button:focus {
-    border: 3px solid #252525!important
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-section
+    .subs-product-sku-right-section
+    .manage-skip-button:focus {
+    border: 3px solid #252525 !important;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .subs-product-sku-right-section .manage-skip-button.skipped {
-    background-color: #252525!important;
-    color: #fff
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-section
+    .subs-product-sku-right-section
+    .manage-skip-button.skipped {
+    background-color: #252525 !important;
+    color: #fff;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section {
-    width: calc(100% - 110px)!important;
-    flex-direction: column
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section {
+    width: calc(100% - 110px) !important;
+    flex-direction: column;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-title-section {
-    justify-content: space-between
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-title-section {
+    justify-content: space-between;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-title-section .subs-product-title {
-    font-family: Lora,sans-serif;
-    font-size: 18px!important;
-    font-weight: 600!important;
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-title-section
+    .subs-product-title {
+    font-family: Lora, sans-serif;
+    font-size: 18px !important;
+    font-weight: 600 !important;
     line-height: 24px;
-    width: 80%
+    width: 80%;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-title-section .subs-product-title.disabled {
-    pointer-events: unset!important
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-title-section
+    .subs-product-title.disabled {
+    pointer-events: unset !important;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-title-section .details-delete-button {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-title-section
+    .details-delete-button {
     width: 24px;
     height: 24px;
-    display: contents
+    display: contents;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-title-section .details-delete-button svg {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-title-section
+    .details-delete-button
+    svg {
     width: 16px;
     height: 16px;
-    color: #252525
+    color: #252525;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-sku-section {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-sku-section {
     justify-content: space-between;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-sku-section .subs-product-sku span {
-    font-size: 10px!important;
-    font-weight: 500!important
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-sku-section
+    .subs-product-sku
+    span {
+    font-size: 10px !important;
+    font-weight: 500 !important;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-sku-section .subs-product-gift-card {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-sku-section
+    .subs-product-gift-card {
     font-size: 11px;
-    color: green!important;
+    color: green !important;
     font-weight: 600;
-    width: 100%!important
+    width: 100% !important;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-sku-section .subs-product-gift-card .subs-product-gift-info {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-sku-section
+    .subs-product-gift-card
+    .subs-product-gift-info {
     color: green;
-    width: 18px
+    width: 18px;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subs-product-sku-section .subs-product-sku-right-section {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subs-product-sku-section
+    .subs-product-sku-right-section {
     width: 50%;
-    padding-left: 6px
+    padding-left: 6px;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subscription-price .sale {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subscription-price
+    .sale {
     font-size: 16px;
-    font-weight: 700!important
+    font-weight: 700 !important;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-deatils-section .subscription-price .original {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .product-card-deatils-section
+    .subscription-price
+    .original {
     font-size: 14px;
-    font-weight: 700!important
+    font-weight: 700 !important;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .quantity-section {
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .quantity-section span {
-    font-size: 14px!important;
-    font-weight: 400!important;
-    color: #252525
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #252525;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .quantity-section .quantity {
-    height: 44px!important;
-    margin-left: 0!important
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .quantity-section
+    .quantity {
+    height: 44px !important;
+    margin-left: 0 !important;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .quantity-section .manage-skip-button {
-    height: 44px!important
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .quantity-section
+    .manage-skip-button {
+    height: 44px !important;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .subscription-frequency-section {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .subscription-frequency-section {
     justify-content: space-between;
     padding-top: 16px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .subscription-frequency-section .subscription-frequency-wrapper {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .subscription-frequency-section
+    .subscription-frequency-wrapper {
     width: 50%;
-    padding-right: 6px
+    padding-right: 6px;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .subscription-frequency-section .subscription-calender-wrapper {
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-left-section
+    .product-list__product-card
+    .subscription-frequency-section
+    .subscription-calender-wrapper {
     width: 50%;
-    padding-left: 6px
+    padding-left: 6px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section {
@@ -31444,53 +31581,53 @@ button.header-oktasignout-text:focus {
     margin-left: 12px;
     background-color: #f5f5f5;
     padding: 16px;
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-process-label {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: left;
     color: #252525;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-process-date {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
     text-align: left;
-    margin-bottom: 16px
+    margin-bottom: 16px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-button-order {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     width: 100%;
     border-radius: 4px;
     color: #fff;
     background-color: #5b81a5;
     border: none;
     height: 44px;
-    margin-bottom: 16px
+    margin-bottom: 16px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-button-order:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-title {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 33px;
     text-align: left;
     color: #252525;
     color: var(--primary-color);
-    margin-bottom: 16px
+    margin-bottom: 16px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-price-table {
@@ -31498,74 +31635,90 @@ button.header-oktasignout-text:focus {
     color: var(--primary-color);
     width: 100%;
     margin-top: 12px;
-    margin-bottom: 12px
+    margin-bottom: 12px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-price-table td {
     display: table-cell;
     padding: 0;
     background: #f5f5f5;
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 500;
-    line-height: 20px
+    line-height: 20px;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-price-table td.sub-sum-total-cell {
-    font-family: Lora,sans-serif;
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-right-section
+    .sub-sum-container
+    .sub-sum-price-table
+    td.sub-sum-total-cell {
+    font-family: Lora, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 20px;
-    padding-top: 5px
+    padding-top: 5px;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-price-table td:first-child {
-    text-align: left
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-right-section
+    .sub-sum-container
+    .sub-sum-price-table
+    td:first-child {
+    text-align: left;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-price-table td:last-child {
-    text-align: right
+    text-align: right;
 }
 
-.subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-price-table tr:not(:last-child) td {
-    padding-bottom: 8px
+.subscription-next-order-wrapper
+    .subscription-next-order-section
+    .subscription-next-order-right-section
+    .sub-sum-container
+    .sub-sum-price-table
+    tr:not(:last-child)
+    td {
+    padding-bottom: 8px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-discount-icon {
-    width: 18px!important;
-    height: 18px!important
+    width: 18px !important;
+    height: 18px !important;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-coupon-container {
-    display: none
+    display: none;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-coupon-label {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 18px;
     font-weight: 600;
-    line-height: 24px
+    line-height: 24px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-coupon-input {
     margin-right: 10px;
     padding: 11px 10px;
     border-radius: 4px;
-    border: 1px solid #b2b2b2
+    border: 1px solid #b2b2b2;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-button-apply {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
     color: #8c8c8c;
     padding: 10px 0;
     flex-grow: 1;
     border-radius: 4px;
-    border: none
+    border: none;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-button-skip {
@@ -31576,344 +31729,421 @@ button.header-oktasignout-text:focus {
     border-radius: 4px;
     color: #252525;
     color: var(--primary-color);
-    font-weight: 600
+    font-weight: 600;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-button-skip:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-divider {
     border-bottom: 1px solid #8c8c8c;
-    width: 100%
+    width: 100%;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-divider.table-divider {
-    margin: 24px 0 16px
+    margin: 24px 0 16px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .sub-sum-container .sub-sum-divider.coupon-divider {
     margin: 16px 0 24px;
-    display: none
+    display: none;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .free-gift-text {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     text-decoration: underline;
     box-shadow: none;
     padding: 0;
-    margin-bottom: 16px
+    margin-bottom: 16px;
 }
 
 .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section .free-gift-text svg {
-    margin-left: 6px
+    margin-left: 6px;
 }
 
 .free-gifts-header {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-weight: 600;
     font-size: 22px;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 .free-gift-name {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 18px;
     font-weight: 600;
-    line-height: 23.04px
+    line-height: 23.04px;
 }
 
-.free-gift-name,.free-gift-qty {
+.free-gift-name,
+.free-gift-qty {
     text-align: left;
     color: #252525;
-    display: block
+    display: block;
 }
 
 .free-gift-qty {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 10px;
     font-weight: 500;
     line-height: 12.1px;
-    padding-top: 4px
+    padding-top: 4px;
 }
 
 .free-gift-price {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 20.48px;
     text-align: left;
     color: #252525;
     display: block;
-    margin-top: .5rem
+    margin-top: 0.5rem;
 }
 
 .bundle-items-collapse-wrapper {
     display: flex;
     justify-content: flex-end;
     padding-top: 12px;
-    padding-bottom: 12px
+    padding-bottom: 12px;
 }
 
 .bundle-items-collapse-wrapper .bundle-items-collapse-button {
     text-decoration: none;
     border-bottom: 1px solid #252525;
-    box-shadow: none
+    box-shadow: none;
 }
 
 .bundle-items-collapse-wrapper .bundle-items-collapse-button:focus {
-    border: 3px solid #252525
+    border: 3px solid #252525;
 }
 
 .bundle-items-list-wrapper {
-    background-color: inherit
+    background-color: inherit;
 }
 
 .bundle-items-list-wrapper .included-item-wrapper {
     width: 50%;
-    padding: 1rem
+    padding: 1rem;
 }
 
 .subs-modal-bundle-items-wrapper .bundle-items-list-wrapper {
     background-color: inherit;
-    padding-top: .5rem
+    padding-top: 0.5rem;
 }
 
 .subs-modal-bundle-items-wrapper .bundle-items-list-wrapper .included-item-wrapper {
     width: 100%;
-    padding: 0
+    padding: 0;
 }
 
-@media screen and (min-width: 767px)and (max-width:1090px) {
+@media screen and (min-width: 767px) and (max-width: 1090px) {
     .subscription-frequency-section {
-        flex-direction:column
+        flex-direction: column;
     }
 
     .subscription-frequency-section .subscription-frequency-wrapper {
-        width: 100%!important;
+        width: 100% !important;
         padding-right: 0;
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
 
     .subscription-frequency-section .subscription-calender-wrapper {
-        width: 100%!important;
-        padding-left: 0!important
+        width: 100% !important;
+        padding-left: 0 !important;
     }
 }
 
-@media screen and (min-width: 767px)and (max-width:866px) {
+@media screen and (min-width: 767px) and (max-width: 866px) {
     .subscription-frequency-section {
-        margin-left:-69px!important
+        margin-left: -69px !important;
     }
 }
 
-@media screen and (min-width: 1092px)and (max-width:1150px) {
+@media screen and (min-width: 1092px) and (max-width: 1150px) {
     .subscription-frequency-section {
-        margin-left:-64px!important
+        margin-left: -64px !important;
     }
 }
 
 @media screen and (max-width: 767px) {
     .subscription-next-order-wrapper .subscription-next-order-section {
-        grid-template-columns:auto;
-        grid-template-rows: 44px auto auto
+        grid-template-columns: auto;
+        grid-template-rows: 44px auto auto;
     }
 
     .subscription-next-order-wrapper .subscription-next-order-section .subs-input-parent {
         grid-column: 1/2;
-        grid-row: 1/2
+        grid-row: 1/2;
     }
 
     .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section {
         grid-column: 1/2;
         grid-row: 3/4;
-        width: auto
+        width: auto;
     }
 
     .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .bundle-items-collapse-wrapper {
-        justify-content: start
+        justify-content: start;
     }
 
     .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .included-item-wrapper {
         width: 100%;
-        padding: 1rem
+        padding: 1rem;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-list-product-img {
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-list-product-img {
         position: absolute;
         width: 70px;
-        height: 70px
+        height: 70px;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section {
-        width: 100%!important
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section {
+        width: 100% !important;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subs-product-title-section {
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subs-product-title-section {
         margin-left: 82px;
-        margin-bottom: 4px
+        margin-bottom: 4px;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subs-product-sku-section .subs-product-sku-left-section {
-        margin-left: 82px
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subs-product-sku-section
+        .subs-product-sku-left-section {
+        margin-left: 82px;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subs-product-sku-section .subs-product-sku-left-section .subs-product-sku {
-        margin-bottom: 4px
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subs-product-sku-section
+        .subs-product-sku-left-section
+        .subs-product-sku {
+        margin-bottom: 4px;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subs-product-sku-section .subs-product-sku-left-section .subscription-price {
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subs-product-sku-section
+        .subs-product-sku-left-section
+        .subscription-price {
         margin-top: 0;
-        margin-bottom: 4px
+        margin-bottom: 4px;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subs-product-sku-section .subs-product-sku-right-section {
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subs-product-sku-section
+        .subs-product-sku-right-section {
         padding-left: 0;
-        width: 100%
+        width: 100%;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subs-product-sku-section .subs-product-sku-right-section .qa-quantity-field-wrapper {
-        margin-right: 15px!important
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subs-product-sku-section
+        .subs-product-sku-right-section
+        .qa-quantity-field-wrapper {
+        margin-right: 15px !important;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subscription-frequency-section {
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subscription-frequency-section {
         flex-flow: column;
-        padding-top: 10px
+        padding-top: 10px;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subscription-frequency-section .subscription-frequency-wrapper {
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subscription-frequency-section
+        .subscription-frequency-wrapper {
         width: 100%;
         padding-right: 0;
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
 
-    .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-left-section .product-list__product-card .product-card-section .product-card-deatils-section .subscription-frequency-section .subscription-calender-wrapper {
+    .subscription-next-order-wrapper
+        .subscription-next-order-section
+        .subscription-next-order-left-section
+        .product-list__product-card
+        .product-card-section
+        .product-card-deatils-section
+        .subscription-frequency-section
+        .subscription-calender-wrapper {
         width: 100%;
-        padding-left: 0
+        padding-left: 0;
     }
 
     .subscription-next-order-wrapper .subscription-next-order-section .subscription-next-order-right-section {
         grid-column: 1/2;
         grid-row: 2/3;
         margin-top: 16px;
-        margin-left: 0
+        margin-left: 0;
     }
 
     .subs-product-sku-section {
-        flex-direction: column
+        flex-direction: column;
     }
 
-    .subscription-frequency-section .subscription-calender-wrapper,.subscription-frequency-section .subscription-frequency-wrapper {
+    .subscription-frequency-section .subscription-calender-wrapper,
+    .subscription-frequency-section .subscription-frequency-wrapper {
         width: 100%;
-        padding: 0
+        padding: 0;
     }
 
     .delete-modal-button-container {
-        flex-direction: column
+        flex-direction: column;
     }
 
     .delete-modal-button-container .delete-modal-button-continue {
         margin-top: 12px;
-        margin-left: 0!important
+        margin-left: 0 !important;
     }
 
     .delete-modal-button-container .delete-modal-button-back {
-        margin-right: 0!important
+        margin-right: 0 !important;
     }
 
-    .delete-modal-container .modal-dialog,.skip-modal-container .modal-dialog {
-        width: unset!important
+    .delete-modal-container .modal-dialog,
+    .skip-modal-container .modal-dialog {
+        width: unset !important;
     }
 }
 
 .skip-modal-container .modal-dialog {
-    width: 600px
+    width: 600px;
 }
 
 .skip-modal-container .modal-dialog .modal-content {
     border-radius: 10px;
-    width: 600px
+    width: 600px;
 }
 
 .skip-modal-container .modal-dialog .modal-content .modal-header {
     border: none;
-    padding: 24px 24px 0
+    padding: 24px 24px 0;
 }
 
 .skip-modal-container .modal-dialog .modal-content .modal-body {
-    padding: 0 24px 24px
+    padding: 0 24px 24px;
 }
 
 .skip-modal-container .modal-dialog .subs-product-sku span {
-    font-size: 10px!important;
-    font-weight: 500!important;
-    color: #5f5f5f
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    color: #5f5f5f;
 }
 
 .skip-modal-container .skip-modal-question {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 28px;
     letter-spacing: 0;
     text-align: left;
     color: #252525;
-    margin-bottom: 4px
+    margin-bottom: 4px;
 }
 
 .skip-modal-container .skip-modal-description {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: left;
     padding-top: 20px;
-    color: #252525
+    color: #252525;
 }
 
 .skip-modal-container .skip-modal-description .subs-product-title {
     font-size: 18px;
     color: #252525;
     font-weight: 600;
-    padding-bottom: 4px
+    padding-bottom: 4px;
 }
 
 .skip-modal-container .skip-modal-description .subscription-price {
-    padding-top: 6px
+    padding-top: 6px;
 }
 
 .skip-modal-container .skipped-date-section {
     margin-top: 12px;
     padding: 8px 23px;
     background: #efe5d7;
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 .skip-modal-container .skipped-date-section span {
     font-size: 12px;
     font-weight: 400;
-    color: #252525
+    color: #252525;
 }
 
 .skip-modal-container .skipped-date-section .skipped-date {
     font-size: 18px;
     font-weight: 600;
-    color: #252525
+    color: #252525;
 }
 
 .skip-modal-container .skip-modal-button-container {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .skip-modal-container .skip-modal-button-container .skip-modal-button-back {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     height: 44px;
     font-size: 14px;
     font-weight: 600;
@@ -31921,19 +32151,19 @@ button.header-oktasignout-text:focus {
     border: 1px solid #b2b2b2;
     background-color: #fff;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
     border-radius: 4px;
     margin-top: 10px;
-    color: #2c2c2c
+    color: #2c2c2c;
 }
 
 .skip-modal-container .skip-modal-button-container .skip-modal-button-back:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .skip-modal-container .skip-modal-button-container .skip-modal-button-continue {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     height: 44px;
     font-weight: 600;
@@ -31942,74 +32172,74 @@ button.header-oktasignout-text:focus {
     background-color: #c81d1d;
     border: none;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 .skip-modal-container .skip-modal-button-container .skip-modal-button-continue:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .delete-modal-container .modal-dialog {
-    width: 600px
+    width: 600px;
 }
 
 .delete-modal-container .modal-dialog .modal-content {
     border-radius: 10px;
-    width: 600px
+    width: 600px;
 }
 
 .delete-modal-container .modal-dialog .modal-content .modal-header {
     border: none;
-    padding: 24px 24px 0
+    padding: 24px 24px 0;
 }
 
 .delete-modal-container .modal-dialog .modal-content .modal-body {
-    padding: 0 24px 24px
+    padding: 0 24px 24px;
 }
 
 .delete-modal-container .delete-modal-question {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 28px;
     letter-spacing: 0;
     text-align: left;
     color: #252525;
-    margin-bottom: 4px
+    margin-bottom: 4px;
 }
 
 .delete-modal-container .delete-modal-description {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: left;
     padding-top: 20px;
-    color: #252525
+    color: #252525;
 }
 
 .delete-modal-container .delete-modal-description .subs-product-title {
     font-size: 18px;
     color: #252525;
     font-weight: 600;
-    padding-bottom: 4px
+    padding-bottom: 4px;
 }
 
 .delete-modal-container .delete-modal-description .subscription-price {
-    padding-top: 6px
+    padding-top: 6px;
 }
 
 .delete-modal-container .delete-modal-button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 16px
+    margin-top: 16px;
 }
 
 .delete-modal-container .delete-modal-button-container .delete-modal-button-back {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     height: 44px;
     font-size: 14px;
     font-weight: 600;
@@ -32017,20 +32247,20 @@ button.header-oktasignout-text:focus {
     border: 1px solid #b2b2b2;
     background-color: #fff;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
     border-radius: 4px;
     margin-right: 4px;
     flex: 1 1;
-    color: #2c2c2c
+    color: #2c2c2c;
 }
 
 .delete-modal-container .delete-modal-button-container .delete-modal-button-back:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .delete-modal-container .delete-modal-button-container .delete-modal-button-continue {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     height: 44px;
     font-weight: 600;
@@ -32039,219 +32269,222 @@ button.header-oktasignout-text:focus {
     background-color: #c81d1d;
     border: none;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
     border-radius: 4px;
     margin-left: 4px;
-    flex: 1 1
+    flex: 1 1;
 }
 
 .delete-modal-container .delete-modal-button-container .delete-modal-button-continue:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .past-order-warning {
-    margin-top: 26px
+    margin-top: 26px;
 }
 
 .subscription-next-order-search-section .form-control {
-    border: 1px solid #b2b2b2
+    border: 1px solid #b2b2b2;
 }
 
 .gray-out {
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
 }
 
 .close:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .single-subscription-pop .ssm-close-icon {
     background: none;
-    border: none
+    border: none;
 }
 
 .single-subscription-pop .ssm-close-icon:focus {
-    border: 2px solid #252525
+    border: 2px solid #252525;
 }
 
 .single-subscription-pop .edit-delete-button {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    padding: 0
+    padding: 0;
 }
 
 .single-subscription-pop .edit-delete-button svg {
     width: 16px;
     height: 16px;
-    color: #252525
+    color: #252525;
 }
 
 .single-subscription-pop .modal-dialog .modal-content {
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 .single-drawer-product-container .single-drawer-product-wrapper .image-wrapper {
-    border: 1px solid #e0e0e0
+    border: 1px solid #e0e0e0;
 }
 
 .single-drawer-product-container .single-drawer-product-wrapper .Subscription-item-title {
     font-size: 26px;
     font-weight: 600;
-    font-family: Lora,sans-serif;
-    padding-bottom: 36px
+    font-family: Lora, sans-serif;
+    padding-bottom: 36px;
 }
 
 .single-drawer-product-container .single-drawer-product-wrapper .subs-product-title {
-    font-size: 18px!important;
+    font-size: 18px !important;
     color: #252525;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .single-drawer-product-container .single-drawer-product-wrapper .subs-product-sku {
-    font-size: 10px!important;
+    font-size: 10px !important;
     font-weight: 500;
     color: #5f5f5f;
-    padding-top: 4px
+    padding-top: 4px;
 }
 
 .single-drawer-product-container .single-drawer-product-wrapper .subscription-price {
-    padding-top: 8px
+    padding-top: 8px;
 }
 
 .single-drawer-product-container .single-drawer-product-wrapper .subscription-price .price-wrapper {
     display: flex;
-    flex-direction: row-reverse
+    flex-direction: row-reverse;
 }
 
 .single-drawer-product-container .single-drawer-product-wrapper .subscription-price .price-wrapper .sale {
-    font-size: 16px!important;
+    font-size: 16px !important;
     font-weight: 700;
-    color: #252525
+    color: #252525;
 }
 
-.single-drawer-product-container .single-drawer-product-wrapper .subscription-price .price-wrapper .original,.single-drawer-product-container .single-drawer-product-wrapper .subscription-price .total-label,.single-drawer-product-container .single-drawer-product-wrapper .subscription-price .total-price {
-    font-size: 16px!important;
+.single-drawer-product-container .single-drawer-product-wrapper .subscription-price .price-wrapper .original,
+.single-drawer-product-container .single-drawer-product-wrapper .subscription-price .total-label,
+.single-drawer-product-container .single-drawer-product-wrapper .subscription-price .total-price {
+    font-size: 16px !important;
     font-weight: 500;
-    color: #8c8c8c
+    color: #8c8c8c;
 }
 
 .single-drawer-product-container .quantity-wrapper {
-    padding-top: 23px
+    padding-top: 23px;
 }
 
 .single-drawer-product-container .quantity-wrapper .quantity-label {
-    font-size: 14px!important;
+    font-size: 14px !important;
     color: #252525;
     font-weight: 400;
-    padding-right: 8px
+    padding-right: 8px;
 }
 
 .single-drawer-product-container .quantity-wrapper .quantity {
-    width: 116px!important;
-    height: 44px!important;
-    border-color: #b2b2b2!important;
-    border-radius: 4px
+    width: 116px !important;
+    height: 44px !important;
+    border-color: #b2b2b2 !important;
+    border-radius: 4px;
 }
 
 .single-drawer-product-container .quantity-wrapper .quantity .quantity-value {
-    border: none!important
+    border: none !important;
 }
 
-.single-drawer-product-container .quantity-wrapper .subscription-price .total-label,.single-drawer-product-container .quantity-wrapper .subscription-price .total-price {
-    font-size: 22px!important;
+.single-drawer-product-container .quantity-wrapper .subscription-price .total-label,
+.single-drawer-product-container .quantity-wrapper .subscription-price .total-price {
+    font-size: 22px !important;
     font-weight: 700;
-    color: #252525
+    color: #252525;
 }
 
 .single-drawer-product-container .subscription-frequency-wrapper {
     padding-top: 26px;
-    width: 274px!important
+    width: 274px !important;
 }
 
 .single-drawer-product-container .subscription-Processing {
-    padding-bottom: 4px
+    padding-bottom: 4px;
 }
 
 .single-drawer-product-container .subscription-Processing .no-processing-text {
     font-weight: 700;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .single-drawer-product-container .subscription-Processing .processing-text {
-    font-size: 14px!important;
-    font-weight: 400
+    font-size: 14px !important;
+    font-weight: 400;
 }
 
 .single-drawer-product-container .subscription-Processing .processing-text-date {
-    font-size: 14px!important;
-    font-weight: 700
+    font-size: 14px !important;
+    font-weight: 700;
 }
 
 .single-drawer-product-container .subscription-Processing-wrapper {
     margin-top: 8px;
-    width: 274px!important
+    width: 274px !important;
 }
 
 .single-drawer-product-container .subscription-terms-wrapper {
-    padding-top: 12px
+    padding-top: 12px;
 }
 
 .single-drawer-product-container .subscription-terms-wrapper .subscription-Processing-text {
-    font-size: 14px!important;
+    font-size: 14px !important;
     color: #252525;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .single-drawer-product-container .subscription-terms-wrapper .subscription-Processing-text .Processing-date {
-    font-weight: 700
+    font-weight: 700;
 }
 
 .single-drawer-product-container .subscription-terms-wrapper .line-one {
-    font-size: 14px!important;
+    font-size: 14px !important;
     color: #252525;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .single-drawer-product-container .subscription-terms-wrapper .line-two {
     padding-top: 24px;
-    font-size: 14px!important;
+    font-size: 14px !important;
     color: #252525;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .single-drawer-product-container .no-processing-text {
     font-weight: 700;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .single-drawer-product-container .subscription-terms-form-wrapper label {
-    font-size: 14px!important;
+    font-size: 14px !important;
     color: #252525;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .subs-input-parent {
-    position: relative
+    position: relative;
 }
 
-.subs-input-parent .form-control[type=text] {
-    padding-left: 25px!important
+.subs-input-parent .form-control[type='text'] {
+    padding-left: 25px !important;
 }
 
 .subs-input-parent .form-control {
-    border-radius: 0!important
+    border-radius: 0 !important;
 }
 
 .subs-input-parent .enable-search-icon {
     position: absolute;
     left: 8px;
-    top: 36%
+    top: 36%;
 }
 
 .subs-input-parent .custom-infinite-scroll {
-    font-size: 14px
+    font-size: 14px;
 }
 
 .subs-input-parent .dropdown-subscription {
@@ -32260,7 +32493,7 @@ button.header-oktasignout-text:focus {
     max-height: 281px;
     z-index: 2;
     left: 0;
-    width: 100%
+    width: 100%;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result {
@@ -32270,7 +32503,7 @@ button.header-oktasignout-text:focus {
     border-top-right-radius: 4px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    box-shadow: 0 0 4px
+    box-shadow: 0 0 4px;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card {
@@ -32278,115 +32511,116 @@ button.header-oktasignout-text:focus {
     width: 100%;
     border: none;
     border-bottom: 1px solid #707070;
-    border-radius: 0
+    border-radius: 0;
 }
 
-.subs-input-parent .dropdown-subscription .subscription-result .subs-input-card.focus-visible,.subs-input-parent .dropdown-subscription .subscription-result .subs-input-card:focus-visible {
-    outline: 1px auto #000!important;
-    border: 1px solid #000!important
+.subs-input-parent .dropdown-subscription .subscription-result .subs-input-card.focus-visible,
+.subs-input-parent .dropdown-subscription .subscription-result .subs-input-card:focus-visible {
+    outline: 1px auto #000 !important;
+    border: 1px solid #000 !important;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .btn-primary {
-    border-color: #fff
+    border-color: #fff;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .btn {
     padding: 0 3px 0 7px;
     font-size: 14px;
-    line-height: 22px
+    line-height: 22px;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .btn .button-plus-icon {
-    font-weight: 600
+    font-weight: 600;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .btn:focus {
-    outline: 0!important;
-    background-color: #126b37!important
+    outline: 0 !important;
+    background-color: #126b37 !important;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .product-search-image {
     -o-object-fit: contain;
-    object-fit: contain
+    object-fit: contain;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .infinite-search-custom-row {
-    align-items: center
+    align-items: center;
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .infinite-search-custom-row.with-image .search-text-section {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc(100% - 140px);
-    max-width: calc(100% - 140px)
+    max-width: calc(100% - 140px);
 }
 
-@media(min-width: 768px)and (max-width:884px) {
+@media (min-width: 768px) and (max-width: 884px) {
     .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .infinite-search-custom-row.with-image .search-text-section {
-        flex-grow:0;
+        flex-grow: 0;
         flex-shrink: 0;
         flex-basis: calc(100% - 60px);
-        max-width: calc(100% - 60px)
+        max-width: calc(100% - 60px);
     }
 }
 
-@media(max-width: 420px) {
+@media (max-width: 420px) {
     .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .infinite-search-custom-row.with-image .search-text-section {
-        flex-grow:0;
+        flex-grow: 0;
         flex-shrink: 0;
         flex-basis: calc(100% - 60px);
-        max-width: calc(100% - 60px)
+        max-width: calc(100% - 60px);
     }
 }
 
-@media(min-width: 768px)and (max-width:884px) {
+@media (min-width: 768px) and (max-width: 884px) {
     .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .infinite-search-custom-row.with-image .infinite-search-add-button {
-        position:relative;
-        float: none!important;
+        position: relative;
+        float: none !important;
         left: 57px;
-        margin-top: 6px
+        margin-top: 6px;
     }
 }
 
-@media(max-width: 420px) {
+@media (max-width: 420px) {
     .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .infinite-search-custom-row.with-image .infinite-search-add-button {
-        position:relative;
-        float: none!important;
+        position: relative;
+        float: none !important;
         left: 57px;
-        margin-top: 6px
+        margin-top: 6px;
     }
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card .infinite-search-custom-row.without-image .search-text-section {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: calc(100% - 80px)
+    flex-basis: calc(100% - 80px);
 }
 
 .subs-input-parent .dropdown-subscription .subscription-result .subs-input-card:last-child {
-    border-bottom: none
+    border-bottom: none;
 }
 
 .msg-style {
     font-size: 12px;
-    display: inline-block
+    display: inline-block;
 }
 
 .circle-add-button {
     cursor: pointer;
     height: 20px;
-    width: 20px
+    width: 20px;
 }
 
 .subfooter-line-divider {
     border-top: 1px solid #8c8c8c;
     width: 100%;
-    margin: 40px 0
+    margin: 40px 0;
 }
 
 .subfooter-button-container {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .subfooter-button-container .subfooter-terms {
@@ -32398,7 +32632,7 @@ button.header-oktasignout-text:focus {
     text-decoration: underline;
     cursor: pointer;
     font-weight: 400;
-    font-family: Inter,sans-serif
+    font-family: Inter, sans-serif;
 }
 
 .subfooter-button-container .subfooter-cancel-allsub {
@@ -32410,59 +32644,59 @@ button.header-oktasignout-text:focus {
     border: 1px solid #c81d1d;
     background-color: #fff;
     font-weight: 600;
-    font-family: Inter,sans-serif
+    font-family: Inter, sans-serif;
 }
 
 .subfooter-button-container .subfooter-cancel-allsub:focus {
-    border: 2px solid #252525!important
+    border: 2px solid #252525 !important;
 }
 
 .cancel-modal-container .modal-dialog {
-    width: 600px
+    width: 600px;
 }
 
 .cancel-modal-container .modal-dialog .modal-content {
     border-radius: 10px;
-    width: 600px
+    width: 600px;
 }
 
 .cancel-modal-container .modal-dialog .modal-content .modal-header {
     border: none;
-    padding: 24px 24px 0
+    padding: 24px 24px 0;
 }
 
 .cancel-modal-container .modal-dialog .modal-content .modal-body {
-    padding: 0 24px 24px
+    padding: 0 24px 24px;
 }
 
 .cancel-modal-container .cancelmodal-question {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 28px;
     letter-spacing: 0;
     text-align: left;
     color: #252525;
-    margin-bottom: 4px
+    margin-bottom: 4px;
 }
 
 .cancel-modal-container .cancelmodal-description {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: .01em;
-    text-align: left
+    letter-spacing: 0.01em;
+    text-align: left;
 }
 
 .cancel-modal-container .cancelmodal-button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 16px
+    margin-top: 16px;
 }
 
 .cancel-modal-container .cancelmodal-button-container .cancelmodal-button-back {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 600;
     padding: 10px;
@@ -32470,18 +32704,18 @@ button.header-oktasignout-text:focus {
     border: 1px solid #b2b2b2;
     background-color: #fff;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
     border-radius: 4px;
-    width: 50%
+    width: 50%;
 }
 
 .cancel-modal-container .cancelmodal-button-container .cancelmodal-button-back:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .cancel-modal-container .cancelmodal-button-container .cancelmodal-button-continue {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 600;
     padding: 10px;
@@ -32489,51 +32723,51 @@ button.header-oktasignout-text:focus {
     background-color: #c81d1d;
     border: none;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
     border-radius: 4px;
-    width: 49%
+    width: 49%;
 }
 
 .cancel-modal-container .cancelmodal-button-container .cancelmodal-button-continue:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 @media screen and (max-width: 767px) {
     .subfooter-line-divider {
-        display:none
+        display: none;
     }
 
     .subfooter-button-container {
         margin-top: 35px;
         margin-bottom: 20px;
-        flex-flow: column
+        flex-flow: column;
     }
 
     .subfooter-button-container .subfooter-cancel-allsub {
-        margin-top: 19px
+        margin-top: 19px;
     }
 
     .cancel-modal-container .modal-dialog {
-        width: unset!important
+        width: unset !important;
     }
 
     .cancel-modal-container .modal-dialog .modal-content {
-        width: 100%!important
+        width: 100% !important;
     }
 
     .cancel-modal-container .modal-dialog .cancelmodal-button-container {
         flex-direction: column;
-        justify-content: unset!important
+        justify-content: unset !important;
     }
 
     .cancel-modal-container .modal-dialog .cancelmodal-button-container .cancelmodal-button-back {
         width: 100%;
-        margin-bottom: 8px
+        margin-bottom: 8px;
     }
 
     .cancel-modal-container .modal-dialog .cancelmodal-button-container .cancelmodal-button-continue {
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -32541,39 +32775,40 @@ button.header-oktasignout-text:focus {
     font-size: 22px;
     font-weight: 700;
     color: #252525;
-    margin: 0
+    margin: 0;
 }
 
 .order-modal-container .modal-header {
-    border: none
+    border: none;
 }
 
 .order-modal-container .order-modal-description {
-    flex-direction: column
+    flex-direction: column;
 }
 
 .order-modal-container .order-modal-description-l1 {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .order-modal-container .order-modal-description-l2 {
     display: flex;
     flex-direction: column;
-    padding-top: 12px
+    padding-top: 12px;
 }
 
 .order-modal-container .order-modal-description-l2 .order-total {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 18px;
-    font-weight: 600
+    font-weight: 600;
 }
 
-.order-modal-container .order-modal-button-continue,.order-modal-container .order-modal-description-l2 .order-amount {
-    font-family: Inter,sans-serif;
+.order-modal-container .order-modal-button-continue,
+.order-modal-container .order-modal-description-l2 .order-amount {
+    font-family: Inter, sans-serif;
     font-size: 16px;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .order-modal-container .order-modal-button-continue {
@@ -32581,60 +32816,60 @@ button.header-oktasignout-text:focus {
     border: none;
     height: 44px;
     background: #5b81a5;
-    color: #fff
+    color: #fff;
 }
 
 .order-modal-container .order-modal-button-back {
     padding-top: 8px;
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 400;
     width: 100%;
     border: none;
     height: 44px;
     background: #fff;
-    color: #252525
+    color: #252525;
 }
 
 .skip-order-modal-container .modal-header {
-    border: none
+    border: none;
 }
 
 .skip-order-modal-container .skip-modal-question {
     font-size: 22px;
     font-weight: 600;
-    font-family: Lora,sans-serif;
-    margin: 0
+    font-family: Lora, sans-serif;
+    margin: 0;
 }
 
 .skip-order-modal-container .skipped-date-details {
     font-size: 12px;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .skip-order-modal-container .skipped-date-detail-section {
     flex-direction: column;
     font-size: 12px;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .skip-order-modal-container .skipped-date-detail-section .skipped-date {
     font-size: 14px;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .skip-order-modal-container .close:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .skip-order-modal-container .skip-order-button-container {
     display: flex;
     flex-direction: row;
-    margin-top: 12px
+    margin-top: 12px;
 }
 
 .skip-order-modal-container .skip-order-button-container .skip-modal-button-back {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     height: 44px;
     font-size: 14px;
     font-weight: 600;
@@ -32642,20 +32877,20 @@ button.header-oktasignout-text:focus {
     border: 1px solid #b2b2b2;
     background-color: #fff;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
     border-radius: 4px;
     width: 50%;
     margin-left: 8px;
-    color: #2c2c2c
+    color: #2c2c2c;
 }
 
 .skip-order-modal-container .skip-order-button-container .skip-modal-button-back:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 .skip-order-modal-container .skip-order-button-container .skip-modal-button-continue {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     height: 44px;
     font-weight: 600;
@@ -32664,30 +32899,30 @@ button.header-oktasignout-text:focus {
     background-color: #c81d1d;
     border: none;
     line-height: 16px;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     text-align: center;
     border-radius: 4px;
-    width: 50%
+    width: 50%;
 }
 
 .skip-order-modal-container .skip-order-button-container .skip-modal-button-continue:focus {
-    border: 3px solid #252525!important
+    border: 3px solid #252525 !important;
 }
 
 @media screen and (max-width: 767px) {
     .skip-order-modal-container .skip-order-button-container {
-        flex-direction:column
+        flex-direction: column;
     }
 
     .skip-order-modal-container .skip-order-button-container .skip-modal-button-back {
         width: 100%;
         margin-top: 12px;
-        margin-left: 0
+        margin-left: 0;
     }
 
     .skip-order-modal-container .skip-order-button-container .skip-modal-button-continue {
         margin-top: 10px;
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -32695,114 +32930,115 @@ button.header-oktasignout-text:focus {
     background: #fff;
     height: 100%;
     padding: 32px;
-    font-family: Lora,sans-serif
+    font-family: Lora, sans-serif;
 }
 
 .flexible-subscription-container .heading-1 {
-    font-size: 26px
+    font-size: 26px;
 }
 
 .flexible-subscription-container .subs-product-wrapper {
-    max-width: 810px
+    max-width: 810px;
 }
 
 .flexible-subscription-container .subs-primary-title {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 26px;
     font-weight: 400;
     line-height: 34px;
     letter-spacing: 0;
     text-align: left;
     color: #252525;
-    margin-bottom: 28px
+    margin-bottom: 28px;
 }
 
 .flexible-subscription-container .subs-secondary-title {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0;
     text-align: left;
-    color: #252525
+    color: #252525;
 }
 
 .flexible-subscription-container .shipping-details-text span {
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 .flexible-subscription-container .subs-tabs-wrapper {
-    margin-top: 58.5px
+    margin-top: 58.5px;
 }
 
 .flexible-subscription-container .subs-tabs-wrapper .nav-item {
-    width: 50%
+    width: 50%;
 }
 
 .flexible-subscription-container .subs-product-title {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
     letter-spacing: 0;
     text-align: left;
     padding-bottom: 4px;
-    color: #252525
+    color: #252525;
 }
 
 .flexible-subscription-container .subs-product-sku {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 10px;
     font-weight: 500;
     line-height: 12px;
     letter-spacing: 0;
     text-align: left;
-    color: #5f5f5f
+    color: #5f5f5f;
 }
 
 .flexible-subscription-container .subs-product-price {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 16px;
     font-weight: 700;
     margin: 8px 0;
     line-height: 20px;
     letter-spacing: 0;
-    text-align: left
+    text-align: left;
 }
 
 .flexible-subscription-container .subs-product-price .strikeout-price {
-    font-family: Inter,sans-serif;
-    font-size: 14px
+    font-family: Inter, sans-serif;
+    font-size: 14px;
 }
 
-.flexible-subscription-container .subs-product-frequency,.flexible-subscription-container .subs-product-quantity {
-    font-family: Inter,sans-serif;
+.flexible-subscription-container .subs-product-frequency,
+.flexible-subscription-container .subs-product-quantity {
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
-    color: #4a6987
+    color: #4a6987;
 }
 
 .flexible-subscription-container .subs-product-total-label {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
-    color: #252525
+    color: #252525;
 }
 
 .flexible-subscription-container .subs-product-total-value {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
     letter-spacing: 0;
     text-align: left;
-    color: #252525
+    color: #252525;
 }
 
 .flexible-subscription-container .manage-next-button {
@@ -32810,48 +33046,48 @@ button.header-oktasignout-text:focus {
     width: 190px;
     padding: 10px 87px;
     border-radius: 4px;
-    border: 1px solid #b2b2b2
+    border: 1px solid #b2b2b2;
 }
 
 .flexible-subscription-container .manage-next-button:focus {
-    border: 3px solid #252525
+    border: 3px solid #252525;
 }
 
 .flexible-subscription-container .manage-next-button-text {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-    letter-spacing: .01em;
-    text-align: center
+    letter-spacing: 0.01em;
+    text-align: center;
 }
 
 .shipping-details-wrapper {
     width: 100%;
-    padding-left: 20px
+    padding-left: 20px;
 }
 
 .details-section {
     flex-basis: 33.33%;
     padding: 0 44px;
-    border-right: 1px solid #b2b2b2
+    border-right: 1px solid #b2b2b2;
 }
 
 .details-section:first-child {
-    padding-left: 0
+    padding-left: 0;
 }
 
 .details-section:last-child {
     border: none;
-    padding-right: 0
+    padding-right: 0;
 }
 
 .details-section .details-heading {
-    font-size: 18px
+    font-size: 18px;
 }
 
 .details-section span {
-    font-size: 14px
+    font-size: 14px;
 }
 
 .product-list-product-img {
@@ -32859,7 +33095,7 @@ button.header-oktasignout-text:focus {
     width: 100px;
     -o-object-fit: fill;
     object-fit: fill;
-    margin-right: 12px
+    margin-right: 12px;
 }
 
 .product-list__product-card {
@@ -32870,129 +33106,136 @@ button.header-oktasignout-text:focus {
     justify-content: space-between;
     padding: 20px;
     margin-top: 16px;
-    margin-bottom: 16px
+    margin-bottom: 16px;
 }
 
-.product-list__product-card.skiped-product .product-list-product-img,.product-list__product-card.skiped-product .quantity-section-wrapper,.product-list__product-card.skiped-product .subs-product-sku-left-section,.product-list__product-card.skiped-product .subs-product-title-section,.product-list__product-card.skiped-product .subscription-frequency-section {
+.product-list__product-card.skiped-product .product-list-product-img,
+.product-list__product-card.skiped-product .quantity-section-wrapper,
+.product-list__product-card.skiped-product .subs-product-sku-left-section,
+.product-list__product-card.skiped-product .subs-product-title-section,
+.product-list__product-card.skiped-product .subscription-frequency-section {
     pointer-events: none;
-    opacity: .5
+    opacity: 0.5;
 }
 
 .product-list__product-card.one-time-product {
-    background-color: #f8fcff
+    background-color: #f8fcff;
 }
 
 .product-list__product-card .product-name {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 18px;
     font-weight: 600;
-    line-height: 24px
+    line-height: 24px;
 }
 
 .product-list__product-card .sku-id-text {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-size: 10px;
     color: #5f5f5f;
-    line-height: 12px
+    line-height: 12px;
 }
 
 .product-list__product-card .original-price {
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    text-decoration: line-through
+    text-decoration: line-through;
 }
 
 .product-list__product-card .price-after-discount {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-weight: 700;
     font-size: 14px;
-    line-height: 20px
+    line-height: 20px;
 }
 
 .product-list__product-card .subtotal {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-weight: 400;
     font-size: 14px;
-    line-height: 20px
+    line-height: 20px;
 }
 
 .details-edit-button {
-    display: contents
+    display: contents;
 }
 
-.details-edit-button,.details-edit-button svg {
+.details-edit-button,
+.details-edit-button svg {
     width: 24px;
-    height: 24px
+    height: 24px;
 }
 
 .details-edit-button:disabled {
-    pointer-events: none
+    pointer-events: none;
 }
 
 .details-edit-button:disabled svg {
-    opacity: .5
+    opacity: 0.5;
 }
 
 .product-edit-button {
     display: block;
-    padding: 0!important
+    padding: 0 !important;
 }
 
-.product-edit-button,.product-edit-button svg {
+.product-edit-button,
+.product-edit-button svg {
     width: 20px;
-    height: 20px
+    height: 20px;
 }
 
 .schedule-date-wrapper {
     background: #f5f5f5;
     padding: 10px 15px;
-    margin-top: 24px
+    margin-top: 24px;
 }
 
 .schedule-date-wrapper .date-section {
-    font-family: Lora,sans-serif;
+    font-family: Lora, sans-serif;
     font-weight: 700;
     font-size: 22px;
-    color: #252525
+    color: #252525;
 }
 
 .subscription-price .sale {
-    padding-right: 10px
+    padding-right: 10px;
 }
 
-.subscription-price .original,.subscription-price .sale {
+.subscription-price .original,
+.subscription-price .sale {
     font-size: 14px;
     color: #252525;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .pv-cv-wrapper {
     font-size: 14px;
-    color: #252525
+    color: #252525;
 }
 
 .frequency-wrapper {
     color: #4a6987;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .frequency-wrapper .sub-total-label {
     color: #252525;
     font-weight: 700;
     font-size: 14px;
-    padding-left: 15px
+    padding-left: 15px;
 }
 
 .frequency-wrapper .model.sub-total-label {
-    padding-left: 0!important
+    padding-left: 0 !important;
 }
 
 .frequency-wrapper .model.sub-total-label .subs-product-total-label {
     color: #000;
     font-weight: 400;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .apply-change-button {
@@ -33002,11 +33245,11 @@ button.header-oktasignout-text:focus {
     font-weight: 600;
     padding-top: 24px;
     border-radius: 4px;
-    border: 1px solid #b2b2b2
+    border: 1px solid #b2b2b2;
 }
 
 .apply-change-button:focus {
-    border: 3px solid #252525
+    border: 3px solid #252525;
 }
 
 .subscription-tabs-wrapper .nav-item {
@@ -33014,156 +33257,156 @@ button.header-oktasignout-text:focus {
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .subscription-tabs-wrapper .nav-item.active {
-    background-color: #e5edf6
+    background-color: #e5edf6;
 }
 
 .product-card-deatils-section {
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .product-card-deatils-section .product-card-product-link {
-    margin-right: 5px
+    margin-right: 5px;
 }
 
 .product-card-deatils-section .product-card-product-link .skipped-section {
     justify-content: center;
     display: flex;
     width: 64px;
-    background: #fb3!important;
+    background: #fb3 !important;
     margin-top: 4px;
     color: #fff;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    border-radius: 2px
+    border-radius: 2px;
 }
 
 .single-subscription-pop .no-processing-text {
     font-weight: 700;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .single-subscription-pop .strikeout-price {
-    font-weight: 400
+    font-weight: 400;
 }
 
 .single-subscription-pop .single-pop-tittle {
     color: #252525;
     font-weight: 700;
     font-size: 12px;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 .single-subscription-pop .quantity-section {
-    margin-top: 8px
+    margin-top: 8px;
 }
 
 .single-subscription-pop .quantity-section .quantity-text {
     display: flex;
     align-items: center;
-    margin-right: 1rem
+    margin-right: 1rem;
 }
 
 .single-subscription-pop .quantity-section .v2-qty-design-quantity {
-    height: 44px!important;
-    width: 116px!important;
-    border-radius: 4px!important;
-    border-color: #b2b2b2!important
+    height: 44px !important;
+    width: 116px !important;
+    border-radius: 4px !important;
+    border-color: #b2b2b2 !important;
 }
 
 .single-subscription-pop .quantity-section .v2-qty-design-quantity .quantity-value {
-    border: none!important
+    border: none !important;
 }
 
 .single-subscription-pop .product-info {
-    margin-top: 8px
+    margin-top: 8px;
 }
 
 .single-subscription-pop .product-info .product-name {
     color: #252525;
     font-weight: 500;
-    font-size: 16px
+    font-size: 16px;
 }
 
 .single-subscription-pop .product-info .subs-product-title {
     font-weight: 600;
-    font-size: 18px
+    font-size: 18px;
 }
 
 .single-subscription-pop .product-info .subs-product-sku {
     margin-top: 6px;
     font-weight: 500;
     font-size: 10px;
-    color: #5f5f5f
+    color: #5f5f5f;
 }
 
 .single-subscription-pop .product-info .subscription-price {
     margin-top: 6px;
-    margin-bottom: 6px
+    margin-bottom: 6px;
 }
 
 .single-subscription-pop .product-info .price-wrapper {
     display: flex;
-    flex-direction: row-reverse!important
+    flex-direction: row-reverse !important;
 }
 
 .single-subscription-pop .product-sku span {
     color: #5f5f5f;
     font-weight: 600;
     font-size: 10px;
-    padding-bottom: 8px
+    padding-bottom: 8px;
 }
 
 .subscription-details-section .tab-content {
-    padding: 0!important
+    padding: 0 !important;
 }
 
 .subscription-details-section.disabled {
-    opacity: .3!important
+    opacity: 0.3 !important;
 }
 
 .single-drawer-modal-btn {
-    background: #252525!important;
+    background: #252525 !important;
     width: 100%;
-    margin-top: 16px
+    margin-top: 16px;
 }
 
 @media screen and (max-width: 1023px) {
     .details-section {
-        padding:0 20px
+        padding: 0 20px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .details-section {
-        flex-basis:100%;
+        flex-basis: 100%;
         border: none;
-        padding: 8px 0
+        padding: 8px 0;
     }
 
     .account-details-wrapper[\:has\(.flexible-subscription-container\)] {
-        padding: 0!important
+        padding: 0 !important;
     }
 
     .account-details-wrapper:has(.flexible-subscription-container) {
-        padding: 0!important
+        padding: 0 !important;
     }
 
     .flexible-subscription-container {
-        padding: 16px
+        padding: 16px;
     }
 
     .flexible-subscription-container .subs-primary-title {
-        margin-bottom: 26px
+        margin-bottom: 26px;
     }
 
     .flexible-subscription-container .subscription-details-section {
         display: flex;
-        flex-flow: column
+        flex-flow: column;
     }
 
     .flexible-subscription-container .subscription-details-section .shipping-details-wrapper {
@@ -33171,134 +33414,135 @@ button.header-oktasignout-text:focus {
         margin: 0 -16px;
         width: auto;
         padding: 0 20px;
-        border-bottom: 1px solid #b2b2b2
+        border-bottom: 1px solid #b2b2b2;
     }
 
     .flexible-subscription-container .subscription-details-section .subscription-tabs-wrapper {
         order: 1;
-        margin-top: 10px
+        margin-top: 10px;
     }
 
     .flexible-subscription-container .subscription-details-section .tab-content {
-        order: 3
+        order: 3;
     }
 
     .flexible-subscription-container .subscription-details-section .tab-content .schedule-date-wrapper {
-        margin-top: 30px
+        margin-top: 30px;
     }
 
     .flexible-subscription-container .subscription-details-section .tab-content .frequency-wrapper {
         flex-flow: column;
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
 
     .flexible-subscription-container .subscription-details-section .tab-content .frequency-wrapper .subs-product-frequency {
-        padding-left: 0!important
+        padding-left: 0 !important;
     }
 
     .flexible-subscription-container .subscription-details-section .tab-content .frequency-wrapper .model-frequency {
-        padding: 0!important;
-        margin-bottom: 4px
+        padding: 0 !important;
+        margin-bottom: 4px;
     }
 
     .flexible-subscription-container .subscription-details-section .tab-content .frequency-wrapper .sub-total-label {
-        padding-left: 0
+        padding-left: 0;
     }
 }
 
 .subscription-Processing-wrapper .processing-text {
-    font-size: 14px!important;
+    font-size: 14px !important;
     color: #252525;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .subscription-Processing-wrapper .processing-text-date {
     font-weight: 700;
-    font-size: 14px!important;
-    color: #252525
+    font-size: 14px !important;
+    color: #252525;
 }
 
 @media screen and (max-width: 950px) {
     .product-card-deatils-section.current-month {
-        flex-direction:column
+        flex-direction: column;
     }
 
     .product-card-deatils-section.current-month .manage-next-button {
-        margin-top: 8px
+        margin-top: 8px;
     }
 }
 
 .subscription-maintenance-message {
     background: #fafafa;
-    margin-bottom: 24px
+    margin-bottom: 24px;
 }
 
 .subscription-maintenance-message .subscription-maintenance-header {
     font-size: 24px;
     font-weight: 700;
-    color: #c4d600
+    color: #c4d600;
 }
 
 .subscription-maintenance-message .subscription-maintenance-details {
     font-size: 18px;
-    color: #b2b2b2
+    color: #b2b2b2;
 }
 
 .subscription-maintenance-message .subscription-maintenance-details p {
-    margin: 0!important
+    margin: 0 !important;
 }
 
 .service-failure {
-    padding-top: 6rem
+    padding-top: 6rem;
 }
 
-.loyalty-header,.loyalty-points-header {
+.loyalty-header,
+.loyalty-points-header {
     color: #1c1c1c;
-    display: flex!important
+    display: flex !important;
 }
 
 .loyalty-points-header {
-    font-size: 32px!important;
+    font-size: 32px !important;
     background-color: #fff;
-    padding: 15px 0 0
+    padding: 15px 0 0;
 }
 
 .loyalty-container {
     background-color: #fff;
     padding: 35px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .transaction-value-negative {
-    color: red
+    color: red;
 }
 
 .history-title {
     font-size: 2rem;
-    color: #2f2f2f
+    color: #2f2f2f;
 }
 
 .loyalty-header-text {
-    color: #252525!important;
-    font-family: Inter,sans-serif!important;
-    font-style: normal!important
+    color: #252525 !important;
+    font-family: Inter, sans-serif !important;
+    font-style: normal !important;
 }
 
 .loyalty-btn {
-    background: #fff!important;
-    border-color: #3a3a3a!important;
-    color: #3a3a3a!important;
+    background: #fff !important;
+    border-color: #3a3a3a !important;
+    color: #3a3a3a !important;
     letter-spacing: 1.5px;
     font-size: normal 15px;
     width: 245px;
-    height: 40px
+    height: 40px;
 }
 
 .loyalty-points-history {
     background-color: #fff;
     color: #1c1c1c;
     padding: 0 10px;
-    border-bottom: 1px solid #292929
+    border-bottom: 1px solid #292929;
 }
 
 .loyalty-points-history-data {
@@ -33306,8 +33550,8 @@ button.header-oktasignout-text:focus {
     color: #252525;
     font-size: 15px;
     line-height: 22px;
-    font-family: Inter,sans-serif;
-    font-weight: 400!important
+    font-family: Inter, sans-serif;
+    font-weight: 400 !important;
 }
 
 .loyalty-text {
@@ -33315,35 +33559,35 @@ button.header-oktasignout-text:focus {
     font-weight: 700;
     color: #252525;
     line-height: 16px;
-    font-family: Inter,sans-serif
+    font-family: Inter, sans-serif;
 }
 
-@media(max-width: 767.98px) {
+@media (max-width: 767.98px) {
     .loyalty-btn {
-        width:100%
+        width: 100%;
     }
 
     .transaction-wrap {
         font-size: 11px;
         color: #252525;
         line-height: 16px;
-        font-weight: 400
+        font-weight: 400;
     }
 
     .transaction-wrap span {
-        word-break: break-word
+        word-break: break-word;
     }
 
     .loyalty-header {
         padding-bottom: 18px;
-        margin-bottom: 10px!important
+        margin-bottom: 10px !important;
     }
 
     .loyalty-header .loyalty-header-text {
-        font-size: 1.5rem!important;
-        letter-spacing: .54px;
+        font-size: 1.5rem !important;
+        letter-spacing: 0.54px;
         line-height: 24px;
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -33351,11 +33595,11 @@ button.header-oktasignout-text:focus {
     font-size: 16px;
     text-decoration: underline;
     color: #000;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .loyalty-current-points {
-    text-align: center
+    text-align: center;
 }
 
 .loyalty-current-points .points-container {
@@ -33363,7 +33607,7 @@ button.header-oktasignout-text:focus {
     background-color: #f5f5f5;
     background-color: #fff;
     padding: 16px 0;
-    color: #1c1c1c
+    color: #1c1c1c;
 }
 
 .loyalty-current-points .points-container .point {
@@ -33371,7 +33615,7 @@ button.header-oktasignout-text:focus {
     font-weight: 700;
     color: #252525;
     line-height: 20px;
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     background: #f5f5f5;
     border-color: #fff;
     width: 126px;
@@ -33381,21 +33625,22 @@ button.header-oktasignout-text:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 5px
+    padding: 0 5px;
 }
 
-.loyalty-current-points .points-container .point .failure-tick,.loyalty-current-points .points-container .point .success-tick {
+.loyalty-current-points .points-container .point .failure-tick,
+.loyalty-current-points .points-container .point .success-tick {
     justify-content: center;
     width: 31px;
     height: 37px;
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .loyalty-current-points .points-container .tierPoint {
     font-size: 14px;
     font-weight: 700;
     color: #252525;
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     background: #f5f5f5;
     justify-content: center;
     align-items: center;
@@ -33404,15 +33649,15 @@ button.header-oktasignout-text:focus {
     border-color: #fff;
     width: 126px;
     height: 126px;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .loyalty-current-points .points-container .valueLittle {
-    font-size: 24px
+    font-size: 24px;
 }
 
 .loyalty-expiration-points {
-    text-align: center
+    text-align: center;
 }
 
 .loyalty-expiration-points .expiration-points-container {
@@ -33420,114 +33665,116 @@ button.header-oktasignout-text:focus {
     background-color: #fefaf6;
     padding: 16px 5px;
     color: #2f2f2f;
-    font-size: 21px
+    font-size: 21px;
 }
 
-.table-content,.table-heading {
+.table-content,
+.table-heading {
     font-size: 15px;
-    color: #2f2f2f
+    color: #2f2f2f;
 }
 
 .loyalty-content.table-content {
     background-color: #fff;
-    padding: 15px 0
+    padding: 15px 0;
 }
 
 .loyalty-wrap-text {
-    color: #252525
+    color: #252525;
 }
 
 .loyalty-rewards {
-    padding: 15px 0
+    padding: 15px 0;
 }
 
 .loyalty-shadow-sm {
-    box-shadow: 0 4px 4px rgba(0,0,0,.25)!important
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
 
-@media(min-width: 768px)and (max-width:1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .loyalty-current-points .points-container .point {
-        font-size:18px;
-        font-family: Inter,sans-serif;
+        font-size: 18px;
+        font-family: Inter, sans-serif;
         font-weight: 700;
         line-height: 20px;
-        color: #252525
+        color: #252525;
     }
 
     .loyalty-current-points .points-container .tierPoint {
         font-size: 18px;
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         font-weight: 700;
         padding-top: 0;
-        color: #252525
+        color: #252525;
     }
 
     .loyalty-current-points .points-container .loyalty-wrap-text {
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
-        color: #252525
+        color: #252525;
     }
 
-    .loyalty-expiration-points .expiration-points-container,.loyalty-points-history-data {
-        font-size: 14px
+    .loyalty-expiration-points .expiration-points-container,
+    .loyalty-points-history-data {
+        font-size: 14px;
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .loyalty-container {
-        flex-direction:column
+        flex-direction: column;
     }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .loyalty-text {
-        font-size:12px!important;
-        font-weight: 600!important;
-        color: #252525!important;
-        line-height: 13px!important;
-        font-family: Inter,sans-serif!important
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        color: #252525 !important;
+        line-height: 13px !important;
+        font-family: Inter, sans-serif !important;
     }
 
     .loyalty-current-points .points-container .point {
         font-size: 18px;
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         font-weight: 700;
         line-height: 20px;
-        color: #252525
+        color: #252525;
     }
 
     .loyalty-current-points .points-container .tierPoint {
         font-size: 18px;
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         font-weight: 700;
         padding-top: 0;
-        color: #252525
+        color: #252525;
     }
 
     .loyalty-current-points .points-container .loyalty-wrap-text {
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         font-weight: 400;
         color: #252525;
-        line-height: 16px!important
+        line-height: 16px !important;
     }
 
     .loyalty-expiration-points .expiration-points-container {
-        font-size: 20px
+        font-size: 20px;
     }
 
     .title-qualify {
-        font-size: 18px!important;
-        color: #1c1c1c
+        font-size: 18px !important;
+        color: #1c1c1c;
     }
 
     .points-qualify {
-        padding: 30px 5px!important
+        padding: 30px 5px !important;
     }
 
     .step-block {
-        padding: 10px
+        padding: 10px;
     }
 }
 
@@ -33537,58 +33784,60 @@ button.header-oktasignout-text:focus {
     border: 2px solid #3a3a3a;
     border-radius: 50%;
     font-size: 32px;
-    line-height: 40px
+    line-height: 40px;
 }
 
 .title-qualify {
     font-size: 32px;
     padding: 30px;
-    color: #1c1c1c
+    color: #1c1c1c;
 }
 
-.step-qualify,.text-qualify {
+.step-qualify,
+.text-qualify {
     font-size: 18px;
-    color: #3a3a3a
+    color: #3a3a3a;
 }
 
 .points-qualify {
-    padding: 30px 80px
+    padding: 30px 80px;
 }
 
 .loyalty-pagination {
     margin: 15px 0;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .loyalty-selectBox-container {
     width: auto;
     height: auto;
-    margin-right: 5px
+    margin-right: 5px;
 }
 
 .loyalty-selectBox {
     width: 45px;
     height: auto;
-    cursor: pointer
+    cursor: pointer;
 }
 
-.loyalty-backward-arrow,.loyalty-forward-arrow {
-    cursor: pointer
+.loyalty-backward-arrow,
+.loyalty-forward-arrow {
+    cursor: pointer;
 }
 
 .loyalty-pagination-text {
     font-size: 12px;
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
-    margin-left: 10px
+    margin-left: 10px;
 }
 
 .loyalty-titleheader {
-    border-bottom: 1px solid #f5f5f5
+    border-bottom: 1px solid #f5f5f5;
 }
 
 .loyalty-titleheader div.transaction-row {
-    font-weight: 700
+    font-weight: 700;
 }
 
 .loyalty-titleheader div.transaction-row .transaction-value {
@@ -33599,85 +33848,86 @@ button.header-oktasignout-text:focus {
     background: #deeee7;
     border-radius: 10px;
     display: block;
-    width: 80px!important;
-    text-align: center
+    width: 80px !important;
+    text-align: center;
 }
 
 .loyalty-titleheader div.transaction-row .transaction-value-negative {
     color: #c81d1d;
     background: #f4d8d8;
-    border: 1px solid #f4d8d8
+    border: 1px solid #f4d8d8;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .loyalty-pagination {
-        justify-content:center!important;
+        justify-content: center !important;
         padding: 12px;
         background: #fff;
-        margin: 0
+        margin: 0;
     }
 }
 
 .loyalty-points-history-table-text {
     font-weight: 700;
     font-size: 12px;
-    line-height: 16px
+    line-height: 16px;
 }
 
-.loyalty-history-note-section,.loyalty-titleheader .transaction-value {
+.loyalty-history-note-section,
+.loyalty-titleheader .transaction-value {
     font-size: 14px;
-    line-height: 20px
+    line-height: 20px;
 }
 
 .loyalty-history-note-section {
     color: #252525;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .loyalty-progressbar-container {
-    width: 100%
+    width: 100%;
 }
 
 .loyalty-progressbar-container .loyalty-progressbar {
     width: 100%;
     height: 25px;
-    border-radius: 30px!important;
-    box-shadow: none!important
+    border-radius: 30px !important;
+    box-shadow: none !important;
 }
 
 .loyalty-progressbar-container .bar-bg {
-    background-color: #d3d3d3
+    background-color: #d3d3d3;
 }
 
 .loyalty-progressbar-container .progressbar-types {
-    width: 100%
+    width: 100%;
 }
 
 .loyalty-progressbar-container .progressbar-types h6 {
-    width: 33%
+    width: 33%;
 }
 
 .invite-user svg {
     height: 1.5rem;
-    width: 1.5rem
+    width: 1.5rem;
 }
 
 .user-invite-form {
     width: 90%;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .user-invite-form .form-control {
-    font-weight: 600
+    font-weight: 600;
 }
 
 .user-invite-form .add-user {
     top: 36px;
-    right: -36px
+    right: -36px;
 }
 
 .user-card {
-    background-color: var(--white)
+    background-color: var(--white);
 }
 
 .user-card .edit-user {
@@ -33685,426 +33935,444 @@ button.header-oktasignout-text:focus {
     z-index: 2;
     display: flex;
     align-items: center;
-    cursor: pointer
+    cursor: pointer;
 }
 
-[dir=ltr] .user-card .edit-user {
-    right: 0
+[dir='ltr'] .user-card .edit-user {
+    right: 0;
 }
 
-[dir=rtl] .user-card .edit-user {
-    left: 0
+[dir='rtl'] .user-card .edit-user {
+    left: 0;
 }
 
 .user-card .edit-user .edit-text {
-    color: var(--primary)
+    color: var(--primary);
 }
 
-.user-card .form-row>.disabled {
-    opacity: .5
+.user-card .form-row > .disabled {
+    opacity: 0.5;
 }
 
-.user-card .form-row>.disabled .form-control:disabled {
-    background: transparent
+.user-card .form-row > .disabled .form-control:disabled {
+    background: transparent;
 }
 
-.user-card .form-row>.bold .form-control,.user-card .form-row>.bold .form-label {
+.user-card .form-row > .bold .form-control,
+.user-card .form-row > .bold .form-label {
     font-weight: 600;
-    color: var(--dark)
+    color: var(--dark);
 }
 
 .inviteuser-create-button {
     width: auto;
-    z-index: 2
+    z-index: 2;
 }
 
 .invite-user-table {
-    padding: 1.5rem
+    padding: 1.5rem;
 }
 
 .user-search-icon {
     font-size: 1.5rem;
     position: absolute;
-    top: 2.75rem
+    top: 2.75rem;
 }
 
-[dir=ltr] .user-search-icon {
-    right: 1.5rem
+[dir='ltr'] .user-search-icon {
+    right: 1.5rem;
 }
 
-[dir=rtl] .user-search-icon {
-    left: 1.5rem
+[dir='rtl'] .user-search-icon {
+    left: 1.5rem;
 }
 
 .user-search {
-    padding-top: 36px
+    padding-top: 36px;
 }
 
-.addressbook-add-button,.addressbook-cancel-button {
-    height: 44px
+.addressbook-add-button,
+.addressbook-cancel-button {
+    height: 44px;
 }
 
-.send-intivation-button,.send-intivation-cancel-button,.userListCard-cancel-button {
+.send-intivation-button,
+.send-intivation-cancel-button,
+.userListCard-cancel-button {
     height: 44px;
     width: 45%;
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 .user-invitation-form-container {
-    position: relative
+    position: relative;
 }
 
 .send-intivation-cancel-button {
     position: absolute;
     bottom: 1rem;
-    right: 1rem
+    right: 1rem;
 }
 
 .userListCard-cancel-button {
     position: absolute;
     bottom: 1.5rem;
-    right: 1rem
+    right: 1rem;
 }
 
-.add-intivation-button,.delete-intivation-button,.resend-intivation-button {
+.add-intivation-button,
+.delete-intivation-button,
+.resend-intivation-button {
     height: 44px;
     display: block;
-    padding: 12px 6px
+    padding: 12px 6px;
 }
 
 .userLisdtCard-button-container {
     margin: 0 1.5rem;
     padding-bottom: 1.5rem;
-    position: relative
+    position: relative;
 }
 
 .userLisdtCard-button-container .col {
-    padding-left: 0!important
+    padding-left: 0 !important;
 }
 
-[dir=ltr] .addressbook-add {
-    margin-right: 10px
+[dir='ltr'] .addressbook-add {
+    margin-right: 10px;
 }
 
-[dir=rtl] .addressbook-add {
-    margin-left: 10px
+[dir='rtl'] .addressbook-add {
+    margin-left: 10px;
 }
 
 .edit-user-button-wrapper .btn-lg {
-    font-size: 1rem
+    font-size: 1rem;
 }
 
 .account-details-wrapper .user-list div {
-    font-weight: 400
+    font-weight: 400;
 }
 
 .accordion-block-text {
     font-size: 1rem;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .email-text {
-    text-transform: none
+    text-transform: none;
 }
 
 .user-colon-align-left {
     display: inline-block;
-    width: 5.5rem
+    width: 5.5rem;
 }
 
 .user-colon-align-right {
     display: inline-block;
-    width: 3.5rem
+    width: 3.5rem;
 }
 
 .user-list-accordian-wrapper {
-    padding: 1.5rem
+    padding: 1.5rem;
 }
 
 .status-active-text-color {
-    color: #165769!important
+    color: #165769 !important;
 }
 
-@media(max-width: 1024.98px) {
-    .addressbook-add-button,.addressbook-cancel-button {
-        flex:0 1 148px
+@media (max-width: 1024.98px) {
+    .addressbook-add-button,
+    .addressbook-cancel-button {
+        flex: 0 1 148px;
     }
 
     .user-search {
-        padding-top: 8px
+        padding-top: 8px;
     }
 
     .user-search-icon {
-        top: 1rem
+        top: 1rem;
     }
 
-    .user-colon-align-left,.user-colon-align-right {
+    .user-colon-align-left,
+    .user-colon-align-right {
         display: inline-block;
-        width: 5.5rem
+        width: 5.5rem;
     }
 }
 
-@media(max-width: 767.98px) {
-    .addressbook-add-button,.addressbook-cancel-button {
-        flex:0 1 49%
+@media (max-width: 767.98px) {
+    .addressbook-add-button,
+    .addressbook-cancel-button {
+        flex: 0 1 49%;
     }
 
-    .user-colon-align-left,.user-colon-align-right {
+    .user-colon-align-left,
+    .user-colon-align-right {
         display: inline-block;
-        width: 5.5rem
+        width: 5.5rem;
     }
 }
 
 .toLowerCase {
-    text-transform: lowercase
+    text-transform: lowercase;
 }
 
 .privacybox {
     position: relative;
-    border: .2px solid #cabbbb;
-    background-color: #fff
+    border: 0.2px solid #cabbbb;
+    background-color: #fff;
 }
 
 .mainheader {
     font-size: 23px;
     text-transform: uppercase;
     margin-top: 20px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .privacy_box_header {
     margin-bottom: 3px;
     font-weight: 400;
-    font-size: unset
+    font-size: unset;
 }
 
 .privacy_text_label {
     font-size: 17px;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .privacy_bold_text {
     font-weight: 700;
     font-size: 18px;
     line-height: 1.3em;
-    margin-bottom: 40px
+    margin-bottom: 40px;
 }
 
-#privacylink,#promotionalLink {
+#privacylink,
+#promotionalLink {
     color: #5c5cee;
     cursor: pointer;
-    padding: 3px
+    padding: 3px;
 }
 
-#privacylink,#promotionalLink,#promotionalSecondLink,#secondLink {
+#privacylink,
+#promotionalLink,
+#promotionalSecondLink,
+#secondLink {
     position: absolute;
     bottom: 4px;
     font-weight: 300;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
-#promotionalSecondLink,#secondLink {
+#promotionalSecondLink,
+#secondLink {
     color: #8484a8;
-    cursor: default
+    cursor: default;
 }
 
 .box {
-    margin-bottom: 50px
+    margin-bottom: 50px;
 }
 
 .modal_box {
-    padding: 20px
+    padding: 20px;
 }
 
 .row_check_box {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .rad {
-    margin-bottom: 40px
+    margin-bottom: 40px;
 }
 
 .checkboxes {
     margin-top: 15px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .PrivacyPage .box .card {
-    border: .2px solid #cabbbb
+    border: 0.2px solid #cabbbb;
 }
 
 .optInBox {
-    margin-right: 15px
+    margin-right: 15px;
 }
 
 .loyaltyAlert {
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .confirmButton {
-    margin-left: 385px
+    margin-left: 385px;
 }
 
 .confirmBtn {
-    float: right
+    float: right;
 }
 
 .pdf_terms {
-    color: #007bff
+    color: #007bff;
 }
 
 .communication-card-privacy input {
-    width: 16px!important;
-    height: 17px!important;
+    width: 16px !important;
+    height: 17px !important;
     left: 18px;
-    outline-offset: 4px
+    outline-offset: 4px;
 }
 
-.communication-card-privacy input,.edit-privacy-checkbox input {
+.communication-card-privacy input,
+.edit-privacy-checkbox input {
     position: absolute;
-    visibility: visible!important;
-    display: inline!important
+    visibility: visible !important;
+    display: inline !important;
 }
 
 .edit-privacy-checkbox input {
     width: 20px;
-    height: 20px
+    height: 20px;
 }
 
-.edit-privacy-checkbox input.focus-visible,.edit-privacy-checkbox input:focus-visible {
+.edit-privacy-checkbox input.focus-visible,
+.edit-privacy-checkbox input:focus-visible {
     border-radius: 50%;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none
+    appearance: none;
 }
-
 
 .list-item-card .list-item-image {
     -o-object-fit: scale-down;
     object-fit: scale-down;
-    margin: auto
+    margin: auto;
 }
 
 .list-item-card:last-of-type {
-    border-bottom: 0!important
+    border-bottom: 0 !important;
 }
 
 .list-item-card .disableBtn {
-    padding-top: 11px!important;
-    padding-bottom: 11px!important
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
 }
 
 .unavailable-product .web-inventory-danger {
     color: #dc3545;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .disableBtn:disabled {
-    color: #8c8c8c!important;
-    background-color: #252525!important
+    color: #8c8c8c !important;
+    background-color: #252525 !important;
 }
 
 .list-item-card .delete-icon svg {
-    width: 1.775rem!important;
-    height: 1.95rem!important
+    width: 1.775rem !important;
+    height: 1.95rem !important;
 }
 
 .list-error-message-danger {
     margin-top: 10px;
-    color: #dc3545
+    color: #dc3545;
 }
 
 .list-header-icon {
     height: 1.5rem;
-    width: 1.5rem
+    width: 1.5rem;
 }
 
 .create-lists {
     height: 44px;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .list-card-container {
-    background: #fff
+    background: #fff;
 }
 
 .list-card-container .toggle-icon svg {
     height: 1.5rem;
-    width: 3rem
+    width: 3rem;
 }
 
 .list-card-container .delete-icon svg {
     width: 1.375rem;
-    height: 1.75rem
+    height: 1.75rem;
 }
 
 .list-card-container .share-icon {
     height: 1.25rem;
-    width: 1.25rem
+    width: 1.25rem;
 }
 
 .lists-block-wrapper .search-icon-button {
     transform: translateY(-50%);
     top: 50%;
-    transition: none
+    transition: none;
 }
 
-[dir=ltr] .lists-block-wrapper .search-icon-button {
-    right: 12px
+[dir='ltr'] .lists-block-wrapper .search-icon-button {
+    right: 12px;
 }
 
-[dir=rtl] .lists-block-wrapper .search-icon-button {
-    left: 12px
+[dir='rtl'] .lists-block-wrapper .search-icon-button {
+    left: 12px;
 }
 
 .lists-block-wrapper .search-icon {
     height: 1.5rem;
-    width: 1.5rem
+    width: 1.5rem;
 }
 
 .disabled-edit {
     pointer-events: none;
-    opacity: .5
+    opacity: 0.5;
 }
 
 .list-card-container .list-card-title .card-name .list-name {
-    word-break: break-word
+    word-break: break-word;
 }
 
-@media(max-width: 1024.98px) {
+@media (max-width: 1024.98px) {
     .card-name {
-        order:0
+        order: 0;
     }
 
     .custom-class-name:hover {
-        background: #de3d49
+        background: #de3d49;
     }
 
     .list-access-type {
-        order: 3
+        order: 3;
     }
 
     .list-details {
-        order: 1
+        order: 1;
     }
 }
 
-.cancel-lists,.create-lists {
+.cancel-lists,
+.create-lists {
     height: 44px;
-    transition: none
+    transition: none;
 }
 
 .list-form-wrapper .invalid-feedback .valid-absolute {
-    top: 15px
+    top: 15px;
 }
 
 .list-form-wrapper .isvalid-feedback {
-    top: 11px!important
+    top: 11px !important;
 }
 
-.delete-icon:focus,.list-details:focus {
+.delete-icon:focus,
+.list-details:focus {
     box-shadow: none;
-    outline: 3px solid #000!important;
-    transition: none
+    outline: 3px solid #000 !important;
+    transition: none;
 }
