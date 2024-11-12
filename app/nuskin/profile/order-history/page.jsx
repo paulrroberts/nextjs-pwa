@@ -227,7 +227,7 @@ export default function Page() {
                                 <Link
                                     className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
                                     data-testid="qa-payments"
-                                    href="/nuskin/profile/payments-methods"
+                                    href="/nuskin/profile/payment-methods"
                                 >
                                     <svg
                                         stroke="currentColor"
