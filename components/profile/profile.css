@@ -20681,7 +20681,7 @@ pre code {
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 1140px;
+        max-width: calc(100% - 40px);
     }
 }
 .row {
