@@ -87,11 +87,6 @@ const drawerLinks = [
         href: '/nuskin/products'
     },
     {
-        title: 'Profile',
-        icon: 'PersonOutlineOutlinedIcon',
-        href: '/nuskin/profile'
-    },
-    {
         title: 'Cart',
         icon: 'ShoppingCartOutlinedIcon',
         href: '/nuskin/cart'
