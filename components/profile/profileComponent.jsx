@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import './profile.css'
 import ProfileNav from './profileNav'
 
@@ -7,7 +6,7 @@ export default function Profile() {
         <section id="id-app-wrapper" className="app-wrapper position-relative">
             <div className="myaccount-wrapper container-fluid pl-0 pr-0">
                 <div className="account-container my-0 mx-auto d-md-flex d-md-flex flex-nowrap container">
-                    <ProfileNav />
+                    <ProfileNav active="profile" />
                     <section id="my-account-details-wrapper" className="account-details-wrapper ">
                         <div className="account-wrapper">
                             <div data-testid="qa-my-profile-container" className="mb-3 shadow-sm profileDetailCont card">

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function ProfileNav() {
+export default function ProfileNav({ active }) {
     return (
         <aside className="account-menu-wrapper  mb-0 shadow">
             <div className="d-flex menu-row pt-4">
@@ -46,7 +46,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 active"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'profile' ? 'active' : ''}`}
                         data-testid="qa-my-profile"
                         aria-current="page"
                     >
@@ -86,7 +86,7 @@ export default function ProfileNav() {
                     </a>
                     <Link
                         href="/nuskin/profile/account-profile"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'account-profile' ? 'active' : ''}`}
                         data-testid="qa-account-profile"
                     >
                         <svg
@@ -121,7 +121,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/security"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'security' ? 'active' : ''}`}
                         data-testid="qa-security"
                     >
                         <svg
@@ -155,7 +155,7 @@ export default function ProfileNav() {
                         </svg>
                     </Link>
                     <Link
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'mysiteadmin' ? 'active' : ''}`}
                         data-testid="qa-mysite"
                         href="/nuskin/profile/mysiteadmin"
                     >
@@ -191,7 +191,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/address-book"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'address-book' ? 'active' : ''}`}
                         data-testid="qa-shipping-address-book"
                     >
                         <svg
@@ -226,7 +226,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/payment-methods"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'payment-methods' ? 'active' : ''}`}
                         data-testid="qa-payments"
                     >
                         <svg
@@ -261,7 +261,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/store-credits"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'store-credits' ? 'active' : ''}`}
                         data-testid="qa-loyalty-points"
                     >
                         <svg
@@ -296,7 +296,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/associates"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'associates' ? 'active' : ''}`}
                         data-testid="qa-users"
                     >
                         <svg
@@ -332,7 +332,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/order-history"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'order-history' ? 'active' : ''}`}
                         data-testid="qa-order-history"
                     >
                         <svg
@@ -367,7 +367,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/lists"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'lists' ? 'active' : ''}`}
                         data-testid="qa-list"
                     >
                         <svg
@@ -402,7 +402,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/direct-deposit"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'direct-deposit' ? 'active' : ''}`}
                         data-testid="qa-direct-deposit"
                     >
                         <svg
@@ -437,7 +437,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/favorites"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'favorites' ? 'active' : ''}`}
                         data-testid="qa-favorites"
                     >
                         <svg
@@ -472,7 +472,7 @@ export default function ProfileNav() {
                     </Link>
                     <Link
                         href="/nuskin/profile/subscriptions"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'subscriptions' ? 'active' : ''}`}
                         data-testid="qa-subscriptions"
                     >
                         <svg
@@ -507,9 +507,8 @@ export default function ProfileNav() {
                         </svg>
                     </Link>
                     <Link
-                        href="/nuskin/profile/privacy
-                    "
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        href="/nuskin/profile/privacy"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'privacy' ? 'active' : ''}`}
                         data-testid="qa-privacy"
                     >
                         <svg
