@@ -24,8 +24,8 @@ export default function ProfileNav({ active }) {
             <div className="d-block">
                 <div className="list-group" role="button">
                     <Link
-                        href="/nuskin/build"
-                        className=" pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3"
+                        href="/nuskin/profile/volumes"
+                        className={`pt-3 pb-3  d-flex text-body align-items-center text-decoration-none pl-3 pr-3 ${active === 'volumes' ? 'active' : ''}`}
                         data-testid="qa-volumes"
                     >
                         <div className="account-menu-item-text ml-2" style={{ flex: '1 1 0%' }}>
