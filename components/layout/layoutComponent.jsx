@@ -79,22 +79,32 @@ const drawerLinks = [
     {
         title: 'Home',
         icon: 'HomeOutlinedIcon',
-        href: '/nuskin'
+        href: '/nuskin',
+        isLoggedIn: false
     },
     {
         title: 'Shop',
         icon: 'StorefrontIcon',
-        href: '/nuskin/products'
+        href: '/nuskin/products',
+        isLoggedIn: false
+    },
+    {
+        title: 'Profile',
+        icon: 'PersonOutlineOutlinedIcon',
+        href: '/nuskin/profile',
+        isLoggedIn: true
     },
     {
         title: 'Cart',
         icon: 'ShoppingCartOutlinedIcon',
-        href: '/nuskin/cart'
+        href: '/nuskin/cart',
+        isLoggedIn: false
     },
     {
         title: 'Notifications',
         icon: 'NotificationsActiveOutlinedIcon',
-        href: '/nuskin/subscribe'
+        href: '/nuskin/subscribe',
+        isLoggedIn: false
     }
 ]
 
@@ -102,32 +112,38 @@ const distDrawerLinks = [
     {
         title: 'Home',
         icon: 'HomeOutlinedIcon',
-        href: '/nuskin'
+        href: '/nuskin',
+        isLoggedIn: false
     },
     {
         title: 'Shop',
         icon: 'StorefrontIcon',
-        href: '/nuskin/products'
+        href: '/nuskin/products',
+        isLoggedIn: false
     },
     {
         title: 'Build',
         icon: 'CachedIcon',
-        href: '/nuskin/build'
+        href: '/nuskin/build',
+        isLoggedIn: true
     },
     {
         title: 'Profile',
         icon: 'PersonOutlineOutlinedIcon',
-        href: '/nuskin/profile'
+        href: '/nuskin/profile',
+        isLoggedIn: true
     },
     {
         title: 'Cart',
         icon: 'ShoppingCartOutlinedIcon',
-        href: '/nuskin/cart'
+        href: '/nuskin/cart',
+        isLoggedIn: false
     },
     {
         title: 'Notifications',
         icon: 'NotificationsActiveOutlinedIcon',
-        href: '/nuskin/subscribe'
+        href: '/nuskin/subscribe',
+        isLoggedIn: false
     }
 ]
 
@@ -197,7 +213,7 @@ export default function LayoutComponent({ children }) {
         <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
             <List>
                 {drawerLnks.map((link, index) => (
-                    <ListItem key={index} disablePadding>
+                    <ListItem key={index} disablePadding className={`${!isLoggedIn && link.isLoggedIn ? 'hidden' : ''} `}>
                         <ListItemButton
                             onClick={() => {
                                 if (tabs.get(link.title)) {

@@ -6,16 +6,16 @@ export default function ProfileNav({ active }) {
             <div className="d-flex menu-row pt-4">
                 <div style={{ border: '0px', borderRadius: '0px' }} className="card-wrapper flex-grow-1 card">
                     <div className="text-white bg-dark account-name-wrapper p-3 card-body">
-                        <div className="mb-0 font-weight-light card-subtitle h6" data-testid="qa-account-welcome-text">
+                        <div className="text-white mb-0 font-weight-light card-subtitle h6" data-testid="qa-account-welcome-text">
                             Welcome!
                         </div>
-                        <div className="font-weight-bold card-title h5" data-testid="qa-account-welcome-name">
+                        <div className="text-white font-weight-bold card-title h5" data-testid="qa-account-welcome-name">
                             JIM JIM
                         </div>
-                        <p className="font-weight-light account-id card-text" data-testid="qa-account-welcome-id">
+                        <p className="text-white font-weight-light account-id card-text" data-testid="qa-account-welcome-id">
                             US00320640
                         </p>
-                        <p className="mt-3 font-normal card-text" data-testid="qa-account-type">
+                        <p className="text-white mt-3 font-normal card-text" data-testid="qa-account-type">
                             Brand Affiliate
                         </p>
                     </div>
