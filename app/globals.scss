@@ -36,13 +36,17 @@ body {
     display: flex;
     align-items: center;
   }
-  
+
   .mini-nav {
     display: flex;
     svg {
       margin: 0 5px;
     }
   }
+}
+
+.hidden {
+  display: none !important;
 }
 
 @layer utilities {
