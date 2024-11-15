@@ -13,6 +13,7 @@ export default async function Page() {
     const suggestions = await getSuggestions()
     return (
         <div>
+            <div className="text-xl font-bold mb-2">Dev Portal Suggestions</div>
             {suggestions.map((suggestion) => (
                 <div key={suggestion.id}>
                     <p>Title: {suggestion.title}</p>
