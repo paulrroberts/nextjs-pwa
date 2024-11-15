@@ -12,14 +12,20 @@ export const dynamicParams = false // or true, to 404 on unknown paths
 export default async function Page() {
     const suggestions = await getSuggestions()
     return (
-        <div>
-            <div className="text-xl font-bold mb-2">Dev Portal Suggestions</div>
-            {suggestions.map((suggestion) => (
-                <div key={suggestion.id}>
-                    <p>Title: {suggestion.title}</p>
-                    <p>Description: {suggestion.description}</p>
-                </div>
-            ))}
+        <div className="p-5">
+            <div className="text-xl font-bold mb-2 ">Dev Portal Suggestions</div>
+            <div className="divide-y divide-current">
+                {suggestions.map((suggestion) => (
+                    <div key={suggestion.id} className="pb-3 pt-3">
+                        <p>
+                            <span className="font-semibold">Title:</span> {suggestion.title}
+                        </p>
+                        <p>
+                            <span className="font-semibold">Description:</span> {suggestion.description}
+                        </p>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
