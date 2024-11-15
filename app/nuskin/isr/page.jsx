@@ -13,6 +13,14 @@ export default async function Page() {
     const suggestions = await getSuggestions()
     return (
         <div className="p-5">
+            <div className="text-2xl mb-3">Incremental Static Regeneration (ISR) Example</div>
+            <p className="mb-5">
+                This screen pulls the suggestions entered in the{' '}
+                <a className="underline" href="https://tools.dev.nuskin.io/internal/developer-portal/suggestions/">
+                    Developer Portal
+                </a>
+                . When new suggestions are added this screen's content will automatically be updated without the need to rebuild this application.
+            </p>
             <div className="text-xl font-bold mb-2 ">Dev Portal Suggestions</div>
             <div className="divide-y divide-current">
                 {suggestions.map((suggestion) => (

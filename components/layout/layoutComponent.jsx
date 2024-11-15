@@ -32,6 +32,7 @@ import LoginIcon from '@mui/icons-material/Login'
 import CachedIcon from '@mui/icons-material/Cached'
 import MenuIcon from '@mui/icons-material/Menu'
 import GetAppIcon from '@mui/icons-material/GetApp'
+import PublishedWithChangesOutlinedIcon from '@mui/icons-material/PublishedWithChangesOutlined'
 import Image from 'next/image'
 import useUserAgent from '../userAgent/userAgent'
 import { useRouter } from 'next/navigation'
@@ -210,7 +211,7 @@ export default function LayoutComponent({ children }) {
     }
 
     const DrawerList = (
-        <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+        <Box sx={{ width: isMobile ? 250 : 400 }} role="presentation" onClick={toggleDrawer(false)}>
             <List>
                 {drawerLnks.map((link, index) => (
                     <ListItem key={index} disablePadding className={`${!isLoggedIn && link.isLoggedIn ? 'hidden' : ''} `}>
@@ -252,6 +253,14 @@ export default function LayoutComponent({ children }) {
                         </ListItemButton>
                     </ListItem>
                 )}
+                <ListItem>
+                    <ListItemButton component={Link} href="/nuskin/isr">
+                        <ListItemIcon>
+                            <PublishedWithChangesOutlinedIcon />
+                        </ListItemIcon>
+                        {isMobile ? <ListItemText primary="ISR Example" /> : <ListItemText primary="Incremental Static Regeneration" />}
+                    </ListItemButton>
+                </ListItem>
             </List>
         </Box>
     )
