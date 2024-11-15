@@ -12,7 +12,7 @@ export const dynamicParams = false // or true, to 404 on unknown paths
 export default async function Page() {
     const suggestions = await getSuggestions()
     return (
-        <div className="p-5">
+        <div className="p-5 bg-white">
             <div className="text-2xl mb-3">Incremental Static Regeneration (ISR) Example</div>
             <p className="mb-5">
                 This screen pulls the suggestions entered in the{' '}
