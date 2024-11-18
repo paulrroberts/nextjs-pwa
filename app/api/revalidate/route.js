@@ -6,7 +6,6 @@ export async function POST(request, res) {
         const { path } = await request.json() // Get the path to revalidate from the POST body.
 
         // Trigger revalidation for the given path.
-        // eslint-disable-next-line no-undef
         await res.revalidate(path)
 
         return NextResponse.json({ message: `Revalidation triggered for ${path}` }, { status: 200 })
