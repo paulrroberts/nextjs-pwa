@@ -1,7 +1,7 @@
 // app/api/revalidate/route.js
 import { NextResponse } from 'next/server'
 
-export async function POST(request) {
+export async function POST(request, res) {
     try {
         const { path } = await request.json() // Get the path to revalidate from the POST body.
 
