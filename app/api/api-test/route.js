@@ -7,10 +7,10 @@ export async function GET(request) {
     })
 }
 
-export async function POST(req) {
+export async function POST(req, res) {
     try {
-        // const { path } = await request.json() // Get the path to revalidate from the POST body.
-        const path = '/nuskin/isr'
+        const { path } = await req.json() // Get the path to revalidate from the POST body.
+        // const path = '/nuskin/isr'
 
         // Trigger revalidation for the given path.
         await res.revalidate(path)
