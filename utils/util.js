@@ -29,7 +29,7 @@ export const myAxios = getRetryAxiosInstance({
         return error.response?.status >= 500 || error.code === 'ECONNABORTED'
     },
     onRetry: (retryCount, error, requestConfig) => {
-        log.info(
+        console.log(
             {
                 retryCount,
                 message: error.message,
