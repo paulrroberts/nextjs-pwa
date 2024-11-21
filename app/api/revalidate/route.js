@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { isNull } from '@nuskin/uncle-buck'
 
 export async function POST(request) {
+    console.log(request)
     if (request.headers.get('Authorization') !== `JWT ${process.env.REVALIDATE_SECRET}`) {
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
